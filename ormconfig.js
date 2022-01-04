@@ -5,7 +5,7 @@ module.exports = {
   entities: process.env.TYPEORM_ENTITIES,
   migrations: process.env.TYPEORM_MIGRATIONS,
   cli: {
-    migrationDir: process.env.TYPEORM_MIGRATIONS_DIR,
-    entitiesDir: process.env.TYPEORM_ENTITIES_DIR,
+    migrationDir: "src/database/migrations",
+    entitiesDir: "src/app/models/",
   },
 };
