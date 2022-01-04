@@ -5,7 +5,6 @@ import authMiddleware from "./app/middlewares/authMiddleware";
 import UserController from "./app/controllers/UserController";
 import AuthController from "./app/controllers/AuthController";
 import { CreateUserController } from "./app/controllers/CreateUserController";
-import { GetAllUsersService } from "./app/services/GetAllUsersService";
 import { GetAllUsersController } from "./app/controllers/GetAllUsersController";
 import { DeleteUserController } from "./app/controllers/DeleteUserController";
 import { UpdateUserController } from "./app/controllers/UpdateUserController";
