@@ -3,8 +3,8 @@ console.log(process.env.TYPEORM_ENTITIES);
 module.exports = {
   type: "postgres",
   url: process.env.DATABASE_URL,
-  entities: process.env.TYPEORM_ENTITIES,
-  migrations: process.env.TYPEORM_MIGRATIONS,
+  entities: "dist/app/models/*.js",
+  migrations: "dist/database/migrations/*.js",
   cli: {
     migrationDir: ["src/database/migrations"],
     entitiesDir: "src/app/models/",
