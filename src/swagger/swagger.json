@@ -1,0 +1,1019 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Quanum Audit API",
+    "description": "API de acesso ao backend da aplicação de auditoria Quanum.",
+    "contact": {
+      "name": "Jean Ferreira",
+      "email": "jeanferreira@id.uff.br"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://{domain}/v1",
+      "variables": {
+        "domain": {
+          "default": "localhost:3000"
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "name": "Default"
+    },
+    {
+      "name": "Users",
+      "description": "Endpoints for Users resource."
+    },
+    {
+      "name": "Audits",
+      "description": "Endpoints for Audits resource."
+    }
+  ],
+  "paths": {
+    "/auth": {
+      "description": "Authentication",
+      "post": {
+        "tags": [
+          "Default"
+        ],
+        "summary": "Rota de login",
+        "security": [],
+        "requestBody": {
+          "description": "--",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Auth_User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "sucessful operation",
+            "content": {
+              "application:json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "allOf": [
+                        {
+                          "$ref": "#/components/schemas/User_Class"
+                        },
+                        {
+                          "type": "object"
+                        }
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error: Forbidden access"
+          }
+        }
+      }
+    },
+    "/users": {
+      "description": "Users resource",
+      "get": {
+        "summary": "Retorna uma lista de todos os Users",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/User_Class"
+                      },
+                      {
+                        "type": "object"
+                      }
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Cadastra um novo usuário",
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "description": "Objeto User a ser cadastrado.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/User_Register"
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "409": {
+            "description": "Error: conflict of resources"
+          }
+        }
+      }
+    },
+    "/users/{user-id}": {
+      "get": {
+        "summary": "Retorna um User a partir do ID especificado.",
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/User_Class"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: Invalid ID supplied."
+          },
+          "404": {
+            "description": "Error: User not found."
+          }
+        }
+      },
+      "patch": {
+        "summary": "Altera propriedades do usuário de ID especificado.",
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Objeto a ser modificado.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/User_Class"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "password": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Error: Invalid ID supplied."
+          },
+          "404": {
+            "description": "Error: User not found."
+          },
+          "409": {
+            "description": "Error: conflict of resources"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Exclui o User do ID especificado",
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Error: Invalid ID supplied."
+          },
+          "404": {
+            "description": "Error: User not found."
+          }
+        }
+      }
+    },
+    "/users/{user-id}/audits": {
+      "get": {
+        "summary": "Retorna uma lista das auditorias do usuário com o id dado.",
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Audit_Class"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: Invalid ID supplied."
+          },
+          "404": {
+            "description": "Error: User not found."
+          }
+        }
+      }
+    },
+    "/audits": {
+      "post": {
+        "summary": "Cadastra uma nova auditoria e retorna a auditoria com os formulários",
+        "tags": [
+          "Audits"
+        ],
+        "requestBody": {
+          "description": "Auditoria a ser cadastrada.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Audit_Register"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "auditors": {
+                        "type": "array",
+                        "items": {
+                          "allOf": [
+                            {
+                              "$ref": "#/components/schemas/User_Class"
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Audit_Class"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/audits/{audit-id}": {
+      "get": {
+        "summary": "Retorna uma auditoria a partir do id dado",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Audit_Class"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Atualiza uma auditoria a partir do id especificado",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Auditoria a ser cadastrada.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Audit_Register"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "auditors": {
+                        "type": "array",
+                        "items": {
+                          "allOf": [
+                            {
+                              "$ref": "#/components/schemas/User_Class"
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Exclui a auditoria do id especificado.",
+        "description": "User must be \"manager\" type",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "sucessful operation"
+          }
+        }
+      }
+    },
+    "/audits/{audit-id}/users": {
+      "get": {
+        "summary": "Retorna uma lista de usuários de uma dada auditoria.",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/User_Class"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Atualiza a lista de usuários de uma dada auditoria e retorna a lista atualizada.",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Usuários a serem alterados",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/User_Class"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "sucessful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/User_Class"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/audits/{audit-id}/forms": {
+      "get": {
+        "summary": "Retorna a lista de formulários de uma dada auditoria.",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "sucessful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Form"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Atualiza a lista de formulários de uma dada auditoria e retorna a lista de formulários.",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Formulários a serem alterados",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Form"
+                    },
+                    {
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "sucessful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Form"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/audits/{audit-id}/forms/{form-id}": {
+      "get": {
+        "summary": "Retorna um formulário a partir do id de uma dada auditoria.",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "in": "path",
+            "name": "form-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "sucessful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Form"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Atualiza e retorna um formulário a partir do id de uma dada auditoria.",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "in": "path",
+            "name": "form-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Formulário a ser alterado",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Form"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "sucessful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Form"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "Auth_User": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "User_Class": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "img_url": {
+            "type": "string",
+            "default": null
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "default": "auditor",
+            "enum": [
+              "manager",
+              "auditor"
+            ]
+          }
+        }
+      },
+      "User_Register": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/User_Class"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "password": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "Audit_Register": {
+        "type": "object",
+        "properties": {
+          "name_institution": {
+            "type": "string"
+          },
+          "postal_address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "main_contact": {
+            "type": "string"
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "audit_type": {
+            "type": "string",
+            "default": "internal",
+            "enum": [
+              "internal",
+              "external"
+            ]
+          }
+        }
+      },
+      "Audit_Class": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Audit_Register"
+          }
+        ],
+        "type": "object",
+        "properties": {
+          "audit_id": {
+            "type": "integer"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "url_auditors": {
+            "type": "string"
+          },
+          "forms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Form"
+            }
+          }
+        }
+      },
+      "Form": {
+        "type": "object",
+        "properties": {
+          "form_id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Question"
+            }
+          }
+        }
+      },
+      "Question": {
+        "type": "object",
+        "properties": {
+          "question_id": {
+            "type": "integer"
+          },
+          "content": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "placeholder": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "answers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Answer"
+            }
+          }
+        }
+      },
+      "Answer": {
+        "type": "object",
+        "properties": {
+          "answer_id": {
+            "type": "integer"
+          },
+          "conformance_lvl": {
+            "type": "string",
+            "default": "0",
+            "enum": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "comment": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "evidences": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
