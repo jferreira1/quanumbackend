@@ -14,7 +14,7 @@
       "url": "https://{domain}/v1",
       "variables": {
         "domain": {
-          "default": "localhost:3000"
+          "default": "https://quanum-backend.herokuapp.com/"
         }
       }
     }
@@ -36,9 +36,7 @@
     "/auth": {
       "description": "Authentication",
       "post": {
-        "tags": [
-          "Default"
-        ],
+        "tags": ["Default"],
         "summary": "Rota de login",
         "security": [],
         "requestBody": {
@@ -93,9 +91,7 @@
       "description": "Users resource",
       "get": {
         "summary": "Retorna uma lista de todos os Users",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "responses": {
           "200": {
             "description": "successful operation",
@@ -126,9 +122,7 @@
       },
       "post": {
         "summary": "Cadastra um novo usuário",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "requestBody": {
           "description": "Objeto User a ser cadastrado.",
           "content": {
@@ -157,9 +151,7 @@
     "/users/{user-id}": {
       "get": {
         "summary": "Retorna um User a partir do ID especificado.",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "in": "path",
@@ -203,9 +195,7 @@
       },
       "patch": {
         "summary": "Altera propriedades do usuário de ID especificado.",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "in": "path",
@@ -256,9 +246,7 @@
       },
       "delete": {
         "summary": "Exclui o User do ID especificado",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "in": "path",
@@ -285,9 +273,7 @@
     "/users/{user-id}/audits": {
       "get": {
         "summary": "Retorna uma lista das auditorias do usuário com o id dado.",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "in": "path",
@@ -328,9 +314,7 @@
     "/audits": {
       "post": {
         "summary": "Cadastra uma nova auditoria e retorna a auditoria com os formulários",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "requestBody": {
           "description": "Auditoria a ser cadastrada.",
           "content": {
@@ -390,9 +374,7 @@
     "/audits/{audit-id}": {
       "get": {
         "summary": "Retorna uma auditoria a partir do id dado",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -422,9 +404,7 @@
       },
       "patch": {
         "summary": "Atualiza uma auditoria a partir do id especificado",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -482,9 +462,7 @@
       "delete": {
         "summary": "Exclui a auditoria do id especificado.",
         "description": "User must be \"manager\" type",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -505,9 +483,7 @@
     "/audits/{audit-id}/users": {
       "get": {
         "summary": "Retorna uma lista de usuários de uma dada auditoria.",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -548,9 +524,7 @@
       },
       "patch": {
         "summary": "Atualiza a lista de usuários de uma dada auditoria e retorna a lista atualizada.",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -618,9 +592,7 @@
     "/audits/{audit-id}/forms": {
       "get": {
         "summary": "Retorna a lista de formulários de uma dada auditoria.",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -653,9 +625,7 @@
       },
       "patch": {
         "summary": "Atualiza a lista de formulários de uma dada auditoria e retorna a lista de formulários.",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -711,9 +681,7 @@
     "/audits/{audit-id}/forms/{form-id}": {
       "get": {
         "summary": "Retorna um formulário a partir do id de uma dada auditoria.",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -752,9 +720,7 @@
       },
       "patch": {
         "summary": "Atualiza e retorna um formulário a partir do id de uma dada auditoria.",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -857,10 +823,7 @@
           "type": {
             "type": "string",
             "default": "auditor",
-            "enum": [
-              "manager",
-              "auditor"
-            ]
+            "enum": ["manager", "auditor"]
           }
         }
       },
@@ -903,10 +866,7 @@
           "audit_type": {
             "type": "string",
             "default": "internal",
-            "enum": [
-              "internal",
-              "external"
-            ]
+            "enum": ["internal", "external"]
           }
         }
       },
@@ -987,13 +947,7 @@
           "conformance_lvl": {
             "type": "string",
             "default": "0",
-            "enum": [
-              "0",
-              "1",
-              "2",
-              "3",
-              "4"
-            ]
+            "enum": ["0", "1", "2", "3", "4"]
           },
           "comment": {
             "type": "string"
