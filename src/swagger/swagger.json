@@ -14,7 +14,7 @@
       "url": "https://{domain}/v1",
       "variables": {
         "domain": {
-          "default": "https://quanum-backend.herokuapp.com"
+          "default": "quanum-backend.herokuapp.com"
         }
       }
     }
