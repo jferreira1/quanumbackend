@@ -37,6 +37,7 @@ export class CreateTables1639968687036 implements MigrationInterface {
             name: "occupation_role",
             type: "varchar",
             length: "255",
+            isNullable: true,
           },
           {
             name: "type",

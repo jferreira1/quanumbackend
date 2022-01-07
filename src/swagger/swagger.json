@@ -17,6 +17,9 @@
           "default": "quanum-backend.herokuapp.com"
         }
       }
+    },
+    {
+      "url": "http://localhost:3000/v1"
     }
   ],
   "tags": [
@@ -807,9 +810,9 @@
           "email": {
             "type": "string"
           },
-          "img_url": {
+          "avatar_url": {
             "type": "string",
-            "default": null
+            "default": "null"
           },
           "firstname": {
             "type": "string"
@@ -817,7 +820,7 @@
           "lastname": {
             "type": "string"
           },
-          "role": {
+          "occupation_role": {
             "type": "string"
           },
           "type": {

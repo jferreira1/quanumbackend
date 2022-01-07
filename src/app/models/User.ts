@@ -35,7 +35,6 @@ class User {
   avatar_url: string;
 
   @BeforeInsert()
-  @BeforeUpdate()
   hashPassword() {
     this.password = bcrypt.hashSync(this.password, 10);
   }
