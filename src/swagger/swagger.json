@@ -330,7 +330,7 @@
     },
     "/audits": {
       "post": {
-        "summary": "Cadastra uma nova auditoria e retorna a auditoria com os formulários",
+        "summary": "Rota de cadastro de auditoria",
         "tags": [
           "Audits"
         ],
@@ -385,7 +385,7 @@
     },
     "/audits/{audit-id}": {
       "get": {
-        "summary": "Retorna uma auditoria a partir do id dado",
+        "summary": "Retorna uma auditoria a partir do id especificado",
         "tags": [
           "Audits"
         ],
@@ -417,7 +417,7 @@
         }
       },
       "patch": {
-        "summary": "Atualiza uma auditoria a partir do id especificado",
+        "summary": "Rota de atualização da auditoria do id especificado",
         "tags": [
           "Audits"
         ],
@@ -538,7 +538,7 @@
     },
     "/audits/{audit-id}/forms": {
       "get": {
-        "summary": "Retorna a lista de formulários de uma dada auditoria.",
+        "summary": "Retorna um array de nomes e seus idiomas dos formulários da auditoria especificada",
         "tags": [
           "Audits"
         ],
@@ -575,7 +575,7 @@
     },
     "/audits/{audit-id}/forms/{form-id}": {
       "get": {
-        "summary": "Retorna um formulário a partir do id de uma dada auditoria.",
+        "summary": "Retorna um formulário e suas perguntas a partir do id da auditoria e do formulário.",
         "tags": [
           "Audits"
         ],
@@ -634,7 +634,7 @@
     },
     "/audits/{audit-id}/forms/{form-id}/answers": {
       "get": {
-        "summary": "...",
+        "summary": "Retorna um array de respostas de um formulário da auditoria",
         "tags": [
           "Audits"
         ],
@@ -686,7 +686,7 @@
         }
       },
       "post": {
-        "summary": "...",
+        "summary": "Rota de cadastro de respostas de um formulário",
         "tags": [
           "Audits"
         ],
@@ -733,7 +733,7 @@
         }
       },
       "put": {
-        "summary": "...",
+        "summary": "Rota de atualização de respostas de um formulário",
         "tags": [
           "Audits"
         ],
@@ -790,7 +790,7 @@
     },
     "/audits/{audit-id}/reports": {
       "get": {
-        "summary": "...",
+        "summary": "Retorna um objeto com os scores dos formulários e o score total da auditoria.",
         "tags": [
           "Audits"
         ],
