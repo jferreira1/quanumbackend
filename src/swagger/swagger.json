@@ -39,7 +39,9 @@
     "/auth": {
       "description": "Authentication",
       "post": {
-        "tags": ["Default"],
+        "tags": [
+          "Default"
+        ],
         "summary": "Rota de login",
         "security": [],
         "requestBody": {
@@ -55,7 +57,7 @@
         },
         "responses": {
           "200": {
-            "description": "sucessful operation",
+            "description": "successful operation",
             "content": {
               "application:json": {
                 "schema": {
@@ -94,7 +96,9 @@
       "description": "Users resource",
       "get": {
         "summary": "Retorna uma lista de todos os Users",
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "responses": {
           "200": {
             "description": "successful operation",
@@ -125,7 +129,9 @@
       },
       "post": {
         "summary": "Cadastra um novo usuário",
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "requestBody": {
           "description": "Objeto User a ser cadastrado.",
           "content": {
@@ -154,7 +160,9 @@
     "/users/{user-id}": {
       "get": {
         "summary": "Retorna um User a partir do ID especificado.",
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -198,7 +206,9 @@
       },
       "patch": {
         "summary": "Altera propriedades do usuário de ID especificado.",
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -249,7 +259,9 @@
       },
       "delete": {
         "summary": "Exclui o User do ID especificado",
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -276,7 +288,9 @@
     "/users/{user-id}/audits": {
       "get": {
         "summary": "Retorna uma lista das auditorias do usuário com o id dado.",
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -317,7 +331,9 @@
     "/audits": {
       "post": {
         "summary": "Cadastra uma nova auditoria e retorna a auditoria com os formulários",
-        "tags": ["Audits"],
+        "tags": [
+          "Audits"
+        ],
         "requestBody": {
           "description": "Auditoria a ser cadastrada.",
           "content": {
@@ -333,19 +349,12 @@
                       "auditors": {
                         "type": "array",
                         "items": {
-                          "allOf": [
-                            {
-                              "$ref": "#/components/schemas/User_Class"
-                            },
-                            {
-                              "type": "object",
-                              "properties": {
-                                "id": {
-                                  "type": "integer"
-                                }
-                              }
+                          "type": "object",
+                          "properties": {
+                            "user_id": {
+                              "type": "string"
                             }
-                          ]
+                          }
                         }
                       }
                     }
@@ -377,7 +386,9 @@
     "/audits/{audit-id}": {
       "get": {
         "summary": "Retorna uma auditoria a partir do id dado",
-        "tags": ["Audits"],
+        "tags": [
+          "Audits"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -407,7 +418,9 @@
       },
       "patch": {
         "summary": "Atualiza uma auditoria a partir do id especificado",
-        "tags": ["Audits"],
+        "tags": [
+          "Audits"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -433,19 +446,12 @@
                       "auditors": {
                         "type": "array",
                         "items": {
-                          "allOf": [
-                            {
-                              "$ref": "#/components/schemas/User_Class"
-                            },
-                            {
-                              "type": "object",
-                              "properties": {
-                                "id": {
-                                  "type": "integer"
-                                }
-                              }
+                          "type": "object",
+                          "properties": {
+                            "user_id": {
+                              "type": "string"
                             }
-                          ]
+                          }
                         }
                       }
                     }
@@ -465,7 +471,9 @@
       "delete": {
         "summary": "Exclui a auditoria do id especificado.",
         "description": "User must be \"manager\" type",
-        "tags": ["Audits"],
+        "tags": [
+          "Audits"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -478,7 +486,7 @@
         ],
         "responses": {
           "200": {
-            "description": "sucessful operation"
+            "description": "successful operation"
           }
         }
       }
@@ -486,7 +494,9 @@
     "/audits/{audit-id}/users": {
       "get": {
         "summary": "Retorna uma lista de usuários de uma dada auditoria.",
-        "tags": ["Audits"],
+        "tags": [
+          "Audits"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -524,78 +534,14 @@
             }
           }
         }
-      },
-      "patch": {
-        "summary": "Atualiza a lista de usuários de uma dada auditoria e retorna a lista atualizada.",
-        "tags": ["Audits"],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "audit-id",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Usuários a serem alterados",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/User_Class"
-                    },
-                    {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        }
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "sucessful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/User_Class"
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          }
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
       }
     },
     "/audits/{audit-id}/forms": {
       "get": {
         "summary": "Retorna a lista de formulários de uma dada auditoria.",
-        "tags": ["Audits"],
+        "tags": [
+          "Audits"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -608,61 +554,7 @@
         ],
         "responses": {
           "200": {
-            "description": "sucessful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Form"
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "patch": {
-        "summary": "Atualiza a lista de formulários de uma dada auditoria e retorna a lista de formulários.",
-        "tags": ["Audits"],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "audit-id",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Formulários a serem alterados",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Form"
-                    },
-                    {
-                      "type": "object"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "sucessful operation",
+            "description": "successful operation",
             "content": {
               "application/json": {
                 "schema": {
@@ -684,7 +576,9 @@
     "/audits/{audit-id}/forms/{form-id}": {
       "get": {
         "summary": "Retorna um formulário a partir do id de uma dada auditoria.",
-        "tags": ["Audits"],
+        "tags": [
+          "Audits"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -705,7 +599,7 @@
         ],
         "responses": {
           "200": {
-            "description": "sucessful operation",
+            "description": "successful operation",
             "content": {
               "application/json": {
                 "schema": {
@@ -713,6 +607,22 @@
                   "allOf": [
                     {
                       "$ref": "#/components/schemas/Form"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "questions": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "allOf": [
+                              {
+                                "$ref": "#/components/schemas/Question"
+                              }
+                            ]
+                          }
+                        }
+                      }
                     }
                   ]
                 }
@@ -720,10 +630,66 @@
             }
           }
         }
+      }
+    },
+    "/audits/{audit-id}/forms/{form-id}/answers": {
+      "get": {
+        "summary": "...",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "in": "path",
+            "name": "form-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Answer"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "answer_id": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
       },
-      "patch": {
-        "summary": "Atualiza e retorna um formulário a partir do id de uma dada auditoria.",
-        "tags": ["Audits"],
+      "post": {
+        "summary": "...",
+        "tags": [
+          "Audits"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -743,39 +709,150 @@
           }
         ],
         "requestBody": {
-          "description": "Formulário a ser alterado",
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/Form"
-                  },
-                  {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      }
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Answer"
                     }
-                  }
-                ]
+                  ]
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "sucessful operation",
+            "description": "successful operation"
+          }
+        }
+      },
+      "put": {
+        "summary": "...",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "in": "path",
+            "name": "form-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Answer"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "answer_id": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/audits/{audit-id}/reports": {
+      "get": {
+        "summary": "...",
+        "tags": [
+          "Audits"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Form"
+                  "properties": {
+                    "forms": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "form_id": {
+                            "type": "integer"
+                          },
+                          "applicables": {
+                            "type": "integer"
+                          },
+                          "total_score": {
+                            "type": "integer"
+                          },
+                          "percentage_score": {
+                            "type": "string"
+                          },
+                          "non_conformancies": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    },
+                    "total": {
+                      "type": "object",
+                      "properties": {
+                        "applicables": {
+                          "type": "integer"
+                        },
+                        "total_score": {
+                          "type": "integer"
+                        },
+                        "percentage_score": {
+                          "type": "string"
+                        },
+                        "non_conformancies": {
+                          "type": "integer"
+                        }
+                      }
                     }
-                  ]
+                  }
                 }
               }
             }
@@ -826,7 +903,10 @@
           "type": {
             "type": "string",
             "default": "auditor",
-            "enum": ["manager", "auditor"]
+            "enum": [
+              "manager",
+              "auditor"
+            ]
           }
         }
       },
@@ -869,7 +949,10 @@
           "audit_type": {
             "type": "string",
             "default": "internal",
-            "enum": ["internal", "external"]
+            "enum": [
+              "internal",
+              "external"
+            ]
           }
         }
       },
@@ -887,13 +970,24 @@
           "created_at": {
             "type": "string"
           },
-          "url_auditors": {
-            "type": "string"
-          },
-          "forms": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Form"
+          "report": {
+            "type": "object",
+            "properties": {
+              "total_score": {
+                "type": "string"
+              },
+              "non-conformancies": {
+                "type": "integer"
+              },
+              "criticals": {
+                "type": "integer"
+              },
+              "majors": {
+                "type": "integer"
+              },
+              "minors": {
+                "type": "integer"
+              }
             }
           }
         }
@@ -904,13 +998,18 @@
           "form_id": {
             "type": "integer"
           },
-          "name": {
-            "type": "string"
-          },
-          "questions": {
+          "form_names": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Question"
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                }
+              }
             }
           }
         }
@@ -932,25 +1031,25 @@
           },
           "language": {
             "type": "string"
-          },
-          "answers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Answer"
-            }
           }
         }
       },
       "Answer": {
         "type": "object",
         "properties": {
-          "answer_id": {
+          "question_id": {
             "type": "integer"
           },
           "conformance_lvl": {
             "type": "string",
             "default": "0",
-            "enum": ["0", "1", "2", "3", "4"]
+            "enum": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
           },
           "comment": {
             "type": "string"
