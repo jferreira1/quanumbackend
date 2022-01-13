@@ -1,4 +1,11 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
+import { Question } from "./Question";
 
 @Entity("evidences_placeholder")
 export class EvidencePlaceholder {
@@ -15,4 +22,7 @@ export class EvidencePlaceholder {
   languageId: number;
 
   //Relations
+  @ManyToOne(() => Question, (question) => question.evidencePlaceholders)
+  @JoinColumn({ name: "question_id" })
+  question: Question;
 }

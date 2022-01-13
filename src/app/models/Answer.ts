@@ -1,11 +1,15 @@
 import {
   Column,
   Entity,
+  JoinColumn,
   JoinTable,
   ManyToMany,
+  ManyToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { Evidence } from "./Evidence";
+import { Question } from "./Question";
+import User from "./User";
 
 export enum ConformanceLevels {
   NA = "Not Applicable",
@@ -39,6 +43,15 @@ export class Answer {
   questionId: number;
 
   //Relations
+
+  @ManyToOne(() => User, (user) => user.answers)
+  @JoinColumn({ name: "user_id" })
+  user: User;
+
+  @ManyToOne(() => Question, (question) => question.answers)
+  @JoinColumn({ name: "question_id" })
+  question: Question;
+
   @ManyToMany(() => Evidence, (evidence) => evidence.answers)
   @JoinTable({
     name: "answers_evidences",

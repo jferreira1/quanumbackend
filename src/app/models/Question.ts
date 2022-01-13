@@ -1,4 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Answer } from "./Answer";
+import { EvidencePlaceholder } from "./EvidencePlaceholder";
 
 @Entity("questions")
 export class Question {
@@ -9,4 +11,12 @@ export class Question {
   formId: number;
 
   //Relations
+  @OneToMany(() => Answer, (answer) => answer.question)
+  answers: Answer[];
+
+  @OneToMany(
+    () => EvidencePlaceholder,
+    (evidencePlaceholder) => evidencePlaceholder.question
+  )
+  evidencePlaceholders: EvidencePlaceholder[];
 }

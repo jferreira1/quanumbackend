@@ -6,10 +6,12 @@ import {
   BeforeUpdate,
   JoinTable,
   ManyToMany,
+  OneToMany,
 } from "typeorm";
 
 import bcrypt from "bcryptjs";
 import Audit from "./Audit";
+import { Answer } from "./Answer";
 
 @Entity("users")
 export class User {
@@ -34,6 +36,10 @@ export class User {
   @Column()
   avatar_url: string;
 
+  //Relations
+  @OneToMany(() => Answer, (answer) => answer.user)
+  answers: Answer[];
+
   @ManyToMany(() => Audit, (audit) => audit.users)
   @JoinTable({
     name: "audits_users",
@@ -44,6 +50,7 @@ export class User {
   })
   audits: Audit[];
 
+  //Methods
   @BeforeInsert()
   hashPassword() {
     this.password = bcrypt.hashSync(this.password, 10);
