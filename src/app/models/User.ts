@@ -4,17 +4,17 @@ import {
   Column,
   BeforeInsert,
   BeforeUpdate,
+  JoinTable,
+  ManyToMany,
 } from "typeorm";
 
 import bcrypt from "bcryptjs";
+import Audit from "./Audit";
 
 @Entity("users")
-class User {
+export class User {
   @PrimaryGeneratedColumn("increment")
   id: number;
-
-  @Column()
-  email: string;
 
   @Column({ name: "pw_hash", select: false })
   password: string;
@@ -28,11 +28,21 @@ class User {
   @Column()
   occupation_role: string;
 
-  @Column()
+  @Column("type_of")
   type: string;
 
   @Column()
   avatar_url: string;
+
+  @ManyToMany(() => Audit, (audit) => audit.users)
+  @JoinTable({
+    name: "audits_users",
+    joinColumn: {
+      name: "user_id",
+      referencedColumnName: "id",
+    },
+  })
+  audits: Audit[];
 
   @BeforeInsert()
   hashPassword() {
