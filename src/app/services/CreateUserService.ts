@@ -1,5 +1,5 @@
 import { getRepository } from "typeorm";
-import User from "../models/User";
+import User from "../entities/User";
 
 type UserRequest = {
   email: string;

@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 
 import { getRepository } from "typeorm";
 
-import User from "../models/User";
+import User from "../entities/User";
 
 class UserController {
   async list(req: Request, res: Response) {
