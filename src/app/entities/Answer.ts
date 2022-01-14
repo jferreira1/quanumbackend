@@ -36,10 +36,10 @@ export class Answer {
   @Column("text")
   comment: string;
 
-  @Column("user_id")
+  @Column({ name: "user_id" })
   userId: number;
 
-  @Column("question_id")
+  @Column({ name: "question_id" })
   questionId: number;
 
   //Relations

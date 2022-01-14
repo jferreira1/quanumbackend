@@ -14,20 +14,11 @@ export class CreateFormsTable1641592352026 implements MigrationInterface {
             generationStrategy: "increment",
           },
           {
-            name: "name_id",
-            type: "integer",
-          },
-          {
             name: "audit_id",
             type: "integer",
           },
         ],
         foreignKeys: [
-          {
-            columnNames: ["name_id"],
-            referencedTableName: "names",
-            referencedColumnNames: ["id"],
-          },
           {
             columnNames: ["audit_id"],
             referencedTableName: "audits",

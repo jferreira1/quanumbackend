@@ -33,7 +33,7 @@ export class User {
   @Column()
   occupation_role: string;
 
-  @Column("type_of")
+  @Column({ name: "type_of" })
   type: string;
 
   @Column()

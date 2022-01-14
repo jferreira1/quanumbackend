@@ -18,15 +18,11 @@ export class Form {
   @Column()
   name: string;
 
-  @Column("audit_id")
+  @Column({ name: "audit_id" })
   auditId: number;
-
-  @Column("name_id")
-  nameId: number;
 
   // Relations
   @OneToMany(() => Name, (name) => name.form)
-  @JoinColumn({ name: "name_id" })
   names: Name[];
 
   @ManyToOne(() => Audit, (audit) => audit.forms)

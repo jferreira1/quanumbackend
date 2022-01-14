@@ -17,10 +17,10 @@ export class QuestionDescription {
   @Column()
   description: string;
 
-  @Column("question_id")
+  @Column({ name: "question_id" })
   questionId: number;
 
-  @Column("language_id")
+  @Column({ name: "language_id" })
   languageId: number;
 
   // Relations´

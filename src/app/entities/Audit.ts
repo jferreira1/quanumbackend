@@ -20,22 +20,22 @@ export class Audit {
   @PrimaryGeneratedColumn("increment")
   id: number;
 
-  @Column("name_institution")
+  @Column({ name: "name_institution" })
   nameInstitution: string;
 
-  @Column("email_institution")
+  @Column({ name: "email_institution" })
   emailInstitution: string;
 
-  @Column("phone_institution")
+  @Column({ name: "phone_institution" })
   phoneInstitution: string;
 
-  @Column("country_institution")
+  @Column({ name: "country_institution" })
   countryInstitution: string;
 
-  @Column("city_institution")
+  @Column({ name: "city_institution" })
   cityInstitution: string;
 
-  @Column("address_institution")
+  @Column({ name: "address_institution" })
   addressInstitution: string;
 
   @Column({
@@ -45,7 +45,7 @@ export class Audit {
   })
   type: AuditType;
 
-  @CreateDateColumn("created_at")
+  @CreateDateColumn({ name: "created_at" })
   createdAt: Date;
 
   @ManyToMany(() => User, (user) => user.audits)

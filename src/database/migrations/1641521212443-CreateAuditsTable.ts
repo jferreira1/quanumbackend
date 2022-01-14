@@ -17,7 +17,7 @@ export class CreateAuditsTable1641521212443 implements MigrationInterface {
             name: "type",
             type: "enum",
             enum: ["internal", "external"],
-            default: "internal",
+            default: "'internal'",
           },
           {
             name: "created_at",
@@ -26,27 +26,27 @@ export class CreateAuditsTable1641521212443 implements MigrationInterface {
           },
           {
             name: "name_institution",
-            type: "string",
+            type: "varchar",
           },
           {
             name: "email_institution",
-            type: "string",
+            type: "varchar",
           },
           {
             name: "phone_institution",
-            type: "string",
+            type: "varchar",
           },
           {
             name: "country_institution",
-            type: "string",
+            type: "varchar",
           },
           {
             name: "city_institution",
-            type: "string",
+            type: "varchar",
           },
           {
             name: "address_institution",
-            type: "string",
+            type: "varchar",
           },
         ],
       })

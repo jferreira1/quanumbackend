@@ -17,6 +17,7 @@ export class CreateAnswersTable1641682491856 implements MigrationInterface {
             name: "conformance_level",
             type: "enum",
             enum: ["NA", "0", "1", "2", "3", "4"],
+            default: "'NA'",
           },
           {
             name: "comment",

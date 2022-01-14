@@ -1,4 +1,10 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
 import { Form } from "./Form";
 
 @Entity("names")
@@ -9,13 +15,14 @@ export class Name {
   @Column()
   name: string;
 
-  @Column("form_id")
+  @Column({ name: "form_id" })
+  @JoinColumn({ name: "form_id" })
   formId: number;
 
-  @Column("language_id")
+  @Column({ name: "language_id" })
   languageId: number;
 
   //Relations
-  @ManyToOne(() => Form, (form) => form.names)
+  @ManyToOne(() => Form)
   form: Form;
 }
