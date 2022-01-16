@@ -18,9 +18,6 @@ export class Form {
   @Column()
   name: string;
 
-  @Column({ name: "audit_id" })
-  auditId: number;
-
   // Relations
   @OneToMany(() => Name, (name) => name.form)
   names: Name[];

@@ -17,12 +17,6 @@ export class EvidencePlaceholder {
   @Column()
   placeholder: string;
 
-  @Column({ name: "question_id" })
-  questionId: number;
-
-  @Column({ name: "language_id" })
-  languageId: number;
-
   //Relations
   @ManyToOne(() => Question, (question) => question.evidencePlaceholders)
   @JoinColumn({ name: "question_id" })

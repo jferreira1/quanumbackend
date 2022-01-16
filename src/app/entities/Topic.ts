@@ -17,12 +17,6 @@ export class Topic {
   @Column()
   topic: string;
 
-  @Column({ name: "question_id" })
-  questionId: number;
-
-  @Column({ name: "language_id" })
-  languageId: number;
-
   // Relations
   @ManyToOne(() => Question, (question) => question.topics)
   @JoinColumn({ name: "question_id" })

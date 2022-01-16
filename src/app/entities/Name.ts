@@ -6,6 +6,7 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { Form } from "./Form";
+import { Language } from "./Language";
 
 @Entity("names")
 export class Name {
@@ -15,14 +16,12 @@ export class Name {
   @Column()
   name: string;
 
-  @Column({ name: "form_id" })
-  @JoinColumn({ name: "form_id" })
-  formId: number;
-
-  @Column({ name: "language_id" })
-  languageId: number;
-
   //Relations
   @ManyToOne(() => Form)
+  @JoinColumn({ name: "form_id" })
   form: Form;
+
+  @ManyToOne(() => Language)
+  @JoinColumn({ name: "language_id" })
+  language: Language;
 }

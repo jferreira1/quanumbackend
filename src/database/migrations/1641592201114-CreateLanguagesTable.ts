@@ -1,4 +1,5 @@
-import { MigrationInterface, QueryRunner, Table } from "typeorm";
+import { getRepository, MigrationInterface, QueryRunner, Table } from "typeorm";
+import { Language } from "../../app/entities/Language";
 
 export class CreateLanguagesTable1641592201114 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {

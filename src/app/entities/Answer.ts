@@ -36,12 +36,6 @@ export class Answer {
   @Column("text")
   comment: string;
 
-  @Column({ name: "user_id" })
-  userId: number;
-
-  @Column({ name: "question_id" })
-  questionId: number;
-
   //Relations
 
   @ManyToOne(() => User, (user) => user.answers)

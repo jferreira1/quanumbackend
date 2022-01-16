@@ -17,12 +17,6 @@ export class QuestionDescription {
   @Column()
   description: string;
 
-  @Column({ name: "question_id" })
-  questionId: number;
-
-  @Column({ name: "language_id" })
-  languageId: number;
-
   // Relations´
   @ManyToOne(() => Question, (question) => question.descriptions)
   @JoinColumn({ name: "question_id" })
