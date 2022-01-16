@@ -15,11 +15,8 @@ export class Form {
   @PrimaryGeneratedColumn("increment")
   id: number;
 
-  @Column()
-  name: string;
-
   // Relations
-  @OneToMany(() => Name, (name) => name.form)
+  @OneToMany(() => Name, (name) => name.form, { eager: true })
   names: Name[];
 
   @ManyToOne(() => Audit, (audit) => audit.forms)

@@ -5,7 +5,6 @@ import {
   CreateDateColumn,
   ManyToMany,
   OneToMany,
-  JoinColumn,
 } from "typeorm";
 import { Form } from "./Form";
 import User from "./User";
@@ -48,10 +47,10 @@ export class Audit {
   @CreateDateColumn({ name: "created_at" })
   createdAt: Date;
 
-  @ManyToMany(() => User, (user) => user.audits)
+  @ManyToMany(() => User, (user) => user.audits, { eager: true })
   users: User[];
 
-  @OneToMany(() => Form, (form) => form.audit)
+  @OneToMany(() => Form, (form) => form.audit, { eager: true })
   forms: Form[];
 }
 

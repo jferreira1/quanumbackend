@@ -23,17 +23,19 @@ export class Question {
 
   @OneToMany(
     () => EvidencePlaceholder,
-    (evidencePlaceholder) => evidencePlaceholder.question
+    (evidencePlaceholder) => evidencePlaceholder.question,
+    { eager: true }
   )
   evidencePlaceholders: EvidencePlaceholder[];
 
   @OneToMany(
     () => QuestionDescription,
-    (questionDescription) => questionDescription.question
+    (questionDescription) => questionDescription.question,
+    { eager: true }
   )
   descriptions: QuestionDescription[];
 
-  @OneToMany(() => Topic, (topic) => topic.question)
+  @OneToMany(() => Topic, (topic) => topic.question, { eager: true })
   topics: Topic[];
 
   @ManyToOne(() => Form, (form) => form.questions)
