@@ -25,5 +25,15 @@ router.patch(
   authMiddleware,
   new UpdateUserController().handle
 );
+router.post("/v1/audits");
+router.get("/v1/audits/:auditId");
+router.patch("/v1/audits/:auditId");
+router.delete("/v1/audits/:auditId");
+router.get("/v1/audits/:auditId/users");
+router.get("/v1/audits/:auditId/forms");
+router.get("/v1/audits/:auditId/forms/:formId");
+router.get("/v1/audits/:auditId/forms/:formId/answers");
+router.post("/v1/audits/:auditId/forms/:formId/answers");
+router.get("/v1/audits/:auditId/reports");
 
 export default router;
