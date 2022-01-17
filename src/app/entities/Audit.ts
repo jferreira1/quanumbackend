@@ -4,7 +4,7 @@ import {
   Column,
   CreateDateColumn,
   ManyToMany,
-  OneToMany,
+  JoinTable,
 } from "typeorm";
 import { Form } from "./Form";
 import User from "./User";
@@ -50,7 +50,18 @@ export class Audit {
   @ManyToMany(() => User, (user) => user.audits, { eager: true })
   users: User[];
 
-  @OneToMany(() => Form, (form) => form.audit, { eager: true })
+  @ManyToMany(() => Form, (form) => form.audit, { eager: true })
+  @JoinTable({
+    name: "audits_forms",
+    joinColumn: {
+      name: "audit_id",
+      referencedColumnName: "id",
+    },
+    inverseJoinColumn: {
+      name: "form_id",
+      referencedColumnName: "id",
+    },
+  })
   forms: Form[];
 }
 

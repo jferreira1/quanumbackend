@@ -12,7 +12,7 @@ import { Question } from "./Question";
 import User from "./User";
 
 export enum ConformanceLevels {
-  NA = "Not Applicable",
+  NA = "NA",
   ZERO = "0",
   ONE = "1",
   TWO = "2",
@@ -51,6 +51,10 @@ export class Answer {
     name: "answers_evidences",
     joinColumn: {
       name: "answer_id",
+      referencedColumnName: "id",
+    },
+    inverseJoinColumn: {
+      name: "evidence_id",
       referencedColumnName: "id",
     },
   })

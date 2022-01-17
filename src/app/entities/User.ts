@@ -50,6 +50,10 @@ export class User {
       name: "user_id",
       referencedColumnName: "id",
     },
+    inverseJoinColumn: {
+      name: "audit_id",
+      referencedColumnName: "id",
+    },
   })
   audits: Audit[];
 

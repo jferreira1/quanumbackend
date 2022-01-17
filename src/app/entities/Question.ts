@@ -17,28 +17,11 @@ export class Question {
   @PrimaryGeneratedColumn("increment")
   id: number;
 
+  @Column({ name: "question_number", unique: true })
+  questionNumber: string;
+
   //Relations
-  @OneToMany(() => Answer, (answer) => answer.question)
-  answers: Answer[];
-
-  @OneToMany(
-    () => EvidencePlaceholder,
-    (evidencePlaceholder) => evidencePlaceholder.question,
-    { eager: true }
-  )
-  evidencePlaceholders: EvidencePlaceholder[];
-
-  @OneToMany(
-    () => QuestionDescription,
-    (questionDescription) => questionDescription.question,
-    { eager: true }
-  )
-  descriptions: QuestionDescription[];
-
-  @OneToMany(() => Topic, (topic) => topic.question, { eager: true })
-  topics: Topic[];
-
-  @ManyToOne(() => Form, (form) => form.questions)
+  @ManyToOne(() => Form)
   @JoinColumn({ name: "form_id" })
   form: Form;
 }

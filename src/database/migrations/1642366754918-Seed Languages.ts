@@ -1,9 +1,9 @@
 import { getRepository, MigrationInterface, QueryRunner } from "typeorm";
-import { NameSeedPortuguese, NameSeedEnglish } from "../seeds/name.seed";
+import { LanguageSeed } from "../seeds/language.seed";
 
-export class SeedNames1642361074055 implements MigrationInterface {
+export class SeedLanguages1642366754918 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
-    const names = await getRepository("names").save();
+    await getRepository("languages").save(LanguageSeed);
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {}
