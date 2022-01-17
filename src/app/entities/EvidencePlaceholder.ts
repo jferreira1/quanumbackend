@@ -18,7 +18,7 @@ export class EvidencePlaceholder {
   placeholder: string;
 
   //Relations
-  @ManyToOne(() => Question, (question) => question.evidencePlaceholders)
+  @ManyToOne(() => Question)
   @JoinColumn({ name: "question_id" })
   question: Question;
 

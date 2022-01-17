@@ -38,15 +38,15 @@ export class Answer {
 
   //Relations
 
-  @ManyToOne(() => User, (user) => user.answers)
+  @ManyToOne(() => User)
   @JoinColumn({ name: "user_id" })
   user: User;
 
-  @ManyToOne(() => Question, (question) => question.answers)
+  @ManyToOne(() => Question)
   @JoinColumn({ name: "question_id" })
   question: Question;
 
-  @ManyToMany(() => Evidence, (evidence) => evidence.answers)
+  @ManyToMany(() => Evidence)
   @JoinTable({
     name: "answers_evidences",
     joinColumn: {

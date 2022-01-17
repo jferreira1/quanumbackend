@@ -8,6 +8,8 @@ import { CreateUserController } from "./app/controllers/CreateUserController";
 import { GetAllUsersController } from "./app/controllers/GetAllUsersController";
 import { DeleteUserController } from "./app/controllers/DeleteUserController";
 import { UpdateUserController } from "./app/controllers/UpdateUserController";
+import { CreateAuditController } from "./app/controllers/Audit/CreateAuditController";
+import { GetAuditsByUserController } from "./app/controllers/Audit/GetAuditsByUserController";
 
 const router = Router();
 
@@ -25,7 +27,8 @@ router.patch(
   authMiddleware,
   new UpdateUserController().handle
 );
-router.post("/v1/audits");
+router.get("/v1/users/:userId/audits", new GetAuditsByUserController().handle);
+router.post("/v1/audits", authMiddleware, new CreateAuditController().handle);
 router.get("/v1/audits/:auditId");
 router.patch("/v1/audits/:auditId");
 router.delete("/v1/audits/:auditId");

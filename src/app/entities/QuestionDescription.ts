@@ -18,7 +18,7 @@ export class QuestionDescription {
   description: string;
 
   // Relations´
-  @ManyToOne(() => Question, (question) => question.descriptions)
+  @ManyToOne(() => Question)
   @JoinColumn({ name: "question_id" })
   question: Question;
 

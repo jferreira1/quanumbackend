@@ -18,7 +18,7 @@ export class Topic {
   topic: string;
 
   // Relations
-  @ManyToOne(() => Question, (question) => question.topics)
+  @ManyToOne(() => Question)
   @JoinColumn({ name: "question_id" })
   question: Question;
 
