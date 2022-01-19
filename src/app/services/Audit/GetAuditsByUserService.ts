@@ -1,5 +1,4 @@
 import { getRepository } from "typeorm";
-import Audit from "../../entities/Audit";
 import User from "../../entities/User";
 
 export class GetAuditsByUserService {
@@ -9,7 +8,7 @@ export class GetAuditsByUserService {
       const audits = await repo
         .createQueryBuilder()
         .relation(User, "audits")
-        .of(1)
+        .of(userId)
         .loadMany();
 
       // TO-DO: adicionar scores
