@@ -2,7 +2,6 @@ import { getRepository } from "typeorm";
 import User from "../entities/User";
 
 interface UserUpdateRequest {
-  id: string;
   email?: string;
   firstname?: string;
   lastname?: string;
