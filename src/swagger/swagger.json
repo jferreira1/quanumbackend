@@ -39,9 +39,7 @@
     "/auth": {
       "description": "Authentication",
       "post": {
-        "tags": [
-          "Default"
-        ],
+        "tags": ["Default"],
         "summary": "Rota de login",
         "security": [],
         "requestBody": {
@@ -96,9 +94,7 @@
       "description": "Users resource",
       "get": {
         "summary": "Retorna uma lista de todos os Users",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "responses": {
           "200": {
             "description": "successful operation",
@@ -129,9 +125,7 @@
       },
       "post": {
         "summary": "Cadastra um novo usuário",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "requestBody": {
           "description": "Objeto User a ser cadastrado.",
           "content": {
@@ -160,9 +154,7 @@
     "/users/{user-id}": {
       "get": {
         "summary": "Retorna um User a partir do ID especificado.",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "in": "path",
@@ -206,9 +198,7 @@
       },
       "patch": {
         "summary": "Altera propriedades do usuário de ID especificado.",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "in": "path",
@@ -259,9 +249,7 @@
       },
       "delete": {
         "summary": "Exclui o User do ID especificado",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "in": "path",
@@ -288,9 +276,7 @@
     "/users/{user-id}/audits": {
       "get": {
         "summary": "Retorna uma lista das auditorias do usuário com o id dado.",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "in": "path",
@@ -331,9 +317,7 @@
     "/audits": {
       "post": {
         "summary": "Rota de cadastro de auditoria",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "requestBody": {
           "description": "Auditoria a ser cadastrada.",
           "content": {
@@ -351,7 +335,7 @@
                         "items": {
                           "type": "object",
                           "properties": {
-                            "user_id": {
+                            "id": {
                               "type": "string"
                             }
                           }
@@ -386,9 +370,7 @@
     "/audits/{audit-id}": {
       "get": {
         "summary": "Retorna uma auditoria a partir do id especificado",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -418,9 +400,7 @@
       },
       "patch": {
         "summary": "Rota de atualização da auditoria do id especificado",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -471,9 +451,7 @@
       "delete": {
         "summary": "Exclui a auditoria do id especificado.",
         "description": "User must be \"manager\" type",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -494,9 +472,7 @@
     "/audits/{audit-id}/users": {
       "get": {
         "summary": "Retorna uma lista de usuários de uma dada auditoria.",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -539,9 +515,7 @@
     "/audits/{audit-id}/forms": {
       "get": {
         "summary": "Retorna um array de nomes e seus idiomas dos formulários da auditoria especificada",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -576,9 +550,7 @@
     "/audits/{audit-id}/forms/{form-id}": {
       "get": {
         "summary": "Retorna um formulário e suas perguntas a partir do id da auditoria e do formulário.",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -635,9 +607,7 @@
     "/audits/{audit-id}/forms/{form-id}/answers": {
       "get": {
         "summary": "Retorna um array de respostas de um formulário da auditoria",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -687,9 +657,7 @@
       },
       "post": {
         "summary": "Rota de cadastro de respostas de um formulário",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -734,9 +702,7 @@
       },
       "put": {
         "summary": "Rota de atualização de respostas de um formulário",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -791,9 +757,7 @@
     "/audits/{audit-id}/reports": {
       "get": {
         "summary": "Retorna um objeto com os scores dos formulários e o score total da auditoria.",
-        "tags": [
-          "Audits"
-        ],
+        "tags": ["Audits"],
         "parameters": [
           {
             "in": "path",
@@ -903,10 +867,7 @@
           "type": {
             "type": "string",
             "default": "auditor",
-            "enum": [
-              "manager",
-              "auditor"
-            ]
+            "enum": ["manager", "auditor"]
           }
         }
       },
@@ -949,10 +910,7 @@
           "audit_type": {
             "type": "string",
             "default": "internal",
-            "enum": [
-              "internal",
-              "external"
-            ]
+            "enum": ["internal", "external"]
           }
         }
       },
@@ -1043,13 +1001,7 @@
           "conformance_lvl": {
             "type": "string",
             "default": "0",
-            "enum": [
-              "0",
-              "1",
-              "2",
-              "3",
-              "4"
-            ]
+            "enum": ["0", "1", "2", "3", "4"]
           },
           "comment": {
             "type": "string"
