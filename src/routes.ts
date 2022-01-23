@@ -12,6 +12,7 @@ import { CreateAuditController } from "./app/controllers/Audit/CreateAuditContro
 import { GetAuditsByUserController } from "./app/controllers/Audit/GetAuditsByUserController";
 import { DeleteAuditController } from "./app/controllers/Audit/DeleteAuditController";
 import { UpdateAuditController } from "./app/controllers/Audit/UpdateAuditController";
+import { GetAuditByIdController } from "./app/controllers/Audit/GetAuditByIdController";
 
 const router = Router();
 
@@ -35,18 +36,18 @@ router.get(
   new GetAuditsByUserController().handle
 );
 router.post("/v1/audits", authMiddleware, new CreateAuditController().handle);
-router.get("/v1/audits/:auditId");
+router.get("/v1/audits/:auditId", new GetAuditByIdController().handle);
 router.patch("/v1/audits/:auditId", new UpdateAuditController().handle);
 router.delete(
   "/v1/audits/:auditId",
   authMiddleware,
   new DeleteAuditController().handle
 );
-router.get("/v1/audits/:auditId/users");
-router.get("/v1/audits/:auditId/forms");
-router.get("/v1/audits/:auditId/forms/:formId");
-router.get("/v1/audits/:auditId/forms/:formId/answers");
-router.post("/v1/audits/:auditId/forms/:formId/answers");
-router.get("/v1/audits/:auditId/reports");
+//router.get("/v1/audits/:auditId/users", new GetUsersByAuditController().handle);
+//router.get("/v1/audits/:auditId/forms");
+//router.get("/v1/audits/:auditId/forms/:formId");
+//router.get("/v1/audits/:auditId/forms/:formId/answers");
+//router.post("/v1/audits/:auditId/forms/:formId/answers");
+//router.get("/v1/audits/:auditId/reports");
 
 export default router;
