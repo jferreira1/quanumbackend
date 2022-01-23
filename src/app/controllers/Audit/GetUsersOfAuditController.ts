@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { GetAuditByIdService } from "../../services/Audit/GetAuditByIdService";
+import { GetUsersOfAuditService } from "../../services/Audit/GetUsersOfAuditService";
 
-export class GetAuditByIdController {
+export class GetUsersOfAuditController {
   async handle(req: Request, res: Response) {
     const { auditId } = req.params;
 
@@ -9,12 +9,10 @@ export class GetAuditByIdController {
       return res.sendStatus(400);
     }
 
-    const service = new GetAuditByIdService();
+    const service = new GetUsersOfAuditService();
     const response = await service.execute(auditId);
 
-    // TO-DO: Formatar response para o especificado
-    // TO-DO: Implementar autenticação
-
+    // TO-DO: formatar resposta no padrão especificado
     return res.json(response);
   }
 }
