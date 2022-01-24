@@ -14,6 +14,7 @@ import { DeleteAuditController } from "./app/controllers/Audit/DeleteAuditContro
 import { UpdateAuditController } from "./app/controllers/Audit/UpdateAuditController";
 import { GetAuditByIdController } from "./app/controllers/Audit/GetAuditByIdController";
 import { GetUsersOfAuditController } from "./app/controllers/Audit/GetUsersOfAuditController";
+import { GetFormsByAuditController } from "./app/controllers/Audit/GetFormsByAuditController";
 
 const router = Router();
 
@@ -49,7 +50,7 @@ router.get(
   authMiddleware,
   new GetUsersOfAuditController().handle
 );
-//router.get("/v1/audits/:auditId/forms");
+router.get("/v1/audits/:auditId/forms", new GetFormsByAuditController().handle);
 //router.get("/v1/audits/:auditId/forms/:formId");
 //router.get("/v1/audits/:auditId/forms/:formId/answers");
 //router.post("/v1/audits/:auditId/forms/:formId/answers");

@@ -1,5 +1,6 @@
 import { getRepository } from "typeorm";
 import Audit, { AuditType } from "../../entities/Audit";
+import { Form } from "../../entities/Form";
 
 type AuditRequest = {
   name_institution: string;
@@ -36,6 +37,8 @@ export class CreateAuditService {
       audit.users = auditors;
 
       // TO-DO: Vincular forms
+      const repoForms = getRepository(Form);
+      audit.forms = await repoForms.createQueryBuilder("forms").getMany();
 
       const auditResponse = repo.save(audit);
 
