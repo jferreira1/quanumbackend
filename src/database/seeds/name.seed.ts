@@ -1,139 +1,58 @@
-import { getRepository } from "typeorm";
-import { Language } from "../../app/entities/Language";
-
 export const NameSeed = [
   {
-    name: "GESTÃO",
-    form_id: 1,
-    language_id: 1,
+    name_pt: "GESTÃO",
+    name_en: "MANAGEMENT",
+  },
+  {
+    name_pt: "REGULAMENTAÇÃO DE PROTEÇÃO E SEGURANÇA RADIOLÓGICAS",
+    name_en: "RADIATION REGULATIONS AND SAFETY",
+  },
+  {
+    name_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+    name_en: "PATIENT RADIATION PROTECTION",
+  },
+  {
+    name_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+    name_en: "EVALUATION OF QUALITY SYSTEM",
+  },
+  {
+    name_pt: "CONTROLE DE QUALIDADE DOS EQUIPAMENTOS DE IMAGEM",
+    name_en: "QUALITY CONTROL OF EQUIPMENT",
+  },
+  {
+    name_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+    name_en: "COMPUTER SYSTEMS AND DATA HANDLING",
+  },
+  {
+    name_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+    name_en: "DIAGNOSTIC CLINICAL SERVICES",
+  },
+  {
+    name_pt: "AVALIAÇÃO DE PROCEDIMENTO DE CINTILOGRAFIA",
+    name_en: "ASSESSMENT OF IMAGING DIAGNOSTIC PROCEDURE",
+  },
+  {
+    name_pt: "TERAPIA COM RADIONUCLÍDEOS",
+    name_en: "RADIONUCLIDE THERAPY",
+  },
+  {
+    name_pt: "AVALIAÇÃO DAS TERAPIAS",
+    name_en: "ASSESSMENT OF THERAPY",
+  },
+  {
+    name_pt: "RADIOFARMÁCIA - NÍVEL 1",
+    name_en: "RADIOPHARMACY OPERATIONAL LEVEL 1",
+  },
+  {
+    name_pt: "RADIOFARMÁCIA - NÍVEL 2",
+    name_en: "RADIOPHARMACY OPERATIONAL LEVEL 2",
+  },
+  {
+    name_pt: "RADIOFARMÁCIA - NÍVEL 3",
+    name_en: "RADIOPHARMACY OPERATIONAL LEVEL 3",
+  },
+  {
+    name_pt: "HORMÔNIOS E MARCADORES TUMORAIS",
+    name_en: "HORMONES AND TUMOUR MARKERS",
   },
 ];
-
-export const NameSeedPortuguese = async () => {
-  const repo = getRepository("languages");
-  const portugueseLanguage: Language | unknown = await repo.findOne({
-    name: "portuguese",
-  });
-  let PORTUGUESE_ID = null;
-  if (portugueseLanguage instanceof Language) {
-    PORTUGUESE_ID = portugueseLanguage.id;
-  }
-
-  return [
-    {
-      name: "GESTÃO",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "REGULAMENTAÇÃO DE PROTEÇÃO E SEGURANÇA RADIOLÓGICAS",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "CONTROLE DE QUALIDADE DOS EQUIPAMENTOS DE IMAGEM",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "AVALIAÇÃO DE PROCEDIMENTO DE CINTILOGRAFIA",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "TERAPIA COM RADIONUCLÍDEOS",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "AVALIAÇÃO DAS TERAPIAS",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "RADIOFARMÁCIA - NÍVEL 1",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "RADIOFARMÁCIA - NÍVEL 2",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "RADIOFARMÁCIA - NÍVEL 3",
-      language_id: PORTUGUESE_ID,
-    },
-    {
-      name: "HORMÔNIOS E MARCADORES TUMORAIS",
-      language_id: PORTUGUESE_ID,
-    },
-  ];
-};
-
-// export const NameSeedEnglish = [
-//   {
-//     name: "MANAGEMENT",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "RADIATION REGULATIONS AND SAFETY",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "PATIENT RADIATION PROTECTION",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "EVALUATION OF QUALITY SYSTEM",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "QUALITY CONTROL OF EQUIPMENT",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "COMPUTER SYSTEMS AND DATA HANDLING",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "DIAGNOSTIC CLINICAL SERVICES",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "ASSESSMENT OF IMAGING DIAGNOSTIC PROCEDURE",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "RADIONUCLIDE THERAPY",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "ASSESSMENT OF THERAPY",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "RADIOPHARMACY OPERATIONAL LEVEL 1",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "RADIOPHARMACY OPERATIONAL LEVEL 2",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "RADIOPHARMACY OPERATIONAL LEVEL 3",
-//     language_id: ENGLISH_ID,
-//   },
-//   {
-//     name: "HORMONES AND TUMOUR MARKERS",
-//     language_id: ENGLISH_ID,
-//   },
-// ];

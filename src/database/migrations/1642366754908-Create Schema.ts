@@ -1,17 +1,11 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
-export class CreateSchema1642366483359 implements MigrationInterface {
-  name = "CreateSchema1642366483359";
+export class CreateSchema1642366754908 implements MigrationInterface {
+  name = "CreateSchema1642366754908";
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
       `CREATE TABLE "evidences" ("id" SERIAL NOT NULL, "link" character varying NOT NULL, CONSTRAINT "PK_bffc6fa8c23f9fd2e2a6d165d45" PRIMARY KEY ("id"))`
-    );
-    await queryRunner.query(
-      `CREATE TABLE "languages" ("id" SERIAL NOT NULL, "shortname" character varying(5) NOT NULL, "name" character varying NOT NULL, CONSTRAINT "PK_b517f827ca496b29f4d549c631d" PRIMARY KEY ("id"))`
-    );
-    await queryRunner.query(
-      `CREATE TABLE "evidences_placeholder" ("id" SERIAL NOT NULL, "placeholder" character varying NOT NULL, "question_id" integer, "language_id" integer, CONSTRAINT "REL_1b3bbc40bbf8b5dc71ec20d13d" UNIQUE ("language_id"), CONSTRAINT "PK_3eea888cc528bd1b14ad2446d99" PRIMARY KEY ("id"))`
     );
     await queryRunner.query(
       `CREATE TABLE "users" ("id" SERIAL NOT NULL, "email" character varying NOT NULL, "pw_hash" character varying NOT NULL, "firstname" character varying NOT NULL, "lastname" character varying NOT NULL, "occupation_role" character varying NOT NULL, "type_of" character varying NOT NULL, "avatar_url" character varying NOT NULL, CONSTRAINT "PK_a3ffb1c0c8416b9fc6f907b7433" PRIMARY KEY ("id"))`
@@ -23,19 +17,25 @@ export class CreateSchema1642366483359 implements MigrationInterface {
       `CREATE TABLE "forms" ("id" SERIAL NOT NULL, "form_number" character varying NOT NULL, CONSTRAINT "UQ_8f72f7868b2eaf6a6c2f015bfac" UNIQUE ("form_number"), CONSTRAINT "PK_ba062fd30b06814a60756f233da" PRIMARY KEY ("id"))`
     );
     await queryRunner.query(
-      `CREATE TABLE "questions_desc" ("id" SERIAL NOT NULL, "description" character varying NOT NULL, "question_id" integer, "language_id" integer, CONSTRAINT "REL_6291c6a64d04d42aaf44ad3a5e" UNIQUE ("language_id"), CONSTRAINT "PK_7c9f3f10c22b0544e632f3c7005" PRIMARY KEY ("id"))`
-    );
-    await queryRunner.query(
-      `CREATE TABLE "topics" ("id" SERIAL NOT NULL, "topic" character varying NOT NULL, "question_id" integer, "language_id" integer, CONSTRAINT "REL_118df244deb5f2cfde282c0518" UNIQUE ("language_id"), CONSTRAINT "PK_e4aa99a3fa60ec3a37d1fc4e853" PRIMARY KEY ("id"))`
-    );
-    await queryRunner.query(
-      `CREATE TABLE "questions" ("id" SERIAL NOT NULL, "form_id" integer, CONSTRAINT "PK_08a6d4b0f49ff300bf3a0ca60ac" PRIMARY KEY ("id"))`
+      `CREATE TABLE "questions" ("id" SERIAL NOT NULL, "question_number" character varying NOT NULL, "form_id" integer, CONSTRAINT "UQ_47e3af78a253db8d4bb38ed6b7c" UNIQUE ("question_number"), CONSTRAINT "PK_08a6d4b0f49ff300bf3a0ca60ac" PRIMARY KEY ("id"))`
     );
     await queryRunner.query(
       `CREATE TABLE "answers" ("id" SERIAL NOT NULL, "conformance_level" "public"."answers_conformance_level_enum" NOT NULL DEFAULT 'NA', "comment" text NOT NULL, "user_id" integer, "question_id" integer, CONSTRAINT "PK_9c32cec6c71e06da0254f2226c6" PRIMARY KEY ("id"))`
     );
     await queryRunner.query(
+      `CREATE TABLE "languages" ("id" SERIAL NOT NULL, "shortname" character varying(5) NOT NULL, "name" character varying NOT NULL, CONSTRAINT "PK_b517f827ca496b29f4d549c631d" PRIMARY KEY ("id"))`
+    );
+    await queryRunner.query(
+      `CREATE TABLE "evidences_placeholder" ("id" SERIAL NOT NULL, "placeholder" character varying NOT NULL, "question_id" integer, "language_id" integer, CONSTRAINT "REL_1b3bbc40bbf8b5dc71ec20d13d" UNIQUE ("language_id"), CONSTRAINT "PK_3eea888cc528bd1b14ad2446d99" PRIMARY KEY ("id"))`
+    );
+    await queryRunner.query(
       `CREATE TABLE "names" ("id" SERIAL NOT NULL, "name" character varying NOT NULL, "form_id" integer, "language_id" integer, CONSTRAINT "PK_d2e97a54ee33765c4d2ff2b8c79" PRIMARY KEY ("id"))`
+    );
+    await queryRunner.query(
+      `CREATE TABLE "questions_desc" ("id" SERIAL NOT NULL, "description" character varying NOT NULL, "question_id" integer, "language_id" integer, CONSTRAINT "REL_6291c6a64d04d42aaf44ad3a5e" UNIQUE ("language_id"), CONSTRAINT "PK_7c9f3f10c22b0544e632f3c7005" PRIMARY KEY ("id"))`
+    );
+    await queryRunner.query(
+      `CREATE TABLE "topics" ("id" SERIAL NOT NULL, "topic" character varying NOT NULL, "question_id" integer, "language_id" integer, CONSTRAINT "REL_118df244deb5f2cfde282c0518" UNIQUE ("language_id"), CONSTRAINT "PK_e4aa99a3fa60ec3a37d1fc4e853" PRIMARY KEY ("id"))`
     );
     await queryRunner.query(
       `CREATE TABLE "audits_users" ("user_id" integer NOT NULL, "audit_id" integer NOT NULL, CONSTRAINT "PK_e9c60a2b921d4305e3de3c3f04a" PRIMARY KEY ("user_id", "audit_id"))`
@@ -65,10 +65,25 @@ export class CreateSchema1642366483359 implements MigrationInterface {
       `CREATE INDEX "IDX_29dc896b87e5b713751dd08e57" ON "answers_evidences" ("evidence_id") `
     );
     await queryRunner.query(
+      `ALTER TABLE "questions" ADD CONSTRAINT "FK_a40e5497291ddbe799af622efa9" FOREIGN KEY ("form_id") REFERENCES "forms"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
+    );
+    await queryRunner.query(
+      `ALTER TABLE "answers" ADD CONSTRAINT "FK_f4cf663ebeca05b7a12f6a2cc97" FOREIGN KEY ("user_id") REFERENCES "users"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
+    );
+    await queryRunner.query(
+      `ALTER TABLE "answers" ADD CONSTRAINT "FK_677120094cf6d3f12df0b9dc5d3" FOREIGN KEY ("question_id") REFERENCES "questions"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
+    );
+    await queryRunner.query(
       `ALTER TABLE "evidences_placeholder" ADD CONSTRAINT "FK_47fb23f0fca1fcbc57299f49815" FOREIGN KEY ("question_id") REFERENCES "questions"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
     );
     await queryRunner.query(
       `ALTER TABLE "evidences_placeholder" ADD CONSTRAINT "FK_1b3bbc40bbf8b5dc71ec20d13d1" FOREIGN KEY ("language_id") REFERENCES "languages"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
+    );
+    await queryRunner.query(
+      `ALTER TABLE "names" ADD CONSTRAINT "FK_baf8e1e1099c088d5c5871f6278" FOREIGN KEY ("form_id") REFERENCES "forms"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
+    );
+    await queryRunner.query(
+      `ALTER TABLE "names" ADD CONSTRAINT "FK_62cfe100d7c2d279f528bb56805" FOREIGN KEY ("language_id") REFERENCES "languages"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
     );
     await queryRunner.query(
       `ALTER TABLE "questions_desc" ADD CONSTRAINT "FK_5768e64b5a08f894506b71c713a" FOREIGN KEY ("question_id") REFERENCES "questions"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
@@ -81,21 +96,6 @@ export class CreateSchema1642366483359 implements MigrationInterface {
     );
     await queryRunner.query(
       `ALTER TABLE "topics" ADD CONSTRAINT "FK_118df244deb5f2cfde282c05186" FOREIGN KEY ("language_id") REFERENCES "languages"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
-    );
-    await queryRunner.query(
-      `ALTER TABLE "questions" ADD CONSTRAINT "FK_a40e5497291ddbe799af622efa9" FOREIGN KEY ("form_id") REFERENCES "forms"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
-    );
-    await queryRunner.query(
-      `ALTER TABLE "answers" ADD CONSTRAINT "FK_f4cf663ebeca05b7a12f6a2cc97" FOREIGN KEY ("user_id") REFERENCES "users"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
-    );
-    await queryRunner.query(
-      `ALTER TABLE "answers" ADD CONSTRAINT "FK_677120094cf6d3f12df0b9dc5d3" FOREIGN KEY ("question_id") REFERENCES "questions"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
-    );
-    await queryRunner.query(
-      `ALTER TABLE "names" ADD CONSTRAINT "FK_baf8e1e1099c088d5c5871f6278" FOREIGN KEY ("form_id") REFERENCES "forms"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
-    );
-    await queryRunner.query(
-      `ALTER TABLE "names" ADD CONSTRAINT "FK_62cfe100d7c2d279f528bb56805" FOREIGN KEY ("language_id") REFERENCES "languages"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
     );
     await queryRunner.query(
       `ALTER TABLE "audits_users" ADD CONSTRAINT "FK_4372ad5c2512745dffc6a84f8f0" FOREIGN KEY ("user_id") REFERENCES "users"("id") ON DELETE CASCADE ON UPDATE CASCADE`
@@ -113,7 +113,7 @@ export class CreateSchema1642366483359 implements MigrationInterface {
       `ALTER TABLE "answers_evidences" ADD CONSTRAINT "FK_6212769db7311d1d7e27d4416f1" FOREIGN KEY ("answer_id") REFERENCES "answers"("id") ON DELETE CASCADE ON UPDATE CASCADE`
     );
     await queryRunner.query(
-      `ALTER TABLE "answers_evidences" ADD CONSTRAINT "FK_29dc896b87e5b713751dd08e572" FOREIGN KEY ("evidence_id") REFERENCES "evidences"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
+      `ALTER TABLE "answers_evidences" ADD CONSTRAINT "FK_29dc896b87e5b713751dd08e572" FOREIGN KEY ("evidence_id") REFERENCES "evidences"("id") ON DELETE CASCADE ON UPDATE CASCADE`
     );
   }
 
@@ -137,21 +137,6 @@ export class CreateSchema1642366483359 implements MigrationInterface {
       `ALTER TABLE "audits_users" DROP CONSTRAINT "FK_4372ad5c2512745dffc6a84f8f0"`
     );
     await queryRunner.query(
-      `ALTER TABLE "names" DROP CONSTRAINT "FK_62cfe100d7c2d279f528bb56805"`
-    );
-    await queryRunner.query(
-      `ALTER TABLE "names" DROP CONSTRAINT "FK_baf8e1e1099c088d5c5871f6278"`
-    );
-    await queryRunner.query(
-      `ALTER TABLE "answers" DROP CONSTRAINT "FK_677120094cf6d3f12df0b9dc5d3"`
-    );
-    await queryRunner.query(
-      `ALTER TABLE "answers" DROP CONSTRAINT "FK_f4cf663ebeca05b7a12f6a2cc97"`
-    );
-    await queryRunner.query(
-      `ALTER TABLE "questions" DROP CONSTRAINT "FK_a40e5497291ddbe799af622efa9"`
-    );
-    await queryRunner.query(
       `ALTER TABLE "topics" DROP CONSTRAINT "FK_118df244deb5f2cfde282c05186"`
     );
     await queryRunner.query(
@@ -164,10 +149,25 @@ export class CreateSchema1642366483359 implements MigrationInterface {
       `ALTER TABLE "questions_desc" DROP CONSTRAINT "FK_5768e64b5a08f894506b71c713a"`
     );
     await queryRunner.query(
+      `ALTER TABLE "names" DROP CONSTRAINT "FK_62cfe100d7c2d279f528bb56805"`
+    );
+    await queryRunner.query(
+      `ALTER TABLE "names" DROP CONSTRAINT "FK_baf8e1e1099c088d5c5871f6278"`
+    );
+    await queryRunner.query(
       `ALTER TABLE "evidences_placeholder" DROP CONSTRAINT "FK_1b3bbc40bbf8b5dc71ec20d13d1"`
     );
     await queryRunner.query(
       `ALTER TABLE "evidences_placeholder" DROP CONSTRAINT "FK_47fb23f0fca1fcbc57299f49815"`
+    );
+    await queryRunner.query(
+      `ALTER TABLE "answers" DROP CONSTRAINT "FK_677120094cf6d3f12df0b9dc5d3"`
+    );
+    await queryRunner.query(
+      `ALTER TABLE "answers" DROP CONSTRAINT "FK_f4cf663ebeca05b7a12f6a2cc97"`
+    );
+    await queryRunner.query(
+      `ALTER TABLE "questions" DROP CONSTRAINT "FK_a40e5497291ddbe799af622efa9"`
     );
     await queryRunner.query(
       `DROP INDEX "public"."IDX_29dc896b87e5b713751dd08e57"`
@@ -190,16 +190,16 @@ export class CreateSchema1642366483359 implements MigrationInterface {
       `DROP INDEX "public"."IDX_4372ad5c2512745dffc6a84f8f"`
     );
     await queryRunner.query(`DROP TABLE "audits_users"`);
-    await queryRunner.query(`DROP TABLE "names"`);
-    await queryRunner.query(`DROP TABLE "answers"`);
-    await queryRunner.query(`DROP TABLE "questions"`);
     await queryRunner.query(`DROP TABLE "topics"`);
     await queryRunner.query(`DROP TABLE "questions_desc"`);
+    await queryRunner.query(`DROP TABLE "names"`);
+    await queryRunner.query(`DROP TABLE "evidences_placeholder"`);
+    await queryRunner.query(`DROP TABLE "languages"`);
+    await queryRunner.query(`DROP TABLE "answers"`);
+    await queryRunner.query(`DROP TABLE "questions"`);
     await queryRunner.query(`DROP TABLE "forms"`);
     await queryRunner.query(`DROP TABLE "audits"`);
     await queryRunner.query(`DROP TABLE "users"`);
-    await queryRunner.query(`DROP TABLE "evidences_placeholder"`);
-    await queryRunner.query(`DROP TABLE "languages"`);
     await queryRunner.query(`DROP TABLE "evidences"`);
   }
 }

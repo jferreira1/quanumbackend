@@ -6,5 +6,7 @@ export class SeedLanguages1642366754918 implements MigrationInterface {
     await getRepository("languages").save(LanguageSeed);
   }
 
-  public async down(queryRunner: QueryRunner): Promise<void> {}
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    // do nothing
+  }
 }
