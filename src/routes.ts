@@ -38,8 +38,16 @@ router.get(
   new GetAuditsByUserController().handle
 );
 router.post("/v1/audits", authMiddleware, new CreateAuditController().handle);
-router.get("/v1/audits/:auditId", new GetAuditByIdController().handle);
-router.patch("/v1/audits/:auditId", new UpdateAuditController().handle);
+router.get(
+  "/v1/audits/:auditId",
+  authMiddleware,
+  new GetAuditByIdController().handle
+);
+router.patch(
+  "/v1/audits/:auditId",
+  authMiddleware,
+  new UpdateAuditController().handle
+);
 router.delete(
   "/v1/audits/:auditId",
   authMiddleware,
@@ -50,7 +58,11 @@ router.get(
   authMiddleware,
   new GetUsersOfAuditController().handle
 );
-router.get("/v1/audits/:auditId/forms", new GetFormsByAuditController().handle);
+router.get(
+  "/v1/audits/:auditId/forms",
+  authMiddleware,
+  new GetFormsByAuditController().handle
+);
 //router.get("/v1/audits/:auditId/forms/:formId");
 //router.get("/v1/audits/:auditId/forms/:formId/answers");
 //router.post("/v1/audits/:auditId/forms/:formId/answers");
