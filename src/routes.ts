@@ -16,6 +16,7 @@ import { GetAuditByIdController } from "./app/controllers/Audit/GetAuditByIdCont
 import { GetUsersOfAuditController } from "./app/controllers/Audit/GetUsersOfAuditController";
 import { GetFormsByAuditController } from "./app/controllers/Audit/GetFormsByAuditController";
 import { GetQuestionsByFormController } from "./app/controllers/Audit/GetQuestionsByFormController";
+import { CreateAnswersController } from "./app/controllers/Audit/CreateAnswersController";
 
 const router = Router();
 
@@ -71,7 +72,11 @@ router.get(
 );
 
 //router.get("/v1/audits/:auditId/forms/:formId/answers");
-//router.post("/v1/audits/:auditId/forms/:formId/answers");
+router.post(
+  "/v1/audits/:auditId/forms/:formId/answers",
+  authMiddleware,
+  new CreateAnswersController().handle
+);
 //router.get("/v1/audits/:auditId/reports");
 
 export default router;
