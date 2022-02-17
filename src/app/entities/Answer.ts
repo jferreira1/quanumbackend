@@ -1,12 +1,16 @@
 import {
   Column,
+  CreateDateColumn,
   Entity,
   JoinColumn,
   JoinTable,
   ManyToMany,
   ManyToOne,
+  OneToOne,
   PrimaryGeneratedColumn,
+  Unique,
 } from "typeorm";
+import Audit from "./Audit";
 import { Evidence } from "./Evidence";
 import { Question } from "./Question";
 import User from "./User";
@@ -21,9 +25,13 @@ export enum ConformanceLevels {
 }
 
 @Entity("answers")
+@Unique(["user", "audit", "question"])
 export class Answer {
   @PrimaryGeneratedColumn("increment")
   id: number;
+
+  @CreateDateColumn({ name: "created_at" })
+  createdAt: Date;
 
   @Column({
     name: "conformance_level",
@@ -41,6 +49,10 @@ export class Answer {
   @ManyToOne(() => User)
   @JoinColumn({ name: "user_id" })
   user: User;
+
+  @ManyToOne(() => Audit)
+  @JoinColumn({ name: "audit_id" })
+  audit: Audit;
 
   @ManyToOne(() => Question)
   @JoinColumn({ name: "question_id" })

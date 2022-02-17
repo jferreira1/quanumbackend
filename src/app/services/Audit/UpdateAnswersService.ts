@@ -1,18 +1,12 @@
 import { getRepository } from "typeorm";
-import { Answer, ConformanceLevels } from "../../entities/Answer";
+import { Answer } from "../../entities/Answer";
 import Audit from "../../entities/Audit";
-import { Evidence } from "../../entities/Evidence";
 import { Form } from "../../entities/Form";
 import { Question } from "../../entities/Question";
 import User from "../../entities/User";
+import { AnswerRequest } from "./CreateAnswersService";
 
-export interface AnswerRequest {
-  conformance_lvl: ConformanceLevels;
-  comment: string;
-  question_id: string;
-}
-
-export class CreateAnswersService {
+export class UpdateAnswersService {
   async execute(
     userId: string,
     auditId: string,
@@ -35,7 +29,13 @@ export class CreateAnswersService {
 
       let responseAnswers: Answer[] = [];
       for (let answerRequest of answersRequest) {
-        let answer = new Answer();
+        let answer = await getRepository(Answer).findOneOrFail({
+          where: {
+            user: userId,
+            question: answerRequest.question_id,
+            audit: auditId,
+          },
+        });
         answer.audit = auditFound[0];
         answer.comment = answerRequest.comment;
         answer.conformanceLevel = answerRequest.conformance_lvl;
