@@ -412,7 +412,7 @@
           }
         ],
         "requestBody": {
-          "description": "Auditoria a ser cadastrada.",
+          "description": "Auditoria a ser atualizada.",
           "content": {
             "application/json": {
               "schema": {
@@ -428,7 +428,7 @@
                         "items": {
                           "type": "object",
                           "properties": {
-                            "user_id": {
+                            "id": {
                               "type": "string"
                             }
                           }

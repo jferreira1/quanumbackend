@@ -22,7 +22,7 @@ export class EvidencePlaceholder {
   @JoinColumn({ name: "question_id" })
   question: Question;
 
-  @OneToOne(() => Language, { eager: true })
+  @ManyToOne(() => Language, { eager: true })
   @JoinColumn({ name: "language_id" })
   language: Language;
 }

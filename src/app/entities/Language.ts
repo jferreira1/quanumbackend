@@ -5,7 +5,7 @@ export class Language {
   @PrimaryGeneratedColumn("increment")
   id: number;
 
-  @Column({ length: 5 })
+  @Column({ length: 5, unique: true })
   shortname: string;
 
   @Column()

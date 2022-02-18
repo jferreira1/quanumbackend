@@ -39,7 +39,7 @@ export class GetQuestionsByFormService {
           language: string;
         }[];
       }[] = [];
-      questions.map(async (question) => {
+      const promises = questions.map(async (question) => {
         const questionDescription = await getRepository(
           QuestionDescription
         ).find({
@@ -76,7 +76,7 @@ export class GetQuestionsByFormService {
         };
         formQuestions.push(questionResponse);
       });
-
+      await Promise.all(promises);
       const formNames = await getRepository(Name).find({
         where: { form: form },
         relations: ["language"],

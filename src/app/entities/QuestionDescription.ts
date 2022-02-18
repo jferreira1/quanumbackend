@@ -22,7 +22,7 @@ export class QuestionDescription {
   @JoinColumn({ name: "question_id" })
   question: Question;
 
-  @OneToOne(() => Language)
+  @ManyToOne(() => Language)
   @JoinColumn({ name: "language_id" })
   language: Language;
 }

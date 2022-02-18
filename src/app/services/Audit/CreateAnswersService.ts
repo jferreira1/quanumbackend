@@ -46,6 +46,11 @@ export class CreateAnswersService {
         responseAnswers.push(await getRepository(Answer).save(answer));
       }
 
+      return await getRepository(Answer).find({
+        where: { audit: audit },
+        relations: ["question"],
+      });
+
       return responseAnswers;
     } catch (err) {
       if (err instanceof Error) {
