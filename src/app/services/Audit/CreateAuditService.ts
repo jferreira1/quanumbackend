@@ -39,7 +39,6 @@ export class CreateAuditService {
 
       const repoForms = getRepository(Form);
       audit.forms = await repoForms.createQueryBuilder("forms").getMany();
-      console.log(audit);
       const auditResponse = repo.save(audit);
 
       return auditResponse;
