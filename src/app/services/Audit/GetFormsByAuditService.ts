@@ -47,9 +47,7 @@ export class GetFormsByAuditService {
 
       return formResponse;
     } catch (err) {
-      if (err instanceof Error) {
-        return err.message;
-      }
+      throw err;
     }
   }
 }

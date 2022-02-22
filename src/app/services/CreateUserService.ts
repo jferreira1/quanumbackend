@@ -11,16 +11,6 @@ type UserRequest = {
   avatar_url: string;
 };
 
-type UserResponse = {
-  email: string;
-  password?: string;
-  firstname: string;
-  lastname: string;
-  occupation_role: string;
-  type: string;
-  avatar_url: string;
-};
-
 export class CreateUserService {
   async execute({
     email,
@@ -30,28 +20,31 @@ export class CreateUserService {
     occupation_role,
     type,
     avatar_url,
-  }: UserRequest): Promise<UserResponse | Error> {
-    const repo = getRepository(User);
+  }: UserRequest) {
+    try {
+      const repo = getRepository(User);
 
-    if (await repo.findOne({ email })) {
-      return new Error("Email already registered");
+      if (await repo.findOne({ email })) {
+        throw new Error("Email already registered");
+      }
+
+      let user = repo.create({
+        email,
+        password,
+        firstname,
+        lastname,
+        occupation_role,
+        type,
+        avatar_url,
+      });
+
+      user = await repo.save(user);
+
+      return user;
+    } catch (err) {
+      if (err instanceof Error) {
+        throw err;
+      }
     }
-
-    const user = repo.create({
-      email,
-      password,
-      firstname,
-      lastname,
-      occupation_role,
-      type,
-      avatar_url,
-    });
-
-    await repo.save(user);
-
-    const userResponse: UserResponse = user;
-    delete userResponse.password;
-
-    return userResponse;
   }
 }

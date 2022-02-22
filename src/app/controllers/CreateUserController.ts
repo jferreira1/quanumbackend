@@ -1,33 +1,53 @@
 import { Request, Response } from "express";
+import ResponseFormat from "../interfaces/ResponseFormat";
 import { CreateUserService } from "../services/CreateUserService";
 
 export class CreateUserController {
   async handle(req: Request, res: Response) {
-    const {
-      email,
-      password,
-      firstname,
-      lastname,
-      occupation_role,
-      type,
-      avatar_url,
-    } = req.body;
+    let response: ResponseFormat = {
+      success: false,
+      data: null,
+      message: "",
+    };
 
-    const service = new CreateUserService();
-    const result = await service.execute({
-      email,
-      password,
-      firstname,
-      lastname,
-      occupation_role,
-      type,
-      avatar_url,
-    });
+    try {
+      const {
+        email,
+        password,
+        firstname,
+        lastname,
+        occupation_role,
+        type,
+        avatar_url,
+      } = req.body;
 
-    if (result instanceof Error) {
-      return res.status(409).json(result.message);
+      const service = new CreateUserService();
+      const result = await service.execute({
+        email,
+        password,
+        firstname,
+        lastname,
+        occupation_role,
+        type,
+        avatar_url,
+      });
+
+      if (result instanceof Error) {
+        throw result;
+      }
+
+      response = {
+        success: true,
+        data: result,
+        message: "O usuário foi registrado com sucesso!",
+      };
+
+      return res.json(response);
+    } catch (err) {
+      if (err instanceof Error) {
+        response = { success: false, data: null, message: err.message };
+        return res.json(response);
+      }
     }
-
-    return res.json(result);
   }
 }

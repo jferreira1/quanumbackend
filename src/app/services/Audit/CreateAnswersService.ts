@@ -20,9 +20,8 @@ export class CreateAnswersService {
   ) {
     try {
       const audit = await getRepository(Audit).findOneOrFail(auditId);
-      if (!audit) {
-        return new Error("Audit of the given 'id' does not exists");
-      }
+      if (!audit) throw new Error("Audit of the given 'id' does not exists");
+
       const form = await getRepository(Form).findOneOrFail({
         where: { id: formId },
         relations: ["audit"],
@@ -46,18 +45,14 @@ export class CreateAnswersService {
         responseAnswers.push(await getRepository(Answer).save(answer));
       }
 
-      return await getRepository(Answer).find({
+      responseAnswers = await getRepository(Answer).find({
         where: { audit: audit },
         relations: ["question"],
       });
 
       return responseAnswers;
     } catch (err) {
-      if (err instanceof Error) {
-        console.log(err.message);
-      } else {
-        console.log(err);
-      }
+      throw err;
     }
   }
 }

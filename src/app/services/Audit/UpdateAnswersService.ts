@@ -15,18 +15,14 @@ export class UpdateAnswersService {
   ) {
     try {
       const audit = await getRepository(Audit).findOneOrFail(auditId);
-      if (!audit) {
-        return new Error("Audit of the given 'id' does not exists");
-      }
+      if (!audit) throw new Error("Audit of the given 'id' does not exists");
       const form = await getRepository(Form).findOneOrFail({
         where: { id: formId },
         relations: ["audit"],
       });
-
       const auditFound = form.audit.filter((formAudit) => {
         return formAudit.id === audit.id;
       });
-
       let responseAnswers: Answer[] = [];
       for (let answerRequest of answersRequest) {
         let answer = await getRepository(Answer).findOneOrFail({
@@ -43,17 +39,11 @@ export class UpdateAnswersService {
           answerRequest.question_id
         );
         answer.user = await getRepository(User).findOneOrFail(userId);
-
         responseAnswers.push(await getRepository(Answer).save(answer));
       }
-
       return responseAnswers;
     } catch (err) {
-      if (err instanceof Error) {
-        console.log(err.message);
-      } else {
-        console.log(err);
-      }
+      throw err;
     }
   }
 }

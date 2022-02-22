@@ -1,5 +1,6 @@
 import { getRepository } from "typeorm";
 import Audit, { AuditType } from "../../entities/Audit";
+import ResponseFormat from "../../interfaces/ResponseFormat";
 
 interface AuditUpdateRequest {
   name_institution?: string;
@@ -16,11 +17,8 @@ export class UpdateAuditService {
   async execute(auditId: string, auditUpdateRequest: AuditUpdateRequest) {
     try {
       const repo = getRepository(Audit);
-
       let audit = await repo.findOne(auditId);
-      if (!audit) {
-        return new Error("Audit does not exists.");
-      }
+      if (!audit) throw new Error("Audit does not exists.");
 
       audit.id = Number(auditId);
       audit.nameInstitution =
@@ -41,7 +39,7 @@ export class UpdateAuditService {
 
       return auditUpdated;
     } catch (err) {
-      return new Error("Status 500");
+      throw err;
     }
   }
 }

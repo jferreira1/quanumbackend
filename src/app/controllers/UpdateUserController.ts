@@ -1,24 +1,33 @@
 import { Request, Response } from "express";
+import ResponseFormat from "../interfaces/ResponseFormat";
 import { UpdateUserService } from "../services/UpdateUserService";
 
 export class UpdateUserController {
   async handle(req: Request, res: Response) {
-    const { userId } = req.params;
-    if (!userId) {
-      return res.sendStatus(400);
-    }
-
+    let response: ResponseFormat = {
+      success: false,
+      data: null,
+      message: "",
+    };
     try {
-      const service = new UpdateUserService();
-      const response = await service.execute(userId, req.body);
+      const { userId } = req.params;
+      if (!userId) throw new Error('"user_id" was not provided.');
 
-      if (response instanceof Error) {
-        return res.status(400).json(response.message);
-      }
+      const service = new UpdateUserService();
+      const userUpdated = await service.execute(userId, req.body);
+
+      response = {
+        success: true,
+        data: userUpdated,
+        message: "O usuário foi atualizado com sucesso!",
+      };
 
       return res.json(response);
     } catch (err) {
-      return res.sendStatus(500);
+      if (err instanceof Error) {
+        response.message = err.message;
+        return res.json(response);
+      }
     }
   }
 }

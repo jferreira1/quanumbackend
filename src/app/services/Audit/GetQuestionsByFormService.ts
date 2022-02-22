@@ -11,17 +11,12 @@ export class GetQuestionsByFormService {
     try {
       const repoAudit = getRepository(Audit);
       const audit = await repoAudit.findOneOrFail(auditId);
-      if (!audit) {
-        return new Error('Audit of the given "id" does not exists');
-      }
+      if (!audit) throw new Error('Audit of the given "id" does not exists');
 
       const form = audit.forms.find((form) => {
         return String(form.id) === formId;
       });
-
-      if (!form) {
-        return new Error('Form of the given "id" does not exists');
-      }
+      if (!form) throw new Error('Form of the given "id" does not exists');
 
       const repoQuestions = getRepository(Question);
       const questions = await repoQuestions.find({
@@ -91,9 +86,7 @@ export class GetQuestionsByFormService {
 
       return response;
     } catch (err) {
-      if (err instanceof Error) {
-        return err.message;
-      }
+      throw err;
     }
   }
 }

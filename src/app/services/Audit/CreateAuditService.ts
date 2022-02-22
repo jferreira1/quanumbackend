@@ -23,7 +23,7 @@ export class CreateAuditService {
     phone_number,
     audit_type,
     auditors,
-  }: AuditRequest): Promise<Audit | undefined> {
+  }: AuditRequest) {
     try {
       const repo = getRepository("audits");
       const audit = new Audit();
@@ -33,20 +33,18 @@ export class CreateAuditService {
       audit.countryInstitution = country;
       audit.emailInstitution = main_contact;
       audit.phoneInstitution = phone_number;
-      audit.type = AuditType.INTERNAL;
+      if (audit_type === AuditType.INTERNAL) audit.type = AuditType.INTERNAL;
+      if (audit_type === AuditType.EXTERNAL) audit.type = AuditType.EXTERNAL;
       audit.users = auditors;
 
-      // TO-DO: Vincular forms
       const repoForms = getRepository(Form);
       audit.forms = await repoForms.createQueryBuilder("forms").getMany();
-
+      console.log(audit);
       const auditResponse = repo.save(audit);
 
       return auditResponse;
     } catch (err) {
-      if (err instanceof Error) {
-        console.log(err.message);
-      }
+      throw err;
     }
   }
 }

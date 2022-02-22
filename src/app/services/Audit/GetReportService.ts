@@ -23,12 +23,10 @@ export class GetReportService {
   async execute(auditId: string) {
     try {
       const auditFound = await getRepository(Audit).findOneOrFail(auditId);
-      if (!auditFound) {
-        return new Error("Audit of given 'id' is not registered.");
-      }
+      if (!auditFound)
+        throw new Error("Audit of given 'id' is not registered.");
 
       let formsResponse: FormResponse[] = [];
-
       let totalApplicables = 0;
       let totalTotalScore = 0;
       let totalPercentageScore = "";
@@ -102,9 +100,7 @@ export class GetReportService {
 
       return reportResponse;
     } catch (err) {
-      if (err instanceof Error) {
-        return err.message;
-      }
+      throw err;
     }
   }
 }

@@ -1,20 +1,17 @@
 import { getRepository } from "typeorm";
+import Audit from "../../entities/Audit";
 
 export class GetAuditByIdService {
   async execute(auditId: string) {
     try {
-      const repo = getRepository("audits");
-      const audit = await repo.findOne(auditId);
+      const repo = getRepository(Audit);
+      const audit = await repo.findOneOrFail(auditId);
 
-      if (!audit) {
-        return new Error("Audit are not registered");
-      }
+      if (!audit) throw new Error("Audit are not registered");
 
       return audit;
     } catch (err) {
-      if (err instanceof Error) {
-        return err.message;
-      }
+      throw err;
     }
   }
 }
