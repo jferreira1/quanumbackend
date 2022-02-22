@@ -1,5 +1,5 @@
 import { getRepository } from "typeorm";
-import User from "../entities/User";
+import User, { UserType } from "../entities/User";
 
 type UserRequest = {
   email: string;
@@ -7,7 +7,7 @@ type UserRequest = {
   firstname: string;
   lastname: string;
   occupation_role: string;
-  type: string;
+  user_type: string;
   avatar_url: string;
 };
 
@@ -18,29 +18,27 @@ export class CreateUserService {
     firstname,
     lastname,
     occupation_role,
-    type,
+    user_type,
     avatar_url,
   }: UserRequest) {
     try {
       const repo = getRepository(User);
 
-      if (await repo.findOne({ email })) {
+      if (await repo.findOne({ email }))
         throw new Error("Email already registered");
-      }
 
-      let user = repo.create({
-        email,
-        password,
-        firstname,
-        lastname,
-        occupation_role,
-        type,
-        avatar_url,
-      });
+      const user = new User();
+      user.email = email;
+      user.password = password;
+      user.firstname = firstname;
+      user.lastname = lastname;
+      user.occupation_role = occupation_role;
+      if (user_type === UserType.AUDITOR) user.type = UserType.AUDITOR;
+      if (user_type === UserType.MANAGER) user.type = UserType.MANAGER;
+      user.avatar_url = avatar_url;
 
-      user = await repo.save(user);
-
-      return user;
+      const userResponse = await repo.save(user);
+      return userResponse;
     } catch (err) {
       if (err instanceof Error) {
         throw err;

@@ -864,7 +864,7 @@
           "occupation_role": {
             "type": "string"
           },
-          "type": {
+          "user_type": {
             "type": "string",
             "default": "auditor",
             "enum": ["manager", "auditor"]

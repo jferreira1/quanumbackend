@@ -13,6 +13,11 @@ import bcrypt from "bcryptjs";
 import Audit from "./Audit";
 import { Answer } from "./Answer";
 
+export enum UserType {
+  AUDITOR = "auditor",
+  MANAGER = "manager",
+}
+
 @Entity("users")
 export class User {
   @PrimaryGeneratedColumn("increment")
@@ -33,8 +38,12 @@ export class User {
   @Column()
   occupation_role: string;
 
-  @Column({ name: "type_of" })
-  type: string;
+  @Column({
+    type: "enum",
+    enum: UserType,
+    default: UserType.AUDITOR,
+  })
+  type: UserType;
 
   @Column()
   avatar_url: string;
