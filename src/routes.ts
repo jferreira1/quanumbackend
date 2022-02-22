@@ -1,8 +1,6 @@
 import { Router } from "express";
 
 import authMiddleware from "./app/middlewares/authMiddleware";
-
-import UserController from "./app/controllers/UserController";
 import AuthController from "./app/controllers/AuthController";
 import { CreateUserController } from "./app/controllers/CreateUserController";
 import { GetAllUsersController } from "./app/controllers/GetAllUsersController";
@@ -20,13 +18,14 @@ import { CreateAnswersController } from "./app/controllers/Audit/CreateAnswersCo
 import { UpdateAnswersController } from "./app/controllers/Audit/UpdateAnswersController";
 import { GetAnswersController } from "./app/controllers/Audit/GetAnswersController";
 import { GetReportController } from "./app/controllers/Audit/GetReportController";
+import { GetUserController } from "./app/controllers/GetUserController";
 
 const router = Router();
 
 router.post("/v1/auth", AuthController.authenticate);
 router.post("/v1/users", new CreateUserController().handle);
 router.get("/v1/users", authMiddleware, new GetAllUsersController().handle);
-router.get("/v1/users/:userId", authMiddleware, UserController.index);
+router.get("/v1/users/:userId", authMiddleware, new GetUserController().index);
 router.delete(
   "/v1/users/:userId",
   authMiddleware,
