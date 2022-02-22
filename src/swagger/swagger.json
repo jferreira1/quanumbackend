@@ -925,9 +925,6 @@
           "audit_id": {
             "type": "integer"
           },
-          "created_at": {
-            "type": "string"
-          },
           "report": {
             "type": "object",
             "properties": {
@@ -1004,9 +1001,6 @@
             "enum": ["0", "1", "2", "3", "4"]
           },
           "comment": {
-            "type": "string"
-          },
-          "created_at": {
             "type": "string"
           },
           "evidences": {
