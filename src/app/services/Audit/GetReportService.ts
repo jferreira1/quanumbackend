@@ -50,8 +50,9 @@ export class GetReportService {
             if (answer.conformanceLevel !== ConformanceLevels.NA) {
               applicables += 1;
               totalScore += Number(answer.conformanceLevel);
-            } else {
-              nonConformancies += 1;
+              if (Number(answer.conformanceLevel) <= 2) {
+                nonConformancies += 1;
+              }
             }
           }
         }
@@ -93,7 +94,7 @@ export class GetReportService {
         non_conformancies: totalNonConformancies,
       };
 
-      let reportResponse = {
+      let reportResponse: ReportResponse = {
         forms: formsResponse,
         total: totalResponse,
       };
