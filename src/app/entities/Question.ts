@@ -2,15 +2,11 @@ import {
   Column,
   Entity,
   JoinColumn,
+  ManyToMany,
   ManyToOne,
-  OneToMany,
   PrimaryGeneratedColumn,
 } from "typeorm";
-import { Answer } from "./Answer";
-import { EvidencePlaceholder } from "./EvidencePlaceholder";
 import { Form } from "./Form";
-import { QuestionDescription } from "./QuestionDescription";
-import { Topic } from "./Topic";
 
 @Entity("questions")
 export class Question {

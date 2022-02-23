@@ -11,7 +11,7 @@ export class GetAnswersService {
 
       const answers = await getRepository(Answer).find({
         where: { audit: auditId },
-        relations: ["question"],
+        relations: ["question", "evidences"],
       });
 
       let answersResponse = [];
@@ -26,6 +26,7 @@ export class GetAnswersService {
           answersResponse.push(answer);
         }
       }
+
       return answersResponse;
     } catch (err) {
       throw err;

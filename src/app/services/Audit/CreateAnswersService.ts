@@ -1,6 +1,7 @@
 import { getRepository } from "typeorm";
 import { Answer, ConformanceLevels } from "../../entities/Answer";
 import Audit from "../../entities/Audit";
+import { Evidence } from "../../entities/Evidence";
 import { Form } from "../../entities/Form";
 import { Question } from "../../entities/Question";
 import User from "../../entities/User";
@@ -9,6 +10,7 @@ export interface AnswerRequest {
   conformance_lvl: ConformanceLevels;
   comment: string;
   question_id: string;
+  evidences: string[];
 }
 
 export class CreateAnswersService {
@@ -37,6 +39,15 @@ export class CreateAnswersService {
         answer.audit = auditFound[0];
         answer.comment = answerRequest.comment;
         answer.conformanceLevel = answerRequest.conformance_lvl;
+        const promises = answerRequest.evidences.map(async (link) => {
+          let evidenceObject = new Evidence();
+          evidenceObject.link = link;
+          evidenceObject.answers = [answer];
+          evidenceObject = await getRepository(Evidence).save(evidenceObject);
+          console.log(evidenceObject);
+          answer.evidences = [evidenceObject];
+        });
+        await Promise.all(promises);
         answer.question = await getRepository(Question).findOneOrFail(
           answerRequest.question_id
         );
