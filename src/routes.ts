@@ -29,7 +29,6 @@ router.post("/v1/users", new CreateUserController().handle);
 router.get("/v1/users", authMiddleware, new GetAllUsersController().handle);
 router.get(
   "/v1/users/types",
-  authMiddleware,
   new GetUsersTypesController().handle
 );
 router.get("/v1/users/:userId", authMiddleware, new GetUserController().index);
