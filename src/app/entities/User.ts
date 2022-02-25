@@ -45,7 +45,7 @@ export class User {
   })
   type: UserType;
 
-  @Column()
+  @Column({ nullable: true })
   avatar_url: string;
 
   //Relations

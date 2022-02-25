@@ -25,12 +25,9 @@ import { GetUsersTypesController } from "./app/controllers/GetUsersTypesControll
 const router = Router();
 
 router.post("/v1/auth", AuthController.authenticate);
-router.post("/v1/users", new CreateUserController().handle);
+router.post("/v1/register", new CreateUserController().handle);
 router.get("/v1/users", authMiddleware, new GetAllUsersController().handle);
-router.get(
-  "/v1/users/types",
-  new GetUsersTypesController().handle
-);
+router.get("/v1/users/types", new GetUsersTypesController().handle);
 router.get("/v1/users/:userId", authMiddleware, new GetUserController().index);
 router.delete(
   "/v1/users/:userId",

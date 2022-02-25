@@ -8,7 +8,7 @@ type UserRequest = {
   lastname: string;
   occupation_role: string;
   user_type: string;
-  avatar_url: string;
+  avatar_url?: string;
 };
 
 export class CreateUserService {
@@ -35,7 +35,7 @@ export class CreateUserService {
       user.occupation_role = occupation_role;
       if (user_type === UserType.AUDITOR) user.type = UserType.AUDITOR;
       if (user_type === UserType.MANAGER) user.type = UserType.MANAGER;
-      user.avatar_url = avatar_url;
+      if (avatar_url) user.avatar_url = avatar_url;
 
       const userResponse = await repo.save(user);
       return userResponse;
