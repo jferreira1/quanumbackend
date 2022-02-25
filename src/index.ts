@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://quanum-backend.herokuapp.com",
+    origin: "localhost:8080",
     credentials: true,
   })
 );
