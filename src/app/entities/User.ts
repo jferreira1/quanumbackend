@@ -3,7 +3,6 @@ import {
   PrimaryGeneratedColumn,
   Column,
   BeforeInsert,
-  BeforeUpdate,
   JoinTable,
   ManyToMany,
   OneToMany,

@@ -22,7 +22,7 @@ export class CreateUserController {
       } = req.body;
 
       const service = new CreateUserService();
-      const result = await service.execute({
+      const user = await service.execute({
         email,
         password,
         firstname,
@@ -32,13 +32,13 @@ export class CreateUserController {
         avatar_url,
       });
 
-      if (result instanceof Error) {
-        throw result;
+      if (user instanceof Error) {
+        throw user;
       }
 
       response = {
         success: true,
-        data: result,
+        data: user,
         message: "O usuário foi registrado com sucesso!",
       };
 

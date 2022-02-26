@@ -122,7 +122,10 @@
             }
           }
         }
-      },
+      }
+    },
+    "/register": {
+      "description": "User register",
       "post": {
         "summary": "Cadastra um novo usuário",
         "tags": ["Users"],

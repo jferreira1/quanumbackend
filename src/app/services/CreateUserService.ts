@@ -11,6 +11,16 @@ type UserRequest = {
   avatar_url?: string;
 };
 
+type UserResponse = {
+  id: string;
+  email: string;
+  firstname: string;
+  lastname: string;
+  occupation_role: string;
+  user_type: string;
+  avatar_url?: string;
+};
+
 export class CreateUserService {
   async execute({
     email,
@@ -27,7 +37,7 @@ export class CreateUserService {
       if (await repo.findOne({ email }))
         throw new Error("Email already registered");
 
-      const user = new User();
+      let user = new User();
       user.email = email;
       user.password = password;
       user.firstname = firstname;
@@ -37,7 +47,16 @@ export class CreateUserService {
       if (user_type === UserType.MANAGER) user.type = UserType.MANAGER;
       if (avatar_url) user.avatar_url = avatar_url;
 
-      const userResponse = await repo.save(user);
+      user = await repo.save(user);
+      const userResponse: UserResponse = {
+        id: String(user.id),
+        email: user.email,
+        firstname: user.firstname,
+        lastname: user.lastname,
+        avatar_url: user.avatar_url,
+        occupation_role: user.occupation_role,
+        user_type: user.type,
+      };
       return userResponse;
     } catch (err) {
       if (err instanceof Error) {
