@@ -55,6 +55,16 @@ class AuthController {
       }
     }
   }
+
+  async logout(req: Request, res: Response) {
+    let response: ResponseFormat = { data: null, success: false, message: "" };
+    try {
+    } catch (err) {
+      if (err instanceof Error) response.message = err.message;
+    } finally {
+      return res.json(response);
+    }
+  }
 }
 
 export default new AuthController();

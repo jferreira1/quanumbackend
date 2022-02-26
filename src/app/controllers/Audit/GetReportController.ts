@@ -13,7 +13,7 @@ export class GetReportController {
       const { auditId } = req.params;
       if (!auditId) throw new Error('"audit_id" was not provided.');
       const service = new GetReportService();
-      const report = await service.execute(auditId);
+      const report = await service.getFormsReports(auditId);
       response = {
         success: true,
         data: report,

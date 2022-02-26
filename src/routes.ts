@@ -25,6 +25,7 @@ import { GetUsersTypesController } from "./app/controllers/GetUsersTypesControll
 const router = Router();
 
 router.post("/v1/auth", AuthController.authenticate);
+router.post("/v1/logout", authMiddleware, AuthController.logout);
 router.post("/v1/register", new CreateUserController().handle);
 router.get("/v1/users", authMiddleware, new GetAllUsersController().handle);
 router.get("/v1/users/types", new GetUsersTypesController().handle);

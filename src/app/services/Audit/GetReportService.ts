@@ -13,14 +13,21 @@ interface FormResponse {
 interface ReportResponse {
   forms: FormResponse[];
   total: {
+    score: number;
+    scoreMax: number;
     applicables: number;
-    total_score: number;
-    percentage_score: string;
-    non_conformancies: number;
+    scoreCriticalLimit: number;
+    percentageScore: string;
+    nonConformancies: number;
   };
 }
 export class GetReportService {
-  async execute(auditId: string) {
+  score: number;
+  scoreMax: number;
+  scoreCriticalLimit: number;
+  nonConformancies: number;
+
+  async getFormsReports(auditId: string) {
     try {
       const auditFound = await getRepository(Audit).findOneOrFail(auditId);
       if (!auditFound)
@@ -88,11 +95,18 @@ export class GetReportService {
         "%";
 
       let totalResponse = {
+        score: totalTotalScore,
+        scoreMax: totalApplicables * 4,
         applicables: totalApplicables,
-        total_score: totalTotalScore,
-        percentage_score: totalPercentageScore,
-        non_conformancies: totalNonConformancies,
+        scoreCriticalLimit: totalApplicables * 2,
+        percentageScore: totalPercentageScore,
+        nonConformancies: totalNonConformancies,
       };
+
+      this.score = totalTotalScore;
+      this.scoreMax = totalApplicables * 4;
+      this.scoreCriticalLimit = totalApplicables * 2;
+      this.nonConformancies = totalNonConformancies;
 
       let reportResponse: ReportResponse = {
         forms: formsResponse,

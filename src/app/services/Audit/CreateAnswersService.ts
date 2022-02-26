@@ -44,7 +44,6 @@ export class CreateAnswersService {
           evidenceObject.link = link;
           evidenceObject.answers = [answer];
           evidenceObject = await getRepository(Evidence).save(evidenceObject);
-          console.log(evidenceObject);
           answer.evidences = [evidenceObject];
         });
         await Promise.all(promises);

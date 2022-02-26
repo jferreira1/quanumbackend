@@ -1,5 +1,24 @@
 import { getRepository } from "typeorm";
+import Audit, { AuditType } from "../../entities/Audit";
 import User from "../../entities/User";
+import ResponseFormat from "../../interfaces/ResponseFormat";
+import { GetReportService } from "./GetReportService";
+
+type AuditResponse = {
+  id: number;
+  nameInstitution: string;
+  emailInstitution: string;
+  phoneInstitution: string;
+  countryInstitution: string;
+  cityInstitution: string;
+  addressInstitution: string;
+  type: AuditType;
+  createdAt: Date;
+  score: number;
+  score_max: number;
+  score_critical_limit: number;
+  non_conformancies: number;
+};
 
 export class GetAuditsByUserService {
   async execute(userId: string): Promise<any> {
@@ -10,16 +29,24 @@ export class GetAuditsByUserService {
         .relation(User, "audits")
         .of(userId)
         .loadMany();
+      let auditsResponse: AuditResponse[] = [];
 
-      // TO-DO: adicionar scores
-      //
-      //
-
-      return audits;
+      const promise = audits.map(async (audit: Audit) => {
+        const report = new GetReportService();
+        await report.getFormsReports(String(audit.id));
+        let auditResponse: AuditResponse = {
+          ...audit,
+          score: report.score,
+          score_max: report.scoreMax,
+          score_critical_limit: report.scoreCriticalLimit,
+          non_conformancies: report.nonConformancies,
+        };
+        auditsResponse.push(auditResponse);
+      });
+      await Promise.all(promise);
+      return auditsResponse;
     } catch (err) {
-      if (err instanceof Error) {
-        console.log(err.message);
-      }
+      throw err;
     }
   }
 }
