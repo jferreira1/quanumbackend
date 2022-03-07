@@ -985,16 +985,275 @@ export const QuestionSeed = [
       {
         question_number: "4.1",
         descriptions: {
-          description_pt: "",
-          description_en: "",
+          description_pt:
+            "Existem indicadores definidos para o SMN (incluindo: tempo entre a solicitação e o exame, classificado como urgente e de rotina; tempo entre o estudo e o laudo; existência e extensão das listas de espera; repetições de exames)?",
+          description_en:
+            "Are indicators defined for the NM Service (including: time between referral and study, classified as urgent and routine; time between study and report;  existence and length of waiting lists; repeated examinations)",
         },
         topics: {
-          topic_pt: "",
-          topic_en: "",
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
-          placeholder_en: "",
+          placeholder_pt: "Verificar os objetivos e padrões estabelecidos.",
+          placeholder_en: "Check the established objectives and standards.",
+        },
+      },
+      {
+        question_number: "4.2",
+        descriptions: {
+          description_pt:
+            "O pessoal envolvido (por exemplo, chefe do departamento, supervisor técnico, comitê de qualidade) realiza um monitoramento e revisão regular dos indicadores definidos acima?",
+          description_en:
+            "Is there a regular monitoring by involved personnel (e.g. Head of Department, Chief Technologist, Quality Committee) and planned review of the indicators defined as above?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos e exemplos dos critérios usados para aceitabilidade.",
+          placeholder_en:
+            "Check the procedures and examples of the criteria used for acceptability.",
+        },
+      },
+      {
+        question_number: "4.3",
+        descriptions: {
+          description_pt:
+            "O serviço passa regularmente por auditorias internas (por exemplo, anualmente) por membros independentes da equipe (além dos responsáveis pelo monitoramento)? Existe um acompanhamento documentado das lições aprendidas?",
+          description_en:
+            "Is the service regularly internally audited (e.g. annually) by independent members of the staff (other than those in charge of the monitoring) ? Is there a documented follow up of lessons learned?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os registros e relatórios de auditoria / Verificar os procedimentos de auditoria.",
+          placeholder_en:
+            "Check the audit records and reports / Check the audit procedures.",
+        },
+      },
+      {
+        question_number: "4.4",
+        descriptions: {
+          description_pt:
+            "Existe um sistema de avaliação de satisfação (paciente, médicos solicitantes e outras partes interessadas)?",
+          description_en:
+            "Is there a system to assess satisfaction (patient, referring physicians/other stakeholders)?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos de avaliação da satisfação / Verificar os registros.",
+          placeholder_en:
+            "Check the procedures for assessing satisfaction / Check the records.",
+        },
+      },
+      {
+        question_number: "4.5",
+        descriptions: {
+          description_pt:
+            "Existe um POP para registrar e lidar com não conformidades e desvios?",
+          description_en:
+            "Is there an SOP for recording and handling of non-conformances and deviations?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar o POP / Verificar os registros / Verificar a lista de correções / Planos de prevenção.",
+          placeholder_en:
+            "Check the SOP / Check the records / Check the list of corrections/prevention plans.",
+        },
+      },
+      {
+        question_number: "4.6",
+        descriptions: {
+          description_pt:
+            "Existe um POP para ações preventivas e corretivas, direcionado à melhoria da qualidade e diminuição de risco?",
+          description_en:
+            "Is there a SOP for preventive and corrective actions, aimed to quality improvement and risk reduction?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos que descrevem o mecanismo para garantir melhorias de qualidade.",
+          placeholder_en:
+            "Check the procedures describing the mechanism to ensure quality improvements.",
+        },
+      },
+      {
+        question_number: "4.7",
+        descriptions: {
+          description_pt:
+            "Todos os equipamentos de diagnóstico são adequadamente registrados por uma autoridade nacional?",
+          description_en:
+            "Are all equipment, clinically used for patients, appropriately marked (e.g. ‘CE’ mark, FDA clearance or approval by a national authority)?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros de monitoramento e revisão.",
+          placeholder_en: "Check the records of the monitoring and reviewing.",
+        },
+      },
+      {
+        question_number: "4.8",
+        descriptions: {
+          description_pt:
+            "Existem políticas escritas ou POPs para especificação, aquisição e teste de novos equipamentos de imagem? Todos os bens e equipamentos são adquiridos de acordo com as especificações definidas por todas as partes envolvidas, incluindo o departamento de medicina nuclear?",
+          description_en:
+            "Are there written policies / SOPs for specifying, procuring and testing new imaging equipment? Are all goods and equipment purchased according to specifications set up by all involved parties, including the NM Department?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar o procedimento de compra / Analise os registros.",
+          placeholder_en: "Check the purchase procedure / Review the records.",
+        },
+      },
+      {
+        question_number: "4.9",
+        descriptions: {
+          description_pt:
+            "As especificações técnicas são utilizadas para os testes de aceitação de bens e equipamentos?",
+          description_en:
+            "Are technical specifications used for the acceptance testing of goods and equipment?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento / Observação no local.",
+          placeholder_en: "Check the procedure / Observation on site.",
+        },
+      },
+      {
+        question_number: "4.10",
+        descriptions: {
+          description_pt:
+            "Existe um programa de garantia de qualidade, com calibração e inspeção regular de todos os equipamentos (incluindo: medidor de atividade, contadores beta e gama, sondas, monitores de radiação, sistemas de aerosol, equipamentos de laboratório) de acordo com o BSS ou padrões e regulamentações internacionais/locais?",
+          description_en:
+            "Is there a quality assurance programme, with regular calibration and inspection of all equipment (including: activity-meter, beta and gamma counters and probes, radiation survey monitors, aerosol delivery systems, laboratory equipment) in accordance with the BSS, international/local standards and regulations?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / Verificar o procedimento / Verificar os registros.",
+          placeholder_en:
+            "Observation on site / Check the procedure / Check the records.",
+        },
+      },
+      {
+        question_number: "4.11",
+        descriptions: {
+          description_pt:
+            "Existe um inventário atualizado de todos os equipamentos?",
+          description_en:
+            "Is there a regularly updated inventory of all the equipment ?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros.",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "4.12",
+        descriptions: {
+          description_pt:
+            "Existe um procedimento para garantir que qualquer equipamento ou material que falhe em um teste de qualidade entre em quarentena?",
+          description_en:
+            "Is there a procedure to ensure that any equipment or material that fails a quality test is quarantined?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os registros / Verificar os procedimentos.",
+          placeholder_en: "Check the records / Check the procedures.",
+        },
+      },
+      {
+        question_number: "4.13",
+        descriptions: {
+          description_pt:
+            "Existem níveis de ação e responsabilidades definidos para determinar quando equipamentos devem ser reparados, substituídos ou retirados de operação?",
+          description_en:
+            "Are action levels and responsibilities defined to determine when equipment should be repaired, replaced, or taken out of service?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos / Verificar o organograma organizacional e descrições de cargos.",
+          placeholder_en:
+            "Check the procedures / Check the organizational chart and job descriptions.",
+        },
+      },
+      {
+        question_number: "4.14",
+        descriptions: {
+          description_pt:
+            "Existem planos de manutenção (preventiva/corretiva) e substituição para todos os principais equipamentos?",
+          description_en:
+            "Are there plans for maintenance (preventive/corrective) and replacement for all major equipment?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos / Verificar os registros.",
+          placeholder_en: "Check the procedures / Check the records.",
+        },
+      },
+      {
+        question_number: "4.15",
+        descriptions: {
+          description_pt:
+            "O serviço participa em programas externos de Gestão de Qualidade/Garantia de Qualidade/Controle de Qualidade (por exemplo, certificação ISO, JCI, ACR, EARL etc)?",
+          description_en:
+            "Does the service participate in external QM/QA/QC programs (e.g. ISO certification, JCI, ACR , EARL, etc)?",
+        },
+        topics: {
+          topic_pt: "AVALIAÇÃO DO PROGRAMA DE GARANTIA DA QUALIDADE",
+          topic_en: "EVALUATION OF QUALITY SYSTEM",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os registros relacionados aos programas externos de Gestão de Qualidade, Garantia de Qualidade e Controle de Qualidade / Verificar os relatórios de auditoria.",
+          placeholder_en:
+            "Check the records related to the external QM, QA, QC programmes / Check the audit reports.",
         },
       },
     ],
