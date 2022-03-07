@@ -2683,16 +2683,470 @@ export const QuestionSeed = [
       {
         question_number: "9.1",
         descriptions: {
-          description_pt: "",
-          description_en: "",
+          description_pt:
+            "Os POPs são baseados em diretrizes nacionais / internacionais disponíveis para todos os tipos de tratamentos?",
+          description_en:
+            "Are SOPs based on national/international guidelines available for all types of treatments?",
         },
         topics: {
-          topic_pt: "",
-          topic_en: "",
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
-          placeholder_en: "",
+          placeholder_pt: "Verificar os POPs para terapia radionuclídica.",
+          placeholder_en: "Check the SOPs for radionuclide therapy.",
+        },
+      },
+      {
+        question_number: "9.2",
+        descriptions: {
+          description_pt:
+            "No caso de tratamentos oncológicos, a decisão de tratar foi tomada após avaliação multidisciplinar?",
+          description_en:
+            "For oncology treatments, has the decision to treat been taken after multidisciplinary evaluation?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros dos pacientes.",
+          placeholder_en: "Check the patient's records.",
+        },
+      },
+      {
+        question_number: "9.3",
+        descriptions: {
+          description_pt:
+            "As condições (médicas, psicológicas, sociais) que poderiam interferir no tratamento estão sendo verificadas?",
+          description_en:
+            "Are conditions (medical, psychological, social) potentially interfering with the treatment checked for?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar as instruções dos POPs para a preparação do paciente.",
+          placeholder_en:
+            "Check the instructions or SOPs for patient preparation.",
+        },
+      },
+      {
+        question_number: "9.4",
+        descriptions: {
+          description_pt:
+            "O preparo do paciente está relacionado ao tratamento específico dirigido?",
+          description_en:
+            "Is patient preparation related to the specific treatment addressed?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar as instruções dos POPs e os registros do paciente.",
+          placeholder_en:
+            "Check the SOPs instructions and the patient's records.",
+        },
+      },
+      {
+        question_number: "9.5",
+        descriptions: {
+          description_pt:
+            "Todo paciente recebe informações sobre o tratamento, incluindo indicação, opções alternativas de tratamento, necessidade de interromper a lactação, efeitos colaterais, preparação, procedimento terapêutico, isolamento (se aplicável) e cuidados posteriores?",
+          description_en:
+            "Does every patient receive information about the treatment including indication, alternative treatment options, the need to stop lactation, side effects, preparation, therapeutic procedure, isolation (if applicable), and aftercare?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verifique os procedimentos e as informações fornecidas aos pacientes antes e depois da terapia.",
+          placeholder_en:
+            "Check the procedures and the information provided to the patients before and after therapy.",
+        },
+      },
+      {
+        question_number: "9.6",
+        descriptions: {
+          description_pt:
+            "Para pacientes pediátricos: os familiares / cuidadores foram informados sobre as medidas de proteção radiológica a serem tomadas e os riscos de atender a criança durante a terapia?",
+          description_en:
+            "For paediatric patients: were relatives/caregivers informed about the radiation protection measures to be taken and the risks of attending the child during therapy?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / verificar os procedimentos terapêuticos / verificar as instruções escritas.",
+          placeholder_en:
+            "Observation on site / Check the therapeutic procedures / Check the written instructions.",
+        },
+      },
+      {
+        question_number: "9.7",
+        descriptions: {
+          description_pt:
+            "A gravidez foi excluída por um teste laboratorial em tempo apropriado antes da terapia?",
+          description_en:
+            "Is pregnancy ruled out by an appropriately timed laboratory test before therapy?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o POP.",
+          placeholder_en: "Check the SOP.",
+        },
+      },
+      {
+        question_number: "9.8",
+        descriptions: {
+          description_pt:
+            "São fornecidas instruções ao paciente sobre a necessidade e a duração da contracepção após a terapia?",
+          description_en:
+            "Are instructions provided to the patient on the necessity and duration of contraception after therapy?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar as instruções escritas entregues aos pacientes.",
+          placeholder_en: "Check the written instructons to the patients.",
+        },
+      },
+      {
+        question_number: "9.9",
+        descriptions: {
+          description_pt:
+            "O consentimento informado é obtido antes da terapia, de acordo com as regras nacionais?",
+          description_en:
+            "Is informed consent obtained before therapy, consistent with national rules?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos escritos para obtenção de consentimento informado.",
+          placeholder_en:
+            "Check the written procedures of obtaining informed consent.",
+        },
+      },
+      {
+        question_number: "9.10",
+        descriptions: {
+          description_pt:
+            "Existe um POP para a aquisição, preparação e CQ, se aplicável, de radiofármacos para terapia?",
+          description_en:
+            "Is there a SOP for the procurement, preparation and QC, if applicable, of  therapeutic radiopharmaceuticals?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os POPs escritos.",
+          placeholder_en: "Check the written SOPs.",
+        },
+      },
+      {
+        question_number: "9.11",
+        descriptions: {
+          description_pt:
+            "A terapia está corretamente indicada (considerando as condições clínicas)?",
+          description_en:
+            "Is the therapy timely and in line with clinical needs?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros. Discutir com solicitantes.",
+          placeholder_en: "Check the records. Discuss with referrers.",
+        },
+      },
+      {
+        question_number: "9.12",
+        descriptions: {
+          description_pt:
+            "A atividade terapêutica é prescrita, levando-se em consideração a dose-alvo e a não-alvo estimada por pessoa habilitada, de acordo com as diretrizes nacionais / internacionais?",
+          description_en:
+            "Is the therapeutic activity prescribed, taking into account the target and non-target dose estimated by qualified person, in accordance with national/international guidelines?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os POPs para atribuições de atividades.",
+          placeholder_en: "Check the SOPs for activity assignments.",
+        },
+      },
+      {
+        question_number: "9.13",
+        descriptions: {
+          description_pt:
+            "A atividade administrada é medida individualmente e verificada em um medidor de atividade, calibrado e com qualidade verificada para o radionuclídeo fornecido?",
+          description_en:
+            "Is the administered activity individually measured and checked in an activity-meter,  calibrated and quality checked for the given radionuclide?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros.",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "9.14",
+        descriptions: {
+          description_pt:
+            "Os POPs sobre medidas de radioproteção estão em vigor para reduzir a dose para os cuidadores e o público, para contaminação, resíduos, etc?",
+          description_en:
+            "Are SOPs on radiation protection measures in place for reducing dose to caregivers and the public, for contamination, waste etc.?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar POPs. Observação no local.",
+          placeholder_en: "Check SOPs. Observation on site.",
+        },
+      },
+      {
+        question_number: "9.15",
+        descriptions: {
+          description_pt:
+            "Em caso de terapia em nível hospitalar (com internação): existem instalações com superfície, blindagem, saneamento, ventilação, gerenciamento de resíduos adequados, etc?",
+          description_en:
+            "In case of in-patient therapy: are facilities available with appropriate surface, shielding, sanitation, ventilation, waste management etc?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os POPs e documentos escritos, layout da ala de terapia e planejamento de blindagem / observação no local.",
+          placeholder_en:
+            "Check the SOPs and written documents, therapy ward layout and shielding plan / Observation on site.",
+        },
+      },
+      {
+        question_number: "9.16",
+        descriptions: {
+          description_pt:
+            "Em caso de terapia em nível hospitalar: são disponibilizados cuidados de enfermagem 24h/dia?",
+          description_en:
+            "In case of in-patient therapy: is 24h/day nursing care provided?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os POPs e documentos escritos / observação no local.",
+          placeholder_en:
+            "Check the SOPs and written documents / Observation on site.",
+        },
+      },
+      {
+        question_number: "9.17",
+        descriptions: {
+          description_pt:
+            "A equipe de enfermagem recebeu treinamento adequado em proteção radiológica para cuidar dos pacientes durante o tratamento?",
+          description_en:
+            "Has the nursing staff received appropriate radiation protection training to care for patients during treatment?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os POPs correspondentes e os cartões pessoais dos enfermeiros.",
+          placeholder_en:
+            "Check the corresponding SOPs and the nurses personal cards.",
+        },
+      },
+      {
+        question_number: "9.18",
+        descriptions: {
+          description_pt:
+            "Em caso de terapia com internação: há equipe médica disponível 24h/dia para emergências?",
+          description_en:
+            "In case of in-patient therapy: is medical staff available for emergencies 24h/day?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / verificar os POPs e organograma organizacional.",
+          placeholder_en:
+            "Observation on site / Check the SOPs and the organizational chart.",
+        },
+      },
+      {
+        question_number: "9.19",
+        descriptions: {
+          description_pt:
+            "Em caso de terapia com internação: há uma pessoa qualificada disponível fora do horário normal de trabalho para lidar com questões urgentes de radioproteção?",
+          description_en:
+            "In case of in-patient therapy: is a qualified person available outside normal working hours to handle urgent radioprotection issues?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / verificar os POPs e organograma organizacional.",
+          placeholder_en:
+            "Observation on site / Check the SOPs and the organizational chart.",
+        },
+      },
+      {
+        question_number: "9.20",
+        descriptions: {
+          description_pt:
+            "Os POPs fornecem instruções claras para dar alta aos pacientes de acordo com os regulamentos nacionais?",
+          description_en:
+            "Do the SOPs provide clear instructions for discharging patients in accordance with national regulations?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os POPs.",
+          placeholder_en: "Check the SOPs.",
+        },
+      },
+      {
+        question_number: "9.21",
+        descriptions: {
+          description_pt:
+            "A taxa de dose emitida pelo paciente é medida e registrada no prontuário do paciente antes da alta do SMN e da instituição?",
+          description_en:
+            "Is patient’s emitted dose-rate measured and recorded in the patient’s file before discharge from the NMS and the institution?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar as instruções escritas / verificar os registros dos pacientes.",
+          placeholder_en:
+            "Check the written instructions / Check the patient's records.",
+        },
+      },
+      {
+        question_number: "9.22",
+        descriptions: {
+          description_pt:
+            "Existem instruções escritas disponíveis para o paciente e familiares / cuidadores com os cuidados pós terapia?",
+          description_en:
+            "Are written instructions available for the patient and family/caregivers after discharge?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar as instruções escritas / verificar os registros dos pacientes.",
+          placeholder_en:
+            "Check the written instructions / Check the patient's records.",
+        },
+      },
+      {
+        question_number: "9.23",
+        descriptions: {
+          description_pt:
+            "Existem procedimentos para garantir que essas instruções foram compreendidas pelo paciente / família / cuidadores?",
+          description_en:
+            "Are procedures in place to make sure that these instructions have been understood by the patient/family/caregivers?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar o POP. Opcionalmente, entrevistar paciente/familiar.",
+          placeholder_en: "Check the SOP. Optionally interview patient/family.",
+        },
+      },
+      {
+        question_number: "9.24",
+        descriptions: {
+          description_pt:
+            "Existem POPs específicos para prevenir ou controlar a administração incorreta (incompatibilidade do paciente / radiofármaco) e / ou má administração (extravasamento) de radiofármacos terapêuticos?",
+          description_en:
+            "Are there specific SOP to prevent or manage misadministration (mismatch patient / radiopharmaceutical) and/or maladministration (extravasation) of therapeutic radiopharmaceuticals?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o POP.",
+          placeholder_en: "Check the SOP.",
+        },
+      },
+      {
+        question_number: "9.25",
+        descriptions: {
+          description_pt:
+            "É emitido e disponibilizado aos médicos envolvidos e ao paciente o laudo contendo as informações sobre o tratamento?",
+          description_en:
+            "Is a comprehensive treatment report issued and made available to involved physicians and the patient?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar um exemplo de relatório. Discutir com solicitantes.",
+          placeholder_en: "Check an example of report. Discuss with referrers.",
+        },
+      },
+      {
+        question_number: "9.26",
+        descriptions: {
+          description_pt:
+            "Há acompanhamento clínico oportuno dos pacientes, com revisão multidisciplinar no caso de pacientes oncológicos?",
+          description_en:
+            "Is there timely clinical follow-up of patients, with multidisciplinary review in the case of oncology patients?",
+        },
+        topics: {
+          topic_pt: "TERAPIA COM RADIONUCLÍDEOS",
+          topic_en: "RADIONUCLIDE THERAPY",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar um registro de paciente.",
+          placeholder_en: "Check a patient records.",
         },
       },
     ],
