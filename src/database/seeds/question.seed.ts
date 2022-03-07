@@ -1265,16 +1265,168 @@ export const QuestionSeed = [
       {
         question_number: "5.1",
         descriptions: {
-          description_pt: "",
-          description_en: "",
+          description_pt:
+            "Para todos os equipamentos de imagem: os testes de aceitação detalhados foram realizados (independentemente do fornecedor) e os parâmetros de desempenho mais relevantes foram registrados?",
+          description_en:
+            "For all imaging equipment: have detailed acceptance tests been performed (independently from the vendor) and the most relevant  performance parameters been recorded?",
         },
         topics: {
-          topic_pt: "",
-          topic_en: "",
+          topic_pt: "CONTROLE DE QUALIDADE DOS EQUIPAMENTOS DE IMAGEM",
+          topic_en: "QUALITY CONTROL OF EQUIPMENT",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
-          placeholder_en: "",
+          placeholder_pt:
+            "Observação no local / Registros de exemplo / Verificar o procedimento.	",
+          placeholder_en:
+            "Observation on site / Example recores / Check the procedure.",
+        },
+      },
+      {
+        question_number: "5.2",
+        descriptions: {
+          description_pt:
+            "Os resultados dos testes de aceitação e da avaliação de desempenho inicial são usados ​​para estabelecer valores de referência de linha de base para CQ de rotina?",
+          description_en:
+            "Are the results of acceptance tests and initial performance assessment used to establish baseline reference values for routine QA/QC?",
+        },
+        topics: {
+          topic_pt: "CONTROLE DE QUALIDADE DOS EQUIPAMENTOS DE IMAGEM",
+          topic_en: "QUALITY CONTROL OF EQUIPMENT",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / Verificar registro de erros / Verificar os procedimentos.",
+          placeholder_en:
+            "Observation on site / Check log book / Check the procedures.",
+        },
+      },
+      {
+        question_number: "5.3",
+        descriptions: {
+          description_pt:
+            "Existem POPs escritos disponíveis sobre o CQ de todos os equipamentos de imagem em uso clínico, consistentes com os manuais de instruções do fabricante?",
+          description_en:
+            "Are there written SOPs available on the operation, QA/QC for all imaging equipment in clinical use, consistent with manufacturer’s instruction manuals?",
+        },
+        topics: {
+          topic_pt: "CONTROLE DE QUALIDADE DOS EQUIPAMENTOS DE IMAGEM",
+          topic_en: "QUALITY CONTROL OF EQUIPMENT",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os procedimentos.",
+          placeholder_en: "Check the procedures.",
+        },
+      },
+      {
+        question_number: "5.4",
+        descriptions: {
+          description_pt:
+            "Existe uma política de armazenamento de longo prazo dos resultados de CQ, de acordo com as regulamentações, diretrizes ou outros órgãos nacionais?",
+          description_en:
+            "Is there a policy on long term storage of QA/QC results, according to national regulations, guidelines or other bodies?",
+        },
+        topics: {
+          topic_pt: "CONTROLE DE QUALIDADE DOS EQUIPAMENTOS DE IMAGEM",
+          topic_en: "QUALITY CONTROL OF EQUIPMENT",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / Registros de exemplo / Verificar o procedimento.",
+          placeholder_en:
+            "Observation on site / Example records / Check the procedure.",
+        },
+      },
+      {
+        question_number: "5.5",
+        descriptions: {
+          description_pt:
+            "Existe uma inspeção física regular e documentada dos equipamentos, incluindo a (s) cabeça (s) do detector, colimador (es), blindagem, etc.?",
+          description_en:
+            "Is there a regular, documented physical inspection of the hardware including the detector head(s), collimator(s), shielding, etc.?",
+        },
+        topics: {
+          topic_pt: "CONTROLE DE QUALIDADE DOS EQUIPAMENTOS DE IMAGEM",
+          topic_en: "QUALITY CONTROL OF EQUIPMENT",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / Registros de exemplo / Verificar o procedimento.",
+          placeholder_en:
+            "Observation on site / Example records / Check the procedure.",
+        },
+      },
+      {
+        question_number: "5.6",
+        descriptions: {
+          description_pt:
+            "Os CQ planares / SPECT mais relevantes são regularmente verificados, revisados ​​e registrados, incluindo análise de tendência: uniformidade, resolução espacial, COR, desempenho do SPECT, bem como outros parâmetros considerados críticos no programa de controle de qualidade interno?",
+          description_en:
+            "Are the most relevant planar/SPECT parameters regularly checked, reviewed and recorded, including trend analysis: uniformity, spatial resolution, COR, SPECT performance, as well as other parameters considered critical in the internal QA programme?",
+        },
+        topics: {
+          topic_pt: "CONTROLE DE QUALIDADE DOS EQUIPAMENTOS DE IMAGEM",
+          topic_en: "QUALITY CONTROL OF EQUIPMENT",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / Registros de exemplo / Verificar o procedimento.",
+          placeholder_en:
+            "Observation on site / Example records / Check the procedure.",
+        },
+      },
+      {
+        question_number: "5.7",
+        descriptions: {
+          description_pt:
+            "Os procedimentos de CQ mais relevantes para sistemas PET são regularmente verificados, revisados ​​e registrados, incluindo análise de tendência: CQ diário de acordo com as instruções do fabricante, normalização de detectores, calibração de concentração de radioatividade 3D, bem como outros parâmetros considerados críticos no programa interno de GQ?",
+          description_en:
+            "Are the most relevant QA/QC procedures for PET systems regularly checked, reviewed and recorded, including trend analysis: daily QC according to manufacturer's instructions, detectors normalization, 2D-3D radioactivity concentration calibration, as well as other parameters considered critical in the internal QA programme?",
+        },
+        topics: {
+          topic_pt: "CONTROLE DE QUALIDADE DOS EQUIPAMENTOS DE IMAGEM",
+          topic_en: "QUALITY CONTROL OF EQUIPMENT",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / Registros de exemplo / Verificar o procedimento.",
+          placeholder_en:
+            "Observation on site / Example records / Check the procedure.",
+        },
+      },
+      {
+        question_number: "5.8",
+        descriptions: {
+          description_pt:
+            "Os procedimentos de CQ mais relevantes para sistemas de imagem multimodalidade são regularmente verificados, revisados ​​- incluindo análise de tendência - e registrados: todos os parâmetros listados em 5.6 ou 5.7, parâmetros de CT (número de CT, uniformidade de imagem, ruído de imagem, artefatos de imagem, modulação de alto contraste , dose de radiação), corregistro das imagens e outros parâmetros considerados críticos no programa interno de GQ?",
+          description_en:
+            "Are the most relevant QA/QC procedures for multimodality imaging systems regularly checked, reviewed - including trend analysis - and recorded : all parameters listed in 5.6 or 5.7, CT parameters (CT number, image uniformity, image noise, image artifacts, high contrast modulation, radiation dose), MR parameters (image uniformity, noise, distortion and artifacts, SAR),  image registration and other parameters considered critical in the internal QA programme?",
+        },
+        topics: {
+          topic_pt: "CONTROLE DE QUALIDADE DOS EQUIPAMENTOS DE IMAGEM",
+          topic_en: "QUALITY CONTROL OF EQUIPMENT",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / Registros de exemplo / Verificar o procedimento.",
+          placeholder_en:
+            "Observation on site / Example records / Check the procedure.",
+        },
+      },
+      {
+        question_number: "5.9",
+        descriptions: {
+          description_pt:
+            "Os POPs de CQ incluem instruções específicas sobre ações corretivas no caso de desvios ou resultados não conformes?",
+          description_en:
+            "Do the QA/QC SOPs include specific instructions on corrective actions in the case of deviations or non-conforming results?",
+        },
+        topics: {
+          topic_pt: "CONTROLE DE QUALIDADE DOS EQUIPAMENTOS DE IMAGEM",
+          topic_en: "QUALITY CONTROL OF EQUIPMENT",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os POPs.",
+          placeholder_en: "Check the SOPs.",
         },
       },
     ],
@@ -1286,16 +1438,196 @@ export const QuestionSeed = [
       {
         question_number: "6.1",
         descriptions: {
-          description_pt: "",
-          description_en: "",
+          description_pt:
+            "Existem políticas escritas disponíveis para especificar, adquirir e testar RIS, PACS e estações de trabalho de análise e processamento de imagens de terceiros?",
+          description_en:
+            "Are there written policies available for specifying, procuring and testing of RIS, PACS and third party image processing and analysis workstations?",
         },
         topics: {
-          topic_pt: "",
-          topic_en: "",
+          topic_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+          topic_en: "COMPUTER SYSTEMS AND DATA HANDLING",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
-          placeholder_en: "",
+          placeholder_pt: "Verificar o procedimento.",
+          placeholder_en: "Check the procedure.",
+        },
+      },
+      {
+        question_number: "6.2",
+        descriptions: {
+          description_pt:
+            "Essas políticas exigem a certificação de todos os equipamentos que serão adquiridos possuem registro na Anvisa?",
+          description_en:
+            "Do these policies require the certification of all equipment, which will be acquired (e.g. ‘CE’ mark, FDA clearance or approval by a national authority)?",
+        },
+        topics: {
+          topic_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+          topic_en: "COMPUTER SYSTEMS AND DATA HANDLING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento.",
+          placeholder_en: "Check the procedure.",
+        },
+      },
+      {
+        question_number: "6.3",
+        descriptions: {
+          description_pt:
+            "A validação de qualquer novo software médico é realizada para garantir a consistência dos resultados com o sistema anterior?",
+          description_en:
+            "Is validation of any new medical software performed to ensure consistency of results with preceding system?",
+        },
+        topics: {
+          topic_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+          topic_en: "COMPUTER SYSTEMS AND DATA HANDLING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento.",
+          placeholder_en: "Check the procedure.",
+        },
+      },
+      {
+        question_number: "6.4",
+        descriptions: {
+          description_pt:
+            "É feita uma avaliação (independente do fornecedor) do desempenho do equipamento e software entregues e comparadas com as especificações do fabricante?",
+          description_en:
+            "Is an assessment done (independent of the vendor) of the performance of the delivered equipment and software  and documented against the specifications of the tender?",
+        },
+        topics: {
+          topic_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+          topic_en: "COMPUTER SYSTEMS AND DATA HANDLING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / Exemplos de registro / Verificar o procedimento.",
+          placeholder_en:
+            "Observation on site / Example records / Check the procedure.",
+        },
+      },
+      {
+        question_number: "6.5",
+        descriptions: {
+          description_pt:
+            "Existe uma política para avaliação de segurança de todos os sistemas de TI (contra vírus, intrusos, etc)?",
+          description_en:
+            "Is there a policy for security assessment of all IT (information technology) systems (against viruses, intruders, etc.)?",
+        },
+        topics: {
+          topic_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+          topic_en: "COMPUTER SYSTEMS AND DATA HANDLING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento.",
+          placeholder_en: "Check the procedure.",
+        },
+      },
+      {
+        question_number: "6.6",
+        descriptions: {
+          description_pt:
+            "Existe uma política para garantir a integridade, segurança e privacidade dos dados, incluindo acesso remoto?",
+          description_en:
+            "Is there a policy for ensuring integrity, security and privacy of data, including remote access?",
+        },
+        topics: {
+          topic_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+          topic_en: "COMPUTER SYSTEMS AND DATA HANDLING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento.",
+          placeholder_en: "Check the procedure.",
+        },
+      },
+      {
+        question_number: "6.7",
+        descriptions: {
+          description_pt:
+            "Para sistemas PACS: existe um POP para monitorar e corrigir incompatibilidades entre os arquivos de imagem e os dados do paciente e / ou outras situações de não conformidade?",
+          description_en:
+            "For PACS systems: is there an SOP for monitoring and correcting mismatches between image files and patient data and/or other non-conforming situations?",
+        },
+        topics: {
+          topic_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+          topic_en: "COMPUTER SYSTEMS AND DATA HANDLING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / Exemplos de registro / Verificar o procedimento.",
+          placeholder_en:
+            "Observation on site / Example records / Check the procedure.",
+        },
+      },
+      {
+        question_number: "6.8",
+        descriptions: {
+          description_pt:
+            "Para sistemas PACS e estações de trabalho de análise de imagem de terceiros: existe um POP para CQ de monitores de exibição de imagem?",
+          description_en:
+            "For PACS systems and third party image analysis workstations: is there an SOP for QA/QC of image display monitors? ",
+        },
+        topics: {
+          topic_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+          topic_en: "COMPUTER SYSTEMS AND DATA HANDLING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / exemplos de registro / verificar o procedimento.",
+          placeholder_en:
+            "Observation on site / Example records / Check the procedure.",
+        },
+      },
+      {
+        question_number: "6.9",
+        descriptions: {
+          description_pt:
+            "Existe um POP para garantir a consistência dos protocolos de aquisição, processamento e análise de dados após a manutenção da estação de trabalho ou grandes revisões de software, também levando em consideração qualquer personalização do SMN?",
+          description_en:
+            "Is there a SOP to ensure consistency of data acquisition, processing and analysis protocols after workstation maintenance or major software revisions, also taking into account any site customization?",
+        },
+        topics: {
+          topic_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+          topic_en: "COMPUTER SYSTEMS AND DATA HANDLING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento.",
+          placeholder_en: "Check the procedure.",
+        },
+      },
+      {
+        question_number: "6.10",
+        descriptions: {
+          description_pt:
+            'Existe uma política sobre GQ de software "interno" ou não registrado com o objetivo de oferecer suporte ao uso clínico?',
+          description_en:
+            "Is there a policy on QM of 'in-house' or non-registered software intended to support clinical use?",
+        },
+        topics: {
+          topic_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+          topic_en: "COMPUTER SYSTEMS AND DATA HANDLING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / Exemplos de registro / Verificar o procedimento.",
+          placeholder_en:
+            "Observation on site / Example records / Check the procedure.",
+        },
+      },
+      {
+        question_number: "6.11",
+        descriptions: {
+          description_pt:
+            "Existe uma política de backup e manutenção dos arquivos de dados do paciente?",
+          description_en:
+            "Is there a policy for backup and maintaining patient data files?",
+        },
+        topics: {
+          topic_pt: "SISTEMA DE IMAGEM E ESTAÇÕES DE TRABALHO",
+          topic_en: "COMPUTER SYSTEMS AND DATA HANDLING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento.",
+          placeholder_en: "Check the procedure.",
         },
       },
     ],
