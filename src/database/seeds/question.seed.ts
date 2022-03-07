@@ -1639,16 +1639,497 @@ export const QuestionSeed = [
       {
         question_number: "7.1",
         descriptions: {
-          description_pt: "",
-          description_en: "",
+          description_pt:
+            "Os POPs são baseados em diretrizes nacionais / internacionais em vigor para todos os tipos de exames realizados?",
+          description_en:
+            "Are SOPs based on national/international guidelines in place for all types of examinations performed?",
         },
         topics: {
-          topic_pt: "",
-          topic_en: "",
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
-          placeholder_en: "",
+          placeholder_pt:
+            "Verificar os POPs clínicos ou manual de procedimentos.",
+          placeholder_en: "Check the clinical SOPs or procedure manual.",
+        },
+      },
+      {
+        question_number: "7.2",
+        descriptions: {
+          description_pt:
+            "Existe um mecanismo para atualizar regularmente os POPs internos, arquivar versões obsoletas e distribuir novas para todos os locais de trabalho relevantes?",
+          description_en:
+            "Is a mechanism in place to regularly update internal SOPs, archive obsolete versions, and distribute new ones, to all relevant work places?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Documentos escritos que descrevem o mecanismo para atualizar os POPs clínicos.",
+          placeholder_en:
+            "Written documents describing the mechanism to update the clinical SOPs.",
+        },
+      },
+      {
+        question_number: "7.3",
+        descriptions: {
+          description_pt:
+            "Cada solicitação clínica é verificada quanto à justificativa / adequação clínica por um médico qualificado da equipe de medicina nuclear?",
+          description_en:
+            "Is every clinical request checked for justification / clinical appropriateness by a qualified physician of the nuclear medicine staff?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar alguns registros incluindo a autorização do médico nuclear.",
+          placeholder_en:
+            "Check some records including the authorization of the NM physician.",
+        },
+      },
+      {
+        question_number: "7.4",
+        descriptions: {
+          description_pt:
+            "Existem instruções para verificar as contra-indicações que impedem o exame ou partes dele?",
+          description_en:
+            "Are instructions in place to check for contraindications preventing the examination or parts of it?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar as instruções / Observação no local.",
+          placeholder_en: "Check the instructions / Observation on site.",
+        },
+      },
+      {
+        question_number: "7.5",
+        descriptions: {
+          description_pt:
+            "Existem procedimentos para a correta identificação dos pacientes em todas as etapas do exame?",
+          description_en:
+            "Are procedures in place for the correct identification of patients throughout all steps of the examination?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos de identificação dos pacientes durante os exames / Observação no local.",
+          placeholder_en:
+            "Check the procedures for identifying patients during the examinations / Observation on site.",
+        },
+      },
+      {
+        question_number: "7.6",
+        descriptions: {
+          description_pt:
+            "As instruções verbais e escritas para a preparação do paciente são fornecidas no momento da consulta e o procedimento é explicado antes da realização do exame?",
+          description_en:
+            "Are verbal and written instructions for patient preparation given at the time of appointment and is the procedure explained before the examination is performed?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar as instruções escritas.",
+          placeholder_en: "Check the written instructions.",
+        },
+      },
+      {
+        question_number: "7.7",
+        descriptions: {
+          description_pt:
+            "A privacidade e a dignidade do paciente são mantidas durante seu tempo no serviço de NM (por exemplo, cobertura adequada do tórax da mulher durante o teste de esforço)?",
+          description_en:
+            "Is patients' privacy and dignity maintained during his/her time at the NM service (e.g. appropriate coverage of women's chest during stress test)?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Observação no local.",
+          placeholder_en: "Observation on site.",
+        },
+      },
+      {
+        question_number: "7.8",
+        descriptions: {
+          description_pt:
+            "Existe um procedimento para questionar sobre gravidez e lactação antes de qualquer administração de radiofármacos?",
+          description_en:
+            "Is a procedure in place to inquire about pregnancy and  lactation before any administration of radiopharmaceuticals?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento escrito.",
+          placeholder_en: "Check the written procedure.",
+        },
+      },
+      {
+        question_number: "7.9",
+        descriptions: {
+          description_pt:
+            "Todo paciente recebe informações apropriadas relacionadas ao exame, incluindo avaliação de risco e, se aplicável, o paciente dá consentimento informado?",
+          description_en:
+            "Does every patient receive appropriate information related to the examination including risk evaluation, and if applicable the patient gives informed consent?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos escritos que descrevem as informações fornecidas aos pacientes.",
+          placeholder_en:
+            "Check the written procedures describing the information provided to the patients.",
+        },
+      },
+      {
+        question_number: "7.10",
+        descriptions: {
+          description_pt:
+            "Todos os protocolos de procedimento (POPs) também incluem informações detalhadas sobre radiofarmacêuticos, configurações de TC e meios de contraste, se aplicável?",
+          description_en:
+            "Do all procedure protocols (SOPs) also include detailed information on radiopharmaceuticals, CT settings and contrast media, if applicable?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os POPs.",
+          placeholder_en: "Check the SOPs.",
+        },
+      },
+      {
+        question_number: "7.11",
+        descriptions: {
+          description_pt:
+            "Os radiofármacos são claramente identificados em relação ao paciente individual e a rastreabilidade é garantida?",
+          description_en:
+            "Are radiopharmaceuticals clearly identified in relation to the individual patient and is traceability ensured?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar as instruções para atribuição de doses e rastreabilidade.",
+          placeholder_en:
+            "Check the instruction for dose assignments and traceability.",
+        },
+      },
+      {
+        question_number: "7.12",
+        descriptions: {
+          description_pt:
+            "Existem instruções para otimizar a atividade radiofarmacêutica de acordo com o hábito corporal (por exemplo, peso), com atenção especial para pacientes pediátricos (por exemplo, cartão de dose EANM / SNMMI)?",
+          description_en:
+            "Are there instructions to optimize radiopharmaceutical activity according to body habitus (e.g. weight), with special attention to paediatric patients (e.g. EANM/SNMMI dose card)?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar as instruções para atribuição de doses e registros de pacientes.",
+          placeholder_en:
+            "Check the instruction for dose assignments and patient records.",
+        },
+      },
+      {
+        question_number: "7.13",
+        descriptions: {
+          description_pt:
+            "Existem procedimentos em vigor para evitar a má administração (incompatibilidade de paciente / radiofármaco) e / ou má administração (extravasamento) de fármacos e radiofármacos?",
+          description_en:
+            "Are procedures in place to avoid misadministration (mismatch patient / radiopharmaceutical) and/or maladministration (extravasation) of pharmaceuticals and radiopharmaceuticals?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os procedimentos escritos.",
+          placeholder_en: "Check the written procedures.",
+        },
+      },
+      {
+        question_number: "7.14",
+        descriptions: {
+          description_pt:
+            "Há um POP disponível para lidar com a administração de radiofármacos não licenciados ou não autorizados?",
+          description_en:
+            "Is there an SOP available for dealing with the administration of non-licensed or off label radiopharmaceuticals?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os procedimentos.",
+          placeholder_en: "Check the procedures.",
+        },
+      },
+      {
+        question_number: "7.15",
+        descriptions: {
+          description_pt:
+            "Existe um POP para lidar com solicitações de emergência?",
+          description_en: "Is an SOP in place to deal with emergency requests?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o POP.",
+          placeholder_en: "Check the SOP.",
+        },
+      },
+      {
+        question_number: "7.16",
+        descriptions: {
+          description_pt:
+            "Existe um processo para garantir que médicos ou equipe apropriada estejam disponíveis para responder às perguntas dos pacientes?",
+          description_en:
+            "Is there a process to ensure that physicians or appropriate staff are available to answer patients' questions?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os documentos escritos que estabelecem a disponibilidade de médicos para responder.",
+          placeholder_en:
+            "Check written documents establishing the availability of medical doctors to answer.",
+        },
+      },
+      {
+        question_number: "7.17",
+        descriptions: {
+          description_pt:
+            "Existem POPs para medidas específicas aplicáveis ​​a pacientes pediátricos (por exemplo, seleção de tipo, qualidade e tamanho de material apropriado, inserção de via de acesso, sedação, anestesia, catéter vesical, etc.)?",
+          description_en:
+            "Are there SOPs for specific measures applicable to paediatric patients (e.g. selection of appropriate material type, quality and size, inserting IV line, sedation, anesthesia, bladder catheter, pharmacological challenge, etc.)?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os POPs.",
+          placeholder_en: "Check the SOPs.",
+        },
+      },
+      {
+        question_number: "7.18",
+        descriptions: {
+          description_pt:
+            "Há supervisão médica apropriada disponível durante as intervenções de medicina nuclear, como diuréticos, inibidores da ECA, testes de estresse, etc?",
+          description_en:
+            "Is appropriate medical supervision available during nuclear medicine interventions such as diuretics, ACE inhibitors, stress testing, etc.?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os POPs clínicos.",
+          placeholder_en: "Check the clinical SOPs.",
+        },
+      },
+      {
+        question_number: "7.19",
+        descriptions: {
+          description_pt:
+            "Existem procedimentos para tratar e relatar adequadamente qualquer evento adverso?",
+          description_en:
+            "Are procedures in place to properly address and report any adverse event?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os procedimentos escritos.",
+          placeholder_en: "Check the written procedures.",
+        },
+      },
+      {
+        question_number: "7.20",
+        descriptions: {
+          description_pt:
+            "Existe um procedimento para comunicação oportuna de achados urgentes ao médico de referência?",
+          description_en:
+            "Is there a procedures for timely communication of urgent findings to the referring physician?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos escritos. Discutir com solicitantes.",
+          placeholder_en:
+            "Check the written procedures. Discuss with referrers.",
+        },
+      },
+      {
+        question_number: "7.21",
+        descriptions: {
+          description_pt:
+            "Existe política de vigilância do paciente durante toda a permanência no serviço?",
+          description_en:
+            "Is there a policy on surveillance of patients during their entire stay in the department?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos escritos / Observação no local.",
+          placeholder_en: "Check the written procedures / Observation on site.",
+        },
+      },
+      {
+        question_number: "7.22",
+        descriptions: {
+          description_pt:
+            "Está disponível um carrinho de emergência totalmente equipado, bomba de oxigênio e sucção?",
+          description_en:
+            "Is a fully equipped emergency cart, oxygen and suction pump available?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os equipamentos disponíveis.",
+          placeholder_en: "Check the available equipment.",
+        },
+      },
+      {
+        question_number: "7.23",
+        descriptions: {
+          description_pt:
+            "Existe um POP para garantir que o carrinho de emergência seja verificado e reabastecido regularmente?",
+          description_en:
+            "Is there an SOP to ensure that the emergency cart is checked and replenished on a regular basis?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o POP.",
+          placeholder_en: "Check the SOP.",
+        },
+      },
+      {
+        question_number: "7.24",
+        descriptions: {
+          description_pt:
+            "Os funcionários são regularmente treinados em suporte de vida básico / avançado (conforme apropriado)?",
+          description_en:
+            "Are staff regularly trained in basic/advanced (as appropriate) life support?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Ver o POP e verificar um registro (cartão pessoal).",
+          placeholder_en: "See SOP and check a record (personal card).",
+        },
+      },
+      {
+        question_number: "7.25",
+        descriptions: {
+          description_pt:
+            "Existem procedimentos para obter assistência rápida em caso de emergência? Os números de telefone correspondentes são exibidos imediatamente?",
+          description_en:
+            "Are procedures in place for obtaining rapid assistance in case of emergency? Are corresponding phone numbers readily displayed?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos escritos / Observação no local.",
+          placeholder_en: "Check the written procedures / Observation on site.",
+        },
+      },
+      {
+        question_number: "7.26",
+        descriptions: {
+          description_pt:
+            "Existe um mecanismo de relatório de incidentes e conseqüente introdução de ações corretivas?",
+          description_en:
+            "Is a mechanism of incident reporting and consequent  introduction of corrective actions in place?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar o procedimento escrito descrevendo o mecanismo.",
+          placeholder_en:
+            "Check the written procedure describing the mechanism.",
+        },
+      },
+      {
+        question_number: "7.27",
+        descriptions: {
+          description_pt:
+            "A equipe médica está regularmente envolvida em reuniões e conselhos multidisciplinares?",
+          description_en:
+            "Are the medical staff regularly involved with multidisciplinary meetings and boards?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento escrito.",
+          placeholder_en: "Check the written procedure.",
+        },
+      },
+      {
+        question_number: "7.28",
+        descriptions: {
+          description_pt:
+            "Existem reuniões internas regulares para revisar a qualidade dos laudos?",
+          description_en:
+            "Are there regular internal meetings to review quality of reports?",
+        },
+        topics: {
+          topic_pt: "SERVIÇOS DE DIAGNÓSTICO CLÍNICO",
+          topic_en: "DIAGNOSTIC CLINICAL SERVICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o POP.",
+          placeholder_en: "Check the SOP.",
         },
       },
     ],
