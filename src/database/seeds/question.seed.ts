@@ -768,4 +768,445 @@ export const QuestionSeed = [
       },
     ],
   },
+  {
+    formNumber: "3",
+    formId: "79",
+    questions: [
+      {
+        question_number: "3.1",
+        descriptions: {
+          description_pt:
+            "Existem POPs disponíveis para garantir a correta identificação do paciente, incluindo possibilidade de gravidez e amamentação, antes da administração do radiofármaco?",
+          description_en:
+            "Are there SOPs available to ensure correct identification of the patient, including possible pregnancy and breast feeding status, prior to administration of the radiopharmaceutical?",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento / Observação no local.",
+          placeholder_en: "Check the procedure / Observation on site.",
+        },
+      },
+      {
+        question_number: "3.2",
+        descriptions: {
+          description_pt:
+            "Existe sinalização apropriada para alertar mulheres em idade fértil a reportar qualquer potencial gravidez ou amamentação?",
+          description_en:
+            "Is  there appropriate signage for alerting female patients of child bearing age to report any potential pregnancy or breast-feeding?",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento / Observação no local.",
+          placeholder_en: "Check the procedure / Observation on site.",
+        },
+      },
+      {
+        question_number: "3.3",
+        descriptions: {
+          description_pt:
+            "São fornecidas informações verbais e por escrito ao paciente sobre seu procedimento antes e depois da administração do radiofármaco?",
+          description_en:
+            "Is verbal and written information provided to patients about their procedure before and after administration of radiopharmaceuticals?",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Observação no local / cópia das instruções.",
+          placeholder_en: "Observation on site / copy of the instructions.",
+        },
+      },
+      {
+        question_number: "3.4",
+        descriptions: {
+          description_pt:
+            "A atividade para cada paciente é confirmada por meio de aferição antes da administração e inserida na ficha do paciente?",
+          description_en:
+            "Is the activity of each patient dose confirmed by measuring prior to administration and entered into the patient's file?",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Observação no local / cópia das instruções.",
+          placeholder_en: "Observation on site / copy of the instructions.",
+        },
+      },
+      {
+        question_number: "3.5",
+        descriptions: {
+          description_pt:
+            "Existe um POP estabelecendo Níveis de Referência em Diagnóstico (DRLs) locais para atividade administrada, baseado em regulamentações ou diretrizes nacionais ou internacionais?",
+          description_en:
+            "Is there an SOP establishing local Diagnostic Reference Levels for administered activity, cross referring to national or international regulations or guidelines?",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento / Verificar o Manual.",
+          placeholder_en: "Check the procedure / Check the Manual.",
+        },
+      },
+      {
+        question_number: "3.6",
+        descriptions: {
+          description_pt:
+            "No caso de imagem multimodalidade: existe um POP estabelecendo DRLs para dose de Raios X, com base em regulamentações ou diretrizes nacionais ou internacionais?",
+          description_en:
+            "In case of multimodality imaging: Is there an SOP establishing local Diagnostic Reference Levels for X-ray dose, cross referring to national or international regulations or guidelines?",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento / verificar o Manual.",
+          placeholder_en: "Check the procedure / Check the Manual.",
+        },
+      },
+      {
+        question_number: "3.7",
+        descriptions: {
+          description_pt:
+            "Existe uma pessoa treinada disponível para estimar a dose efetiva de radiação aos pacientes após administração dos radiofármacos?",
+          description_en:
+            "Is there a trained person available to estimate the effective radiation dose to patients following administration of radiopharmaceuticals?",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Observação no local / Verificar descrição do cargo.",
+          placeholder_en: "Observation on site / Check the job description.",
+        },
+      },
+      {
+        question_number: "3.8",
+        descriptions: {
+          description_pt:
+            "No caso de imagem multimodalidade: existe uma pessoa qualificada disponível para estimar os riscos devido à exposição à radiação X.",
+          description_en:
+            "In the case of multimodality imaging: is there a trained person available to estimate the risk due to X-ray exposure or radiofrequency  due to MR",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Observação no local / Verificar descrição do cargo.",
+          placeholder_en: "Observation on site / Check the job description.",
+        },
+      },
+      {
+        question_number: "3.9",
+        descriptions: {
+          description_pt:
+            "Existem POPs adequados para minimizar o risco de administração equivocada (erro entre o paciente e o radiofármaco) e/ou má administração (extravasamento) de radiofármacos?",
+          description_en:
+            "Are there adequate SOPs to minimize the risk of misadministration (mismatch patient / radiopharmaceutical) and/or maladministration (extravasation) of radiopharmaceuticals?",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento / Observação no local.",
+          placeholder_en: "Check the procedure / Observation on site.",
+        },
+      },
+      {
+        question_number: "3.10",
+        descriptions: {
+          description_pt:
+            "Existem mecanismos (busca em RIS/PACS, pesquisa por exames prévios, pergunta ao paciente) para minimizar o risco de repetição desnecessária de exames envolvendo exposição à radiação ionizante?",
+          description_en:
+            "Are there mechanisms in place (query of RIS/PACS, search for previous investigations, ask the patient) to minimize the risk of unnecessary repetition of investigations involving radiation exposure?",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento.",
+          placeholder_en: "Check the procedure.",
+        },
+      },
+      {
+        question_number: "3.11",
+        descriptions: {
+          description_pt:
+            'Existe um POP específico sobre "desvios", incidentes, quase-falhas e outras não conformidades em exposição ao paciente, incluindo relatório e ações corretivas?',
+          description_en:
+            "Is there a specific SOP addressing deviations, incidents, near misses and other non-compliance in patient exposures, including reporting and corrective actions?",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento.",
+          placeholder_en: "Check the procedure.",
+        },
+      },
+      {
+        question_number: "3.12",
+        descriptions: {
+          description_pt:
+            "Existe um POP específico para lidar com mulheres grávidas ou lactantes que precisem passar por um procedimento de medicina nuclear?",
+          description_en:
+            "Is there a specific SOP for dealing with pregnant or breast-feeding women who need a nuclear medicine procedure?",
+        },
+        topics: {
+          topic_pt: "PROTEÇÃO RADIOLÓGICA DOS PACIENTES",
+          topic_en: "PATIENT RADIATION PROTECTION",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o procedimento.",
+          placeholder_en: "Check the procedure.",
+        },
+      },
+    ],
+  },
+  {
+    formNumber: "4",
+    formId: "80",
+    questions: [
+      {
+        question_number: "4.1",
+        descriptions: {
+          description_pt: "",
+          description_en: "",
+        },
+        topics: {
+          topic_pt: "",
+          topic_en: "",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+    ],
+  },
+  {
+    formNumber: "5",
+    formId: "81",
+    questions: [
+      {
+        question_number: "5.1",
+        descriptions: {
+          description_pt: "",
+          description_en: "",
+        },
+        topics: {
+          topic_pt: "",
+          topic_en: "",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+    ],
+  },
+  {
+    formNumber: "6",
+    formId: "82",
+    questions: [
+      {
+        question_number: "6.1",
+        descriptions: {
+          description_pt: "",
+          description_en: "",
+        },
+        topics: {
+          topic_pt: "",
+          topic_en: "",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+    ],
+  },
+  {
+    formNumber: "7",
+    formId: "83",
+    questions: [
+      {
+        question_number: "7.1",
+        descriptions: {
+          description_pt: "",
+          description_en: "",
+        },
+        topics: {
+          topic_pt: "",
+          topic_en: "",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+    ],
+  },
+  {
+    formNumber: "8",
+    formId: "84",
+    questions: [
+      {
+        question_number: "8.1",
+        descriptions: {
+          description_pt: "",
+          description_en: "",
+        },
+        topics: {
+          topic_pt: "",
+          topic_en: "",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+    ],
+  },
+  {
+    formNumber: "9",
+    formId: "85",
+    questions: [
+      {
+        question_number: "9.1",
+        descriptions: {
+          description_pt: "",
+          description_en: "",
+        },
+        topics: {
+          topic_pt: "",
+          topic_en: "",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+    ],
+  },
+  {
+    formNumber: "10",
+    formId: "86",
+    questions: [
+      {
+        question_number: "10.1",
+        descriptions: {
+          description_pt: "",
+          description_en: "",
+        },
+        topics: {
+          topic_pt: "",
+          topic_en: "",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+    ],
+  },
+  {
+    formNumber: "11",
+    formId: "87",
+    questions: [
+      {
+        question_number: "11.1",
+        descriptions: {
+          description_pt: "",
+          description_en: "",
+        },
+        topics: {
+          topic_pt: "",
+          topic_en: "",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+    ],
+  },
+  {
+    formNumber: "12",
+    formId: "88",
+    questions: [
+      {
+        question_number: "12.1",
+        descriptions: {
+          description_pt: "",
+          description_en: "",
+        },
+        topics: {
+          topic_pt: "",
+          topic_en: "",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+    ],
+  },
+  {
+    formNumber: "13",
+    formId: "89",
+    questions: [
+      {
+        question_number: "13.1",
+        descriptions: {
+          description_pt: "",
+          description_en: "",
+        },
+        topics: {
+          topic_pt: "",
+          topic_en: "",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+    ],
+  },
+  {
+    formNumber: "14",
+    formId: "90",
+    questions: [
+      {
+        question_number: "14.1",
+        descriptions: {
+          description_pt: "",
+          description_en: "",
+        },
+        topics: {
+          topic_pt: "",
+          topic_en: "",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+    ],
+  },
 ];
