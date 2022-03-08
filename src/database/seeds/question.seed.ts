@@ -4363,15 +4363,477 @@ export const QuestionSeed = [
         question_number: "13.1",
         descriptions: {
           description_pt: "",
-          description_en: "",
+          description_en:
+            "Is the radiopharmacy operational level 3 unit operated under the direction of a person with appropriate training and qualification as defined by local or national regulations?",
         },
         topics: {
-          topic_pt: "",
-          topic_en: "",
+          topic_pt: "TREINAMENTO DE EQUIPE TÉCNICA",
+          topic_en: "STAFFING AND TRAINING",
         },
         evidencePlaceholders: {
           placeholder_pt: "",
-          placeholder_en: "",
+          placeholder_en:
+            "Registered Pharmacist, Scientist or QP. Check the training SOP / Check the personal cards.",
+        },
+      },
+      {
+        question_number: "13.2",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there specific staff training and assessment of competency at operational level 3, including all risks, deviations and change control, pharmaceutical formulation, QC, validation, and aseptic practice?",
+        },
+        topics: {
+          topic_pt: "TREINAMENTO DE EQUIPE TÉCNICA",
+          topic_en: "STAFFING AND TRAINING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the training SOP / Check the personal cards.",
+        },
+      },
+      {
+        question_number: "13.3",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are there appropriately trained staff members, minimum 3 of them, for compounding of diagnostics or therapies or cold-kits, or sub-dispensing of commercial kits and validation/release of the final product?",
+        },
+        topics: {
+          topic_pt: "TREINAMENTO DE EQUIPE TÉCNICA",
+          topic_en: "STAFFING AND TRAINING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the training SOP / Check the personal cards.",
+        },
+      },
+      {
+        question_number: "13.4",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are there QC staff (independent from those involved on specific production)  trained to perform final checks and batch release on all products prepared for patient use?",
+        },
+        topics: {
+          topic_pt: "TREINAMENTO DE EQUIPE TÉCNICA",
+          topic_en: "STAFFING AND TRAINING",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the training SOP / Check the personal cards.",
+        },
+      },
+      {
+        question_number: "13.5",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are there clean-rooms with anteroom facilities fitted with HEPA-filters meeting USP/EU standards, Class D for use with isolators and Class C with LAF (Laminar air flow) cabinet?",
+        },
+        topics: {
+          topic_pt: "INSTALAÇÕES",
+          topic_en: "FACILITIES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.6",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a HVAC - (heating, ventilation, air-conditioning) system installed, validated and maintained?",
+        },
+        topics: {
+          topic_pt: "INSTALAÇÕES",
+          topic_en: "FACILITIES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.7",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are these facilities and all critical equipment regularly monitored and under control (i.e. differential pressure, airflow rates, particle counts and microbiological contamination)?",
+        },
+        topics: {
+          topic_pt: "INSTALAÇÕES",
+          topic_en: "FACILITIES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.8",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are all analytical equipment (HPLC, GC, TLC, weighing scales, etc) validated, maintained ? Are records kept of cleaning, routine calibration and maintenance?",
+        },
+        topics: {
+          topic_pt: "INSTALAÇÕES",
+          topic_en: "FACILITIES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.9",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Does the terminal sterilization and dispensing take place under ISO 5, class 100 or EU Grade A conditions? Is this supported by controls such as microbiological plate and broth, and filter integrity tests?",
+        },
+        topics: {
+          topic_pt: "INSTALAÇÕES",
+          topic_en: "FACILITIES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.10",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are synthesis modules tested for tightness and integrity/function before starting each synthesis?",
+        },
+        topics: {
+          topic_pt: "PROTOCOLOS OPERACIONAIS",
+          topic_en: "OPERATIONAL PROTOCOLS",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "13.11",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a SOP for material management, including control and checks on all raw materials (chemicals or gas)?  If applicable, are only ingredients and reagents of pharmaceutical grade used and do all glassware or all consumables have quality marks?",
+        },
+        topics: {
+          topic_pt: "PROTOCOLOS OPERACIONAIS",
+          topic_en: "OPERATIONAL PROTOCOLS",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.12",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a SOP for control of material storage conditions (e.g. storage in fridge /freezer /desiccator/at room temperature) and does each item have a QC traceable tag?",
+        },
+        topics: {
+          topic_pt: "PROTOCOLOS OPERACIONAIS",
+          topic_en: "OPERATIONAL PROTOCOLS",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.13",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are the environmental conditions compliant during production, and is the preparation of each stage of radiopharmaceutical compounding carried out in a laminar air flow (LAF) cabinet?",
+        },
+        topics: {
+          topic_pt: "PROTOCOLOS OPERACIONAIS",
+          topic_en: "OPERATIONAL PROTOCOLS",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.14",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is each step checked and cross-checked on the working document at the time of completion of the task?",
+        },
+        topics: {
+          topic_pt: "PROTOCOLOS OPERACIONAIS",
+          topic_en: "OPERATIONAL PROTOCOLS",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.15",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Can each individual patient preparation and/or batch number be traced back by an operational documentation system to the starting material, equipment used, operators, cyclotron run, specific generator and/or kit, QC processes and final release?",
+        },
+        topics: {
+          topic_pt: "PROTOCOLOS OPERACIONAIS",
+          topic_en: "OPERATIONAL PROTOCOLS",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.16",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are there SOPs with instructions on safety, cleaning, line clearance and decontamination for prevention of any cross-contamination?",
+        },
+        topics: {
+          topic_pt: "PROTOCOLOS OPERACIONAIS",
+          topic_en: "OPERATIONAL PROTOCOLS",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the procedure, records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.17",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are all critical checks (including visual), changes and amendments during the process of preparation of individual radiopharmaceuticals, kits, PET modules, therapies formally controlled, approved, timed and dated?",
+        },
+        topics: {
+          topic_pt: "PROTOCOLOS OPERACIONAIS",
+          topic_en: "OPERATIONAL PROTOCOLS",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the records / Change control documentation / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.18",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Does the batch master-file specify an approved label that includes pharmacopeia name, activity, reference and expiry time, instructions for storage, license number and precautions? Are copies of labels retained and is the total number of labels reconciled before final QC release of batch?",
+        },
+        topics: {
+          topic_pt: "PROTOCOLOS OPERACIONAIS",
+          topic_en: "OPERATIONAL PROTOCOLS",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.19",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Does the production manager check before batch handover to Quality Control for final release to the patient?",
+        },
+        topics: {
+          topic_pt: "PROTOCOLOS OPERACIONAIS",
+          topic_en: "OPERATIONAL PROTOCOLS",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.20",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are there SOPs for QA/QC, based on pharmacopeia or equivalent validated methods?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the procedure, records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.21",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Does the quality controller independently check environmental compliance, material, documentation, equipment, operator, cleaning, etc.?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the procedure, records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.22",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is a validation done before starting a new or significant modification to an existing method of synthesis?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the procedure, records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.23",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there routine microbiological monitoring of the preparation area and the aseptic dispensing station in the radiopharmacy? Does the quality controller independently perform all required microbiological assessments, filter integrity tests, endotoxins, plates controls, end of broth, contact plates, sterility testing, etc.?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the procedure, records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.24",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there an annually tested product recall procedure to ensure radiopharmaceuticals are not administered to patients before receipt of the product release document?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the procedure, records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.25",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Have all critical assessments been performed and any changes been approved by a Qualified Person before release for patient administration?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the procedure, records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.26",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a SOP for packing and safe transportation requirements in accordance with IAEA guidelines?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the procedure, records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.27",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there timely transmission of a product release document / certificate of analysis to end-users and follow-up of deficiencies, complaints and feedback?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the procedure, records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.28",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there an annual programme of self-assessment and audit of QMS at radiopharmacy operational level 3?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the procedure, records / Evaluation on the field.",
+        },
+      },
+      {
+        question_number: "13.29",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are proper UN-compliant waste disposal practices (including separate lead shielding for radioactive waste, waste container for solvents, and biological waste) in place?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en:
+            "Check the procedure, records / Evaluation on the field.",
         },
       },
     ],
@@ -4384,15 +4846,337 @@ export const QuestionSeed = [
         question_number: "14.1",
         descriptions: {
           description_pt: "",
-          description_en: "",
+          description_en:
+            "Does the radioimmunoassay service have formal authorization from a recognized national authority?",
         },
         topics: {
-          topic_pt: "",
-          topic_en: "",
+          topic_pt: "BOAS PRÁTICAS LABORATORIAIS",
+          topic_en: "GOOD LABORATORY PRACTICES",
         },
         evidencePlaceholders: {
           placeholder_pt: "",
-          placeholder_en: "",
+          placeholder_en:
+            "Check the written authorization from the national authority.",
+        },
+      },
+      {
+        question_number: "14.2",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a clear written protocol  for using all radioimmunoassay,  IRMA (immunoradiometric assay), ELISA (enzyme linked immunosorbent assay) analytes used in the laboratory?",
+        },
+        topics: {
+          topic_pt: "BOAS PRÁTICAS LABORATORIAIS",
+          topic_en: "GOOD LABORATORY PRACTICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the written protocol.",
+        },
+      },
+      {
+        question_number: "14.3",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a clear protocol stating the action required in a follow-up of suspected result errors in the laboratory?",
+        },
+        topics: {
+          topic_pt: "BOAS PRÁTICAS LABORATORIAIS",
+          topic_en: "GOOD LABORATORY PRACTICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the protocol.",
+        },
+      },
+      {
+        question_number: "14.4",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a mechanism to check why  its recent results are 20% lower,  while all previous results have all been  within 10% of the target?",
+        },
+        topics: {
+          topic_pt: "BOAS PRÁTICAS LABORATORIAIS",
+          topic_en: "GOOD LABORATORY PRACTICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the mechanism.",
+        },
+      },
+      {
+        question_number: "14.5",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a mechanism to follow-up random errors, e.g. wrong sample  on analyser, wrong specimen assayed, wrong result reported by accident?",
+        },
+        topics: {
+          topic_pt: "BOAS PRÁTICAS LABORATORIAIS",
+          topic_en: "GOOD LABORATORY PRACTICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the mechanism.",
+        },
+      },
+      {
+        question_number: "14.6",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a mechanism to double check records of reported ‘undetectable’  when the expected result would have been clinically significant?",
+        },
+        topics: {
+          topic_pt: "BOAS PRÁTICAS LABORATORIAIS",
+          topic_en: "GOOD LABORATORY PRACTICES",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the mechanism.",
+        },
+      },
+      {
+        question_number: "14.7",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a procedure to follow when the clinical user does not provide the necessary information or the correct specimen?",
+        },
+        topics: {
+          topic_pt: "FASE PRÉ-ANALÍTICA",
+          topic_en: "PRE-ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the written procedure.",
+        },
+      },
+      {
+        question_number: "14.8",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a periodic review to prevent pre-analytical errors, e.g. use of inappropriate specimen collection tubes, specimen mix-ups, incorrectly labelled or mixed up requests from the requesting unit or laboratory?",
+        },
+        topics: {
+          topic_pt: "FASE PRÉ-ANALÍTICA",
+          topic_en: "PRE-ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "14.9",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a periodic review of the appropriateness and integrity of the sample transport system? ",
+        },
+        topics: {
+          topic_pt: "FASE PRÉ-ANALÍTICA",
+          topic_en: "PRE-ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "14.10",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a periodic review to ensure that the confidentiality of patient results is guaranteed?",
+        },
+        topics: {
+          topic_pt: "FASE PRÉ-ANALÍTICA",
+          topic_en: "PRE-ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "14.11",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a periodic review to ensure biological safety?",
+        },
+        topics: {
+          topic_pt: "FASE PRÉ-ANALÍTICA",
+          topic_en: "PRE-ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "14.12",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are there records of regression  line analyses with a known amount  of the international standard in serum?",
+        },
+        topics: {
+          topic_pt: "FASE ANALÍTICA",
+          topic_en: "ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "14.13",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are there records of recovery experiments to validate a new method?",
+        },
+        topics: {
+          topic_pt: "FASE ANALÍTICA",
+          topic_en: "ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "14.14",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "For each type of assay and/or each type of data set, is there a record of calculated mean, standard deviations and coefficient of variation? ",
+        },
+        topics: {
+          topic_pt: "FASE ANALÍTICA",
+          topic_en: "ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "14.15",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a Levey-Jennings plot, including controls and standards for each assay? ",
+        },
+        topics: {
+          topic_pt: "FASE ANALÍTICA",
+          topic_en: "ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "14.16",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a clear written protocol when points are outside the 2 standard deviation limits? ",
+        },
+        topics: {
+          topic_pt: "FASE ANALÍTICA",
+          topic_en: "ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the written protocol.",
+        },
+      },
+      {
+        question_number: "14.17",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a system in place to guarantee safe disposal of samples and are samples treated as infectious waste?",
+        },
+        topics: {
+          topic_pt: "FASE ANALÍTICA",
+          topic_en: "ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Observation on site.",
+        },
+      },
+      {
+        question_number: "14.18",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a standard format for reporting laboratory results that includes the laboratory’s name, patient details, requesting person, test description, sample type (serum, urine, etc.), results (plus reference values), interpretative comments (if any) and signature of authorized professional?",
+        },
+        topics: {
+          topic_pt: "FASE PÓS-ANALÍTICA",
+          topic_en: "POST-ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the procedures / Check the reports.",
+        },
+      },
+      {
+        question_number: "14.19",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is there a list of authorized staff members who are designated to amend patient notes or reports and for communicating results?",
+        },
+        topics: {
+          topic_pt: "FASE PÓS-ANALÍTICA",
+          topic_en: "POST-ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the procedures / Check the reports.",
+        },
+      },
+      {
+        question_number: "14.20",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Are reference values based on national or regional findings available for each assay type?",
+        },
+        topics: {
+          topic_pt: "FASE PÓS-ANALÍTICA",
+          topic_en: "POST-ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the written procedures.",
+        },
+      },
+      {
+        question_number: "14.21",
+        descriptions: {
+          description_pt: "",
+          description_en:
+            "Is feedback from clinical interpretative services documented?",
+        },
+        topics: {
+          topic_pt: "FASE PÓS-ANALÍTICA",
+          topic_en: "POST-ANALYTICAL PHASE",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "Check the records.",
         },
       },
     ],
