@@ -4008,16 +4008,349 @@ export const QuestionSeed = [
       {
         question_number: "12.1",
         descriptions: {
-          description_pt: "",
-          description_en: "",
+          description_pt:
+            "Existe treinamento específico de pessoal e avaliação de competências, incluindo prática asséptica?",
+          description_en:
+            "Is there specific staff training and assessment of competency at operational level 2, including aseptic practice?",
         },
         topics: {
-          topic_pt: "",
-          topic_en: "",
+          topic_pt: "Equipe técnica",
+          topic_en: "Staffing",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
-          placeholder_en: "",
+          placeholder_pt:
+            "Verificar o POP de treinamento / Verificar os cartões pessoais.",
+          placeholder_en: "Check the training SOP / Check the  personal cards.",
+        },
+      },
+      {
+        question_number: "12.2",
+        descriptions: {
+          description_pt:
+            "A equipe é treinada para realizar verificações finais em todos os produtos antes da liberação para uso do paciente?",
+          description_en:
+            "Are staff trained to perform final checks on all products before release for patient use?",
+        },
+        topics: {
+          topic_pt: "Equipe técnica",
+          topic_en: "Staffing",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os cartões pessoais.",
+          placeholder_en: "Check the  personal cards.",
+        },
+      },
+      {
+        question_number: "12.3",
+        descriptions: {
+          description_pt:
+            "Há confirmação regular de treinamento para a equipe que realiza a marcação de células (hemácias)?",
+          description_en:
+            "Is there regular confirmation of training for staff performing cell labelling?",
+        },
+        topics: {
+          topic_pt: "Equipe técnica",
+          topic_en: "Staffing",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o POP de treinamento.",
+          placeholder_en: "Check the training SOP.",
+        },
+      },
+      {
+        question_number: "12.4",
+        descriptions: {
+          description_pt:
+            "Existe uma cabine de segurança microbiológica Classe II tipo B em uma sala reservada para a farmácia?",
+          description_en:
+            "Is there a Class II type B microbiological safety cabinet in a dedicated, pharmacy classified room?",
+        },
+        topics: {
+          topic_pt: "Instalações",
+          topic_en: "Facilities",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros.",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "12.5",
+        descriptions: {
+          description_pt:
+            "Para cabines de segurança, as luvas são inspecionadas visualmente e os testes de integridade realizados e registrados antes da preparação acontecer?",
+          description_en:
+            "For isolators, are gloves or gauntlets visually inspected and integrity tests carried out and recorded before preparation takes place?",
+        },
+        topics: {
+          topic_pt: "Instalações",
+          topic_en: "Facilities",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Avaliação no local.",
+          placeholder_en: "Check the records / Evaluation on site.",
+        },
+      },
+      {
+        question_number: "12.6",
+        descriptions: {
+          description_pt:
+            "Existe um sistema adequado de climatização (aquecimento, ventilação, ar condicionado) instalado e mantido regularmente?",
+          description_en:
+            "Is there an adequate HVAC - (heating, ventilation, air-conditioning) system installed and regularly maintained?",
+        },
+        topics: {
+          topic_pt: "Instalações",
+          topic_en: "Facilities",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Avaliação no local.",
+          placeholder_en: "Check the records / Evaluation on site.",
+        },
+      },
+      {
+        question_number: "12.7",
+        descriptions: {
+          description_pt:
+            "Todas as capelas de fluxo laminar, isoladores, etc., são validadas e verificadas regularmente?",
+          description_en:
+            "Are all laminar flow hot cell, isolators etc, validated and regularly checked?",
+        },
+        topics: {
+          topic_pt: "Instalações",
+          topic_en: "Facilities",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Avaliação no local.",
+          placeholder_en: "Check the records / Evaluation on site.",
+        },
+      },
+      {
+        question_number: "12.8",
+        descriptions: {
+          description_pt:
+            "Todos os métodos e preparações estão documentados nos POPs?",
+          description_en:
+            "Are all methods and preparations documented in SOPs?",
+        },
+        topics: {
+          topic_pt: "Protocolos de preparação",
+          topic_en: "Preparation protocols",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar a documentação aprovada.",
+          placeholder_en: "Check the approved documentation.",
+        },
+      },
+      {
+        question_number: "12.9",
+        descriptions: {
+          description_pt:
+            "Todos os produtos, kits e geradores têm aprovação de produto, autorização de comercialização ou possuem um número de licença de produto?",
+          description_en:
+            "Do all products, kits and generators have product approval, marketing authorization, or bear a product license number?",
+        },
+        topics: {
+          topic_pt: "Protocolos de preparação",
+          topic_en: "Preparation protocols",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar o POP de compra.",
+          placeholder_en: "Check the records / Check the purchase SOP.",
+        },
+      },
+      {
+        question_number: "12.10",
+        descriptions: {
+          description_pt:
+            "O preparo dos radiofármacos marcados com Tc-99m a partir de kits e geradores é realizado em cabine de fluxo laminar?",
+          description_en:
+            "Is the preparation of 99mTc radiopharmaceuticals from kits and generators carried out in a laminar air flow (LAF) cabinet?",
+        },
+        topics: {
+          topic_pt: "Protocolos de preparação",
+          topic_en: "Preparation protocols",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Avaliação no local.",
+          placeholder_en: "Evaluation on site.",
+        },
+      },
+      {
+        question_number: "12.11",
+        descriptions: {
+          description_pt:
+            "A preparação de cada paciente individual pode ser rastreada até um gerador específico e número de lote do kit?",
+          description_en:
+            "Can each individual patient preparation be traced to a specific generator and kit batch number?",
+        },
+        topics: {
+          topic_pt: "Protocolos de preparação",
+          topic_en: "Preparation protocols",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os registros / Avaliação no local da rastreabilidade.",
+          placeholder_en:
+            "Check the records / Evaluation on field of traceability.",
+        },
+      },
+      {
+        question_number: "12.12",
+        descriptions: {
+          description_pt:
+            "Os POPs para rotulagem de células autólogas incluem instruções sobre segurança (ou seja, fazer uma única preparação do paciente por vez), limpeza e descontaminação após cada preparação?",
+          description_en:
+            "Do SOPs for autologous cell labelling include instructions on safety (i.e. doing a single patient preparation at a time), cleaning and decontamination after each preparation?",
+        },
+        topics: {
+          topic_pt: "Protocolos de preparação",
+          topic_en: "Preparation protocols",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os POPs / Observação no local.",
+          placeholder_en: "Check the SOPs / Observation on site.",
+        },
+      },
+      {
+        question_number: "12.13",
+        descriptions: {
+          description_pt:
+            "Existem POPs para a preparação e distribuição de produtos biológicos marcados com radionuclídeos?",
+          description_en:
+            "Are there SOPs for the preparation and dispensing of radio-labelled biologicals, e.g. monoclonal antibodies, peptides from approved kit formulations?",
+        },
+        topics: {
+          topic_pt: "Protocolos de preparação",
+          topic_en: "Preparation protocols",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os procedimentos / Observação no local.",
+          placeholder_en: "Check the procedures / Observation on site.",
+        },
+      },
+      {
+        question_number: "12.14",
+        descriptions: {
+          description_pt:
+            "Os critérios de CQ foram definidos para a liberação de preparações antes da administração ao paciente?",
+          description_en:
+            "Have QC criteria been set for the release of preparations before patient administration?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os procedimentos.",
+          placeholder_en: "Check the procedures.",
+        },
+      },
+      {
+        question_number: "12.15",
+        descriptions: {
+          description_pt:
+            "É feito um registro de aprovação / liberação por uma pessoa autorizada antes de um produto ser administrado a um paciente?",
+          description_en:
+            "Is a record of approval/release made by an authorized person before a product is administered to a patient?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros.",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "12.16",
+        descriptions: {
+          description_pt:
+            "Existe um POP para QC regular do eluato do gerador Mo-99 / Tc-99 (incluindo descoberta de Mo-99, conteúdo de Al, pH, pureza radioquímica, etc)?",
+          description_en:
+            "Is there a SOP for regular QC of 99Mo/99mTc generator eluate (including 99Mo breakthrough, Al contents, pH, radiochemical purity, etc)",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos / Verificar os registros.",
+          placeholder_en: "Check the procedures / Check the records.",
+        },
+      },
+      {
+        question_number: "12.17",
+        descriptions: {
+          description_pt:
+            "Existe um POP para QC regular de kits rotulados com Tc-99m?",
+          description_en:
+            "Is there a SOP for regular QC of 99mTc labelled kits?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos / Verificar os registros.",
+          placeholder_en: "Check the procedures / Check the records.",
+        },
+      },
+      {
+        question_number: "12.18",
+        descriptions: {
+          description_pt:
+            "Antes do uso pelo paciente, os testes de pureza radioquímica são realizados em todos os novos lotes ou kits de radiofármacos recém-entregues?",
+          description_en:
+            "Before patient use, are radiochemical purity tests performed on all new batches or newly delivered radiopharmaceutical kits?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos / Verificar os registros.",
+          placeholder_en: "Check the procedures / Check the records.",
+        },
+      },
+      {
+        question_number: "12.19",
+        descriptions: {
+          description_pt:
+            "Para avaliar a dispensação asséptica, há monitoramento microbiológico de rotina (por exemplo, placas de ágar de 90 mm, placas de contato e swabs)?",
+          description_en:
+            "To assess aseptic dispensing, is there routine microbiological monitoring (e.g. 90 mm agar plates, contact plates and swabs)?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos / Verificar os registros.",
+          placeholder_en: "Check the procedures / Check the records.",
+        },
+      },
+      {
+        question_number: "12.20",
+        descriptions: {
+          description_pt:
+            "As mudanças no uso de kits, diluentes ou veículos, agulhas, seringas, swabs e recipientes estéreis são registradas?",
+          description_en:
+            "Are changes in the use of kits, diluents or vehicles, needles, syringes, swabs and sterile containers recorded?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA/QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os procedimentos / Verificar os registros.",
+          placeholder_en: "Check the procedures / Check the records.",
         },
       },
     ],
