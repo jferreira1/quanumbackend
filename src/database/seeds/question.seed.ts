@@ -3158,16 +3158,541 @@ export const QuestionSeed = [
       {
         question_number: "10.1",
         descriptions: {
-          description_pt: "",
-          description_en: "",
+          description_pt:
+            "Adequação desta terapia baseada em avaliação multidisciplinar e formalmente aprovada pelo médico responsável pelo tratamento.",
+          description_en:
+            "Appropriateness of this therapy based on a multidisciplinary evaluation and formally approved by the physician in charge of the treatment.",
         },
         topics: {
-          topic_pt: "",
-          topic_en: "",
+          topic_pt: "CLÍNICO",
+          topic_en: "CLINICAL",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
-          placeholder_en: "",
+          placeholder_pt:
+            "Verificar os registros / verificar os POPs / verificar as diretrizes internacionais relacionadas.",
+          placeholder_en:
+            "Check the records / Check the SOPs / Check the related international guidelines.",
+        },
+      },
+      {
+        question_number: "10.2",
+        descriptions: {
+          description_pt: "Tratamento em tempo clinicamente adequado.",
+          description_en: "Treatment within a clinically appropriate time.",
+        },
+        topics: {
+          topic_pt: "CLÍNICO",
+          topic_en: "CLINICAL",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros de pacientes.",
+          placeholder_en: "Check the patient records.",
+        },
+      },
+      {
+        question_number: "10.3",
+        descriptions: {
+          description_pt:
+            "Possíveis interferências ou contra-indicações à terapia identificada (condição do paciente, alergias, doenças concomitantes, questões socioeconômicas, etc.)",
+          description_en:
+            "Possible interferences or contraindications to the therapy identified (patient condition, allergies, concurrent diseases, socio-economic issues, etc.)",
+        },
+        topics: {
+          topic_pt: "CLÍNICO",
+          topic_en: "CLINICAL",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os registros de pacientes / verificar os POPs.",
+          placeholder_en: "Check the patient records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.4",
+        descriptions: {
+          description_pt:
+            "Resultados de todos os procedimentos de diagnóstico relevantes disponíveis (considerando o histórico do paciente e a avaliação atual)",
+          description_en:
+            "Results of all relevant diagnostic procedures available (considering both patient history and current workup)",
+        },
+        topics: {
+          topic_pt: "CLÍNICO",
+          topic_en: "CLINICAL",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / observação no local.",
+          placeholder_en: "Check the records / Observation on site.",
+        },
+      },
+      {
+        question_number: "10.5",
+        descriptions: {
+          description_pt: "Gravidez excluída por teste laboratorial",
+          description_en: "Pregnancy excluded by laboratory test",
+        },
+        topics: {
+          topic_pt: "CLÍNICO",
+          topic_en: "CLINICAL",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros.",
+          placeholder_en: "Check the records / Observation on site.",
+        },
+      },
+      {
+        question_number: "10.6",
+        descriptions: {
+          description_pt:
+            "Havia informações disponíveis sobre tratamentos anteriores, incluindo terapia anterior com radionuclídeos?",
+          description_en:
+            "Was information about previous treatments including previous radionuclide therapy, available?",
+        },
+        topics: {
+          topic_pt: "CLÍNICO",
+          topic_en: "CLINICAL",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros.",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "10.7",
+        descriptions: {
+          description_pt:
+            "Havia informações disponíveis sobre tratamentos em andamento e foram verificadas quaisquer possíveis interferência com a terapia com radionuclídeos atual?",
+          description_en:
+            "Was information about on-going medical therapy available and checked for any potential interference with the current radionuclide therapy?",
+        },
+        topics: {
+          topic_pt: "CLÍNICO",
+          topic_en: "CLINICAL",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros.",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "10.8",
+        descriptions: {
+          description_pt: "Identificação do Paciente",
+          description_en: "Patient Identification",
+        },
+        topics: {
+          topic_pt: "PROCEDIMENTO: Verificar se é feito de acordo com o POP",
+          topic_en: "TECHNICAL/PROCEDURE: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.9",
+        descriptions: {
+          description_pt:
+            "O radiofármaco correto foi prescrito e a atividade foi baseada na dose estimada para tecidos alvo e não alvo?",
+          description_en:
+            "Was the correct radiopharmaceutical prescribed and was the activity based on the estimated dose to target and non-target tissues?",
+        },
+        topics: {
+          topic_pt: "PROCEDIMENTO: Verificar se é feito de acordo com o POP",
+          topic_en: "TECHNICAL/PROCEDURE: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.10",
+        descriptions: {
+          description_pt:
+            "Atividade medida antes da administração, usando um medidor de atividade calibrado",
+          description_en:
+            "Activity measured before administration, using a calibrated activity meter",
+        },
+        topics: {
+          topic_pt: "PROCEDIMENTO: Verificar se é feito de acordo com o POP",
+          topic_en: "TECHNICAL/PROCEDURE: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros.",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "10.11",
+        descriptions: {
+          description_pt:
+            "Prevenção da administração incorreta (paciente / radiofármaco incompatível) e / ou má administração (extravasamento) do radiofármaco",
+          description_en:
+            "Prevention of misadministration (mismatch patient / radiopharmaceutical) and/or maladministration (extravasation) of the radiopharmaceutical",
+        },
+        topics: {
+          topic_pt: "PROCEDIMENTO: Verificar se é feito de acordo com o POP",
+          topic_en: "TECHNICAL/PROCEDURE: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.12",
+        descriptions: {
+          description_pt:
+            "Informações sobre contracepção subsequente fornecidas",
+          description_en:
+            "Information concerning subsequent contraception provided",
+        },
+        topics: {
+          topic_pt: "PROCEDIMENTO: Verificar se é feito de acordo com o POP",
+          topic_en: "TECHNICAL/PROCEDURE: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros.",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "10.13",
+        descriptions: {
+          description_pt:
+            "Exames de imagem realizados, quando necessários, para verificar a biodistribuição do radiofármaco",
+          description_en:
+            "Imaging performed, when required, to check the biodistribution of the radiopharmaceutical",
+        },
+        topics: {
+          topic_pt: "PROCEDIMENTO: Verificar se é feito de acordo com o POP",
+          topic_en: "TECHNICAL/PROCEDURE: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros.",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "10.14",
+        descriptions: {
+          description_pt:
+            "O paciente foi totalmente informado e o consentimento foi obtido conforme descrito?",
+          description_en:
+            "Has the patient been fully informed and has consent been obtained as described?",
+        },
+        topics: {
+          topic_pt:
+            "PREPARO DO PACIENTE: Verificar se é feito de acordo com o POP",
+          topic_en: "PATIENT PREPARATION: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os registros / Verificar os POPs / Observação no local.",
+          placeholder_en:
+            "Check the records / Check the SOPs / Observation on site.",
+        },
+      },
+      {
+        question_number: "10.15",
+        descriptions: {
+          description_pt:
+            "Instruções sobre medicamentos relacionados ao tratamento e quaisquer outras preparações fornecidas",
+          description_en:
+            "Instructions concerning treatment-related medication and any other preparations given",
+        },
+        topics: {
+          topic_pt:
+            "PREPARO DO PACIENTE: Verificar se é feito de acordo com o POP",
+          topic_en: "PATIENT PREPARATION: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os registros / Verificar os POPs / Observação no local.",
+          placeholder_en:
+            "Check the records / Check the SOPs / Observation on site.",
+        },
+      },
+      {
+        question_number: "10.16",
+        descriptions: {
+          description_pt:
+            "Condição médica do paciente e/ou interferência relacionada ao tratamento com o procedimento verificados",
+          description_en:
+            "Patient medical condition and/or treatment-related interference with the procedure checked",
+        },
+        topics: {
+          topic_pt:
+            "PREPARO DO PACIENTE: Verificar se é feito de acordo com o POP",
+          topic_en: "PATIENT PREPARATION: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.17",
+        descriptions: {
+          description_pt:
+            "Paciente instruída sobre a necessidade de evitar a gravidez por um período específico após a terapia. Aconselhamento relevante sobre lactação dado",
+          description_en:
+            "Patient instructed on the necessity of avoiding pregnancy for a specified time after therapy. Relevant counselling on lactation given",
+        },
+        topics: {
+          topic_pt:
+            "PREPARO DO PACIENTE: Verificar se é feito de acordo com o POP",
+          topic_en: "PATIENT PREPARATION: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.18",
+        descriptions: {
+          description_pt:
+            "Para pacientes pediátricos: parentes / cuidadores informados sobre questões de proteção contra radiação ionizante",
+          description_en:
+            "For paediatric patients: relatives/caregivers informed about radiation protection issues",
+        },
+        topics: {
+          topic_pt:
+            "PREPARO DO PACIENTE: Verificar se é feito de acordo com o POP",
+          topic_en: "PATIENT PREPARATION: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.19",
+        descriptions: {
+          description_pt:
+            "Verificação dupla das estimativas de dose / atividade a ser administrada",
+          description_en:
+            "Double checked dose estimates / activity to be administered",
+        },
+        topics: {
+          topic_pt:
+            "PROTEÇÃO RADIOLÓGICA: Verificar se é feito de acordo com o POP",
+          topic_en: "RADIATION PROTECTION: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.20",
+        descriptions: {
+          description_pt:
+            "Precauções para proteção de visitantes, parentes / cuidadores (tempo, distância, prevenção de contaminação, dosímetros opcionais)",
+          description_en:
+            "Precautions for protection of visitors, relatives/caregiver (time, distance, preventing contamination, optional dosimeters)",
+        },
+        topics: {
+          topic_pt:
+            "PROTEÇÃO RADIOLÓGICA: Verificar se é feito de acordo com o POP",
+          topic_en: "RADIATION PROTECTION: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.21",
+        descriptions: {
+          description_pt: "Medição da taxa de dose na alta",
+          description_en: "Measurement of dose rate at discharge",
+        },
+        topics: {
+          topic_pt:
+            "PROTEÇÃO RADIOLÓGICA: Verificar se é feito de acordo com o POP",
+          topic_en: "RADIATION PROTECTION: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.22",
+        descriptions: {
+          description_pt:
+            "Instruções pós alta, para limitar a dose para a família, público e contaminação do meio ambiente",
+          description_en:
+            "Instruction at discharge, to limit dose to family, public and contamination of environment",
+        },
+        topics: {
+          topic_pt:
+            "PROTEÇÃO RADIOLÓGICA: Verificar se é feito de acordo com o POP",
+          topic_en: "RADIATION PROTECTION: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.23",
+        descriptions: {
+          description_pt: "Monitoramento de contaminação do setor",
+          description_en: "Contamination monitoring of the ward.",
+        },
+        topics: {
+          topic_pt:
+            "PROTEÇÃO RADIOLÓGICA: Verificar se é feito de acordo com o POP",
+          topic_en: "RADIATION PROTECTION: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.24",
+        descriptions: {
+          description_pt: "Preparo do paciente verificado.",
+          description_en: "Patient preparation ascertained.",
+        },
+        topics: {
+          topic_pt:
+            "GARANTIA DE QUALIDADE/CONTROLE DE QUALIDADE: Verificar se é feito de acordo com o POP.",
+          topic_en: "QA/QC: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Observação no local.",
+          placeholder_en: "Check the records / Observation on site.",
+        },
+      },
+      {
+        question_number: "10.25",
+        descriptions: {
+          description_pt:
+            "Documentação do CQ do radiofármaco, incluindo caso de aquisição externa.",
+          description_en:
+            "Documentation of QC of the radiopharmaceutical including in the case of external procurement.",
+        },
+        topics: {
+          topic_pt:
+            "GARANTIA DE QUALIDADE/CONTROLE DE QUALIDADE: Verificar se é feito de acordo com o POP.",
+          topic_en: "QA/QC: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.26",
+        descriptions: {
+          description_pt:
+            "Arquivamento do número do lote, dosagem e horário de administração de qualquer produto farmacêutico relacionado à terapia.",
+          description_en:
+            "Filing of batch number, dosing and time of administration of any therapy-related pharmaceutical.",
+        },
+        topics: {
+          topic_pt:
+            "GARANTIA DE QUALIDADE/CONTROLE DE QUALIDADE: Verificar se é feito de acordo com o POP.",
+          topic_en: "QA/QC: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros.",
+          placeholder_en: "Check the records.",
+        },
+      },
+      {
+        question_number: "10.27",
+        descriptions: {
+          description_pt:
+            "Manejo e documentação de quaisquer incidentes (derramamento, extravasamento no local da injeção, vômito etc.) ou quaisquer eventos adversos.",
+          description_en:
+            "Handling and documentation of any incidents (spilling, extravasation at the injection site, vomiting etc.) or any adverse events.",
+        },
+        topics: {
+          topic_pt:
+            "GARANTIA DE QUALIDADE/CONTROLE DE QUALIDADE: Verificar se é feito de acordo com o POP.",
+          topic_en: "QA/QC: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.28",
+        descriptions: {
+          description_pt:
+            "Rastreabilidade de todos os pacientes e dados relacionados ao tratamento, por ex. radiofármaco, atividade administrada e via.",
+          description_en:
+            "Traceability of all patients and treatment-related data, e.g. radiopharmaceutical, administered activity and route.",
+        },
+        topics: {
+          topic_pt:
+            "GARANTIA DE QUALIDADE/CONTROLE DE QUALIDADE: Verificar se é feito de acordo com o POP.",
+          topic_en: "QA/QC: Check if done according to SOP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Observação no local / Verificar todos os registros que mostram rastreabilidade.",
+          placeholder_en:
+            "Observation on site / Check all the records showing traceability.",
+        },
+      },
+      {
+        question_number: "10.29",
+        descriptions: {
+          description_pt:
+            "Um laudo sobre o tratamento foi emitido e disponibilizado a todas as partes envolvidas?",
+          description_en:
+            "Was a comprehensive treatment report issued and made available to all involved parties?",
+        },
+        topics: {
+          topic_pt: "LAUDO E ACOMPANHAMENTO",
+          topic_en: "REPORTING AND FOLLOW-UP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar o relatório / Verificar os POPs. Discutir com solicitantes (não para pacientes individuais).",
+          placeholder_en:
+            "Check the report / Check the SOPs. Discuss with referrers (not for individual patients).",
+        },
+      },
+      {
+        question_number: "10.30",
+        descriptions: {
+          description_pt: "O laudo foi elaborado conforme especificado no POP?",
+          description_en:
+            "Was the report drafted as specified in the relevant SOP?",
+        },
+        topics: {
+          topic_pt: "LAUDO E ACOMPANHAMENTO",
+          topic_en: "REPORTING AND FOLLOW-UP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o relatório / Verificar os POPs.",
+          placeholder_en: "Check the report / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "10.31",
+        descriptions: {
+          description_pt:
+            "Algum feedback recebido após a terapia foi devidamente documentado e gerenciado?",
+          description_en:
+            "Was any feedback received after therapy properly documented and managed?",
+        },
+        topics: {
+          topic_pt: "LAUDO E ACOMPANHAMENTO",
+          topic_en: "REPORTING AND FOLLOW-UP",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar o relatório / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
         },
       },
     ],
