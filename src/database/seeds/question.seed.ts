@@ -3704,16 +3704,299 @@ export const QuestionSeed = [
       {
         question_number: "11.1",
         descriptions: {
-          description_pt: "",
-          description_en: "",
+          description_pt:
+            "A unidade de radiofarmácia é operada sob a direção de uma pessoa com treinamento apropriado conforme definido pelos regulamentos locais ou nacionais?",
+          description_en:
+            "Is the radiopharmacy unit operated under the direction of a person with appropriate training as defined by local or national regulations?",
         },
         topics: {
-          topic_pt: "",
-          topic_en: "",
+          topic_pt: "Equipe técnica",
+          topic_en: "Staffing",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar a descrição do cargo e o cartão pessoal da pessoa responsável.",
+          placeholder_en:
+            "Check the job description and the personal card of the person in charge.",
+        },
+      },
+      {
+        question_number: "11.2",
+        descriptions: {
+          description_pt:
+            "Existem manuais de treinamento escritos para todas as categorias da equipe de radiofarmácia?",
+          description_en:
+            "Are there written staff training manuals for all categories of radiopharmacy staff?",
+        },
+        topics: {
+          topic_pt: "Equipe técnica",
+          topic_en: "Staffing",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar o POP de treinamento / Verificar os cartões pessoais.",
+          placeholder_en: "Check the training SOP / Check the personal cards.",
+        },
+      },
+      {
+        question_number: "11.3",
+        descriptions: {
+          description_pt:
+            "A unidade possui salas devidamente acabadas (incluindo iluminação, paredes, pisos, tetos e ventilação adequados) e uma estação de dispensação blindada?",
+          description_en:
+            "Does the unit have appropriately finished rooms (including adequate lighting, walls, floors, ceilings and ventilation) and a shielded dispensing station?",
+        },
+        topics: {
+          topic_pt: "Radiofarmácia",
+          topic_en: "Facilities",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Avaliação no local.",
+          placeholder_en: "Evaluation on site.",
+        },
+      },
+      {
+        question_number: "11.4",
+        descriptions: {
+          description_pt:
+            "Existe uma coifa validada (verificação anual do fluxo de ar, segurança e teste de desafio) com filtros adequados para o manuseio de material radioativo volátil?",
+          description_en:
+            "Is there a validated (annual check on air flow, safety and challenge testing) fume hood with suitable filters for handling volatile radioactive material?",
+        },
+        topics: {
+          topic_pt: "Radiofarmácia",
+          topic_en: "Facilities",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Avaliação no local.",
+          placeholder_en: "Evaluation on site.",
+        },
+      },
+      {
+        question_number: "11.5",
+        descriptions: {
+          description_pt:
+            "Os materiais são armazenados em condições especificadas e controladas (por exemplo, na geladeira) e os produtos vencidos são removidos?",
+          description_en:
+            "Are materials stored in specified and controlled conditions (e.g. in fridge), and are expired products removed?",
+        },
+        topics: {
+          topic_pt: "Radiofarmácia",
+          topic_en: "Facilities",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Avaliação no local.",
+          placeholder_en: "Check the records / Evaluation on site.",
+        },
+      },
+      {
+        question_number: "11.6",
+        descriptions: {
+          description_pt: "Existem POPs para a compra de radiofármacos?",
+          description_en:
+            "Are there SOPs for the purchase of radiopharmaceuticals?",
+        },
+        topics: {
+          topic_pt: "Aquisição de materiais",
+          topic_en: "Purchase of materials",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os POPs de compra / Verificar a descrição do trabalho e os cartões pessoais.",
+          placeholder_en:
+            "Check the purchase SOPs / Check the job description and the personal cards.",
+        },
+      },
+      {
+        question_number: "11.7",
+        descriptions: {
+          description_pt:
+            "Todas as mercadorias recebidas são verificadas e registradas em relação ao pedido para conferência da entrega?",
+          description_en:
+            "Are all goods received checked and recorded against the order for correctness of delivery?",
+        },
+        topics: {
+          topic_pt: "Aquisição de materiais",
+          topic_en: "Purchase of materials",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os registros / Verificar os POPs de compra.",
+          placeholder_en: "Check the records / Check the purchase SOPs.",
+        },
+      },
+      {
+        question_number: "11.8",
+        descriptions: {
+          description_pt:
+            "Existem POPs para dispensação asséptica e identificação (rotulagem, marcação, codificação por cores) de radiofármacos prontos para uso?",
+          description_en:
+            "Are there SOPs for the aseptic dispensing and identifying (labelling, marking, color coding) of ready-to-use radiopharmaceuticals?",
+        },
+        topics: {
+          topic_pt: "Protocolos de dispensa",
+          topic_en: "Dispensing protocols",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os POPs.",
+          placeholder_en: "Check the SOPs.",
+        },
+      },
+      {
+        question_number: "11.9",
+        descriptions: {
+          description_pt:
+            "Existe capela de fluxo blindada com filtros adequados, no caso de materiais radioativos voláteis (I-131, Rn-219, etc)?",
+          description_en:
+            "Is there a shielded fume cupboard with suitable filters, in case of volatile radioactive materials (131I, 219Rn, etc)?",
+        },
+        topics: {
+          topic_pt: "Protocolos de dispensa",
+          topic_en: "Dispensing protocols",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Avaliação no local.",
+          placeholder_en: "Evaluation on site.",
+        },
+      },
+      {
+        question_number: "11.10",
+        descriptions: {
+          description_pt:
+            "Os POPs contêm instruções de segurança e monitoramento para dispensar e manipular o I-131?",
+          description_en:
+            "Do SOPs contain safety and monitoring instructions for dispensing and manipulating radioiodine?",
+        },
+        topics: {
+          topic_pt: "Protocolos de dispensa",
+          topic_en: "Dispensing protocols",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os POPs.",
+          placeholder_en: "Check the SOPs.",
+        },
+      },
+      {
+        question_number: "11.11",
+        descriptions: {
+          description_pt:
+            "A documentação de cada lote de radiofármaco pode ser rastreada desde a prescrição até a administração da preparação individual do paciente?",
+          description_en:
+            "Can the documentation for each radiopharmaceutical batch be traced from the prescription to the administration of individual patient preparation?",
+        },
+        topics: {
+          topic_pt: "Protocolos de dispensa",
+          topic_en: "Dispensing protocols",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os registros / Avaliação no local da rastreabilidade dos radiofármacos.",
+          placeholder_en:
+            "Check the records / Evaluation on field of radiopharmaceutical traceability.",
+        },
+      },
+      {
+        question_number: "11.12",
+        descriptions: {
+          description_pt:
+            "Toda a documentação de cada lote de radiofármaco está arquivada de acordo com os regulamentos nacionais?",
+          description_en:
+            "Is all documentation for each batch of radiopharmaceutical archived according to national regulations?",
+        },
+        topics: {
+          topic_pt: "Protocolos de dispensa",
+          topic_en: "Dispensing protocols",
+        },
+        evidencePlaceholders: {
+          placeholder_pt:
+            "Verificar os registros / Avaliação no local da rastreabilidade dos radiofármacos.",
+          placeholder_en:
+            "Check the records / Evaluation on field of radiopharmaceutical traceability.",
+        },
+      },
+      {
+        question_number: "11.13",
+        descriptions: {
+          description_pt:
+            "Os controles de qualidade dos radiofármacos são realizados e/ou a documentação de laudos externos verificada e eventuais recalls são gerenciados adequadamente?",
+          description_en:
+            "Are radiopharmaceuticals quality controls performed or related documentation checked and eventual recalls properly managed?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA / QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os registros / Verificar os POPs.",
+          placeholder_en: "Check the records / Check the SOPs.",
+        },
+      },
+      {
+        question_number: "11.14",
+        descriptions: {
+          description_pt:
+            "As verificações diárias do medidor de atividade são realizadas usando radionuclídeo (s) de longa duração para incluir a gama de radioisótopos para os pacientes?",
+          description_en:
+            "Are daily activity meter checks performed using long lived radionuclide/s to include the range of radioisotopes for patients?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA / QC",
         },
         evidencePlaceholders: {
           placeholder_pt: "",
           placeholder_en: "",
+        },
+      },
+      {
+        question_number: "11.15",
+        descriptions: {
+          description_pt:
+            "Existem verificações do medidor de atividade documentadas e ensaio de calibração feito de cada radionuclídeo com uma fonte de referência certificada (incluindo verificações na geometria, tipo de recipiente, etc)?",
+          description_en:
+            "Are there documented activity meter checks and calibration assay made of each radionuclide with a certified reference source  (including checks on geometry, container type, etc.)?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA / QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "",
+          placeholder_en: "",
+        },
+      },
+      {
+        question_number: "11.16",
+        descriptions: {
+          description_pt:
+            "Existe um POP para reclamações/procedimentos caso não atendam aos padrões exigidos?",
+          description_en:
+            "Is there a SOP for complaints and for dealing with products not meeting the required standards?",
+        },
+        topics: {
+          topic_pt: "Garantia de Qualidade / Controle de Qualidade",
+          topic_en: "QA / QC",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os procedimentos.",
+          placeholder_en: "Check the procedures.",
+        },
+      },
+      {
+        question_number: "11.17",
+        descriptions: {
+          description_pt:
+            "Existem POPs de radiofarmácia específicos para o descarte de rejeitos radioativos e não radioativos?",
+          description_en:
+            "Are there specific radiopharmacy SOPs for the disposal of radioactive and non-radioactive waste?",
+        },
+        topics: {
+          topic_pt: "Rejeitos",
+          topic_en: "Waste",
+        },
+        evidencePlaceholders: {
+          placeholder_pt: "Verificar os procedimentos. / Observação no local.",
+          placeholder_en: "Check the procedures / Observation on site.",
         },
       },
     ],
