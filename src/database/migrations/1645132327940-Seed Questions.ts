@@ -26,6 +26,7 @@ export class SeedQuestions1645132327940 implements MigrationInterface {
           question.form = await repoForm.findOneOrFail({
             formNumber: form.formNumber,
           });
+          question = await getRepository(Question).save(question);
 
           //Descriptions
           const descriptionPt = new QuestionDescription();

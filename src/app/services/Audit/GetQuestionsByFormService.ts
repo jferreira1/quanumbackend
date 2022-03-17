@@ -5,6 +5,7 @@ import { Name } from "../../entities/Name";
 import { Question } from "../../entities/Question";
 import { QuestionDescription } from "../../entities/QuestionDescription";
 import { Topic } from "../../entities/Topic";
+import QuestionsFormResponseFormat from "../../interfaces/QuestionsFormResponseFormat";
 
 export class GetQuestionsByFormService {
   async execute(auditId: string, formId: string) {
@@ -19,7 +20,7 @@ export class GetQuestionsByFormService {
       if (!form) throw new Error('Form of the given "id" does not exists');
 
       const repoQuestions = getRepository(Question);
-      const questions = await repoQuestions.find({
+      let questions = await repoQuestions.find({
         where: { form: form },
         relations: ["form"],
       });
@@ -34,7 +35,9 @@ export class GetQuestionsByFormService {
           language: string;
         }[];
       }[] = [];
-      const promises = questions.map(async (question) => {
+
+      let formTopics = new Set<Topic[]>();
+      const promise = questions.map(async (question) => {
         const questionDescription = await getRepository(
           QuestionDescription
         ).find({
@@ -42,10 +45,34 @@ export class GetQuestionsByFormService {
           relations: ["question", "language"],
         });
 
-        const questionTopic = await getRepository(Topic).find({
+        const questionTopics = await getRepository(Topic).find({
           where: { question: question },
           relations: ["question", "language"],
         });
+
+        if (formTopics.size === 0) {
+          formTopics.add(questionTopics);
+        }
+
+        let founds: Topic[] = [];
+        formTopics.forEach((formTopic) => {
+          if (questionTopics[0].topic === formTopic[0].topic) {
+            founds.push(formTopic[0]);
+          }
+          if (questionTopics[0].topic === formTopic[1].topic) {
+            founds.push(formTopic[1]);
+          }
+          if (questionTopics[1].topic === formTopic[0].topic) {
+            founds.push(formTopic[0]);
+          }
+          if (questionTopics[1].topic === formTopic[1].topic) {
+            founds.push(formTopic[1]);
+          }
+        });
+
+        if (!founds.length) {
+          formTopics.add(questionTopics);
+        }
 
         const questionPlaceholder = await getRepository(
           EvidencePlaceholder
@@ -57,10 +84,10 @@ export class GetQuestionsByFormService {
         let questionsRecords = [];
         for (let i = 0; i < questionDescription.length; i++) {
           questionsRecords.push({
-            topic: questionTopic[i].topic,
+            topic: questionTopics[i].topic,
             question: questionDescription[i].description,
             evidences_placeholder: questionPlaceholder[i].placeholder,
-            language: questionTopic[i].language.name,
+            language: questionTopics[i].language.name,
           });
         }
 
@@ -71,17 +98,118 @@ export class GetQuestionsByFormService {
         };
         formQuestions.push(questionResponse);
       });
-      await Promise.all(promises);
+      await Promise.all(promise);
+
       const formNames = await getRepository(Name).find({
         where: { form: form },
         relations: ["language"],
       });
 
-      const response = {
-        form_id: form.id,
-        form_number: form.formNumber,
-        form_names: formNames,
-        questions: formQuestions,
+      let formNamesByLanguages = {
+        portuguese: formNames.find((n) => n.language.name === "portuguese")!
+          .name,
+        english: formNames.find((n) => n.language.name === "english")!.name,
+      };
+
+      type topicsResponse = {
+        portuguese: string;
+        english: string;
+        questions: {
+          id: number;
+          number: string;
+          portuguese: {
+            question: string;
+            evidencePlaceholder: string;
+          };
+          english: {
+            question: string;
+            evidencePlaceholder: string;
+          };
+        }[];
+      };
+
+      let topicsResponseArray: topicsResponse[] = [];
+
+      questions = await getRepository(Question)
+        .find({
+          where: { form: form },
+          relations: ["topics", "descriptions", "placeholders"],
+        })
+        .then((questions) =>
+          questions.sort((questionA, questionB) => {
+            let comparisonFirstNumber =
+              Number(questionA.questionNumber.split(".")[0]) -
+              Number(questionB.questionNumber.split(".")[0]);
+
+            if (comparisonFirstNumber > 0) {
+              let comparisonSecondNumber =
+                Number(questionA.questionNumber.split(".")[1]) -
+                Number(questionB.questionNumber.split(".")[1]);
+              if (comparisonSecondNumber > 0) return comparisonSecondNumber;
+              return comparisonFirstNumber;
+            }
+            return comparisonFirstNumber;
+          })
+        );
+
+      let formTopicsSorted = Array.from(formTopics).sort(
+        (topicA, topicB) => topicA[0].id - topicB[0].id
+      );
+
+      // Iteração de Set formTopics com arrays de tópicos em multiplos idiomas.
+      for (let topics of formTopicsSorted) {
+        let topicResponse: topicsResponse = {
+          portuguese: "",
+          english: "",
+          questions: [],
+        };
+
+        // Iteração entre os idiomas de cada tópico
+        for (let topicByLanguage of topics) {
+          for (let question of questions) {
+            if (question.topics[0].topic === topicByLanguage.topic) {
+              topicResponse.questions.push({
+                id: question.id,
+                number: question.questionNumber,
+                portuguese: {
+                  question: question.descriptions[0].description,
+                  evidencePlaceholder: question.placeholders[0].placeholder,
+                },
+                english: {
+                  question: question.descriptions[1].description,
+                  evidencePlaceholder: question.placeholders[1].placeholder,
+                },
+              });
+            }
+
+            for (let topicToTest of question.topics) {
+              if (topicToTest.topic === topicByLanguage.topic) {
+                if (topicByLanguage.language.name === "portuguese") {
+                  topicResponse.portuguese = topicByLanguage.topic;
+                }
+                if (topicByLanguage.language.name === "english") {
+                  topicResponse.english = topicByLanguage.topic;
+                }
+              }
+            }
+          }
+        }
+        topicsResponseArray.push(topicResponse);
+      }
+
+      let response: {
+        formId: number;
+        formNumber: string;
+        formNames: {
+          portuguese: string;
+          english: string;
+        };
+        topics: topicsResponse[];
+      } = {
+        formId: form.id,
+        formNumber: form.formNumber,
+        formNames: formNamesByLanguages,
+        topics: topicsResponseArray,
       };
 
       return response;
