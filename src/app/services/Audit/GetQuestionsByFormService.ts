@@ -172,11 +172,11 @@ export class GetQuestionsByFormService {
                 number: question.questionNumber,
                 portuguese: {
                   question: question.descriptions[0].description,
-                  evidencePlaceholder: question.placeholders[0].placeholder,
+                  evidencePlaceholder: question.placeholders[1].placeholder,
                 },
                 english: {
                   question: question.descriptions[1].description,
-                  evidencePlaceholder: question.placeholders[1].placeholder,
+                  evidencePlaceholder: question.placeholders[0].placeholder,
                 },
               });
             }
