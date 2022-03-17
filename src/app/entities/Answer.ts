@@ -6,7 +6,6 @@ import {
   JoinTable,
   ManyToMany,
   ManyToOne,
-  OneToOne,
   PrimaryGeneratedColumn,
   Unique,
 } from "typeorm";

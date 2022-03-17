@@ -5,7 +5,6 @@ import { Name } from "../../entities/Name";
 import { Question } from "../../entities/Question";
 import { QuestionDescription } from "../../entities/QuestionDescription";
 import { Topic } from "../../entities/Topic";
-import QuestionsFormResponseFormat from "../../interfaces/QuestionsFormResponseFormat";
 
 export class GetQuestionsByFormService {
   async execute(auditId: string, formId: string) {

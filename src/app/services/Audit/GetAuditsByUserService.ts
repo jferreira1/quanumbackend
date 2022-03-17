@@ -1,7 +1,6 @@
 import { getRepository } from "typeorm";
 import Audit, { AuditType } from "../../entities/Audit";
 import User from "../../entities/User";
-import ResponseFormat from "../../interfaces/ResponseFormat";
 import { GetReportService } from "./GetReportService";
 
 type AuditResponse = {
