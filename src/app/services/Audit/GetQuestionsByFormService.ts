@@ -196,6 +196,14 @@ export class GetQuestionsByFormService {
         topicsResponseArray.push(topicResponse);
       }
 
+      let amountOfQuestions: number = await getRepository(Question)
+        .find({
+          where: { form: form },
+        })
+        .then((questions) => {
+          return questions.length;
+        });
+
       let response: {
         formId: number;
         formNumber: string;
@@ -203,11 +211,13 @@ export class GetQuestionsByFormService {
           portuguese: string;
           english: string;
         };
+        amountOfQuestions: number;
         topics: topicsResponse[];
       } = {
         formId: form.id,
         formNumber: form.formNumber,
         formNames: formNamesByLanguages,
+        amountOfQuestions: amountOfQuestions,
         topics: topicsResponseArray,
       };
 
