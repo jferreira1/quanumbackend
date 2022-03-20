@@ -13,18 +13,15 @@ export class GetAnswersService {
         where: { audit: auditId },
         relations: ["question", "evidences"],
       });
-
+      const questions = await getRepository(Question).find({
+        where: { form: formId },
+        relations: ["form"],
+      });
       let answersResponse = [];
+
       for (let answer of answers) {
-        const question = await getRepository(Question).findOneOrFail(
-          answer.question,
-          {
-            relations: ["form"],
-          }
-        );
-        if (question.form.id === Number(formId)) {
+        if (questions.find((question) => answer.question.id === question.id))
           answersResponse.push(answer);
-        }
       }
 
       return answersResponse;
