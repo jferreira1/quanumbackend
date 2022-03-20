@@ -1,5 +1,5 @@
 import { getRepository } from "typeorm";
-import User from "../entities/User";
+import User, { UserType } from "../entities/User";
 
 interface UserUpdateRequest {
   email?: string;
@@ -7,6 +7,7 @@ interface UserUpdateRequest {
   lastname?: string;
   occupation_role?: string;
   avatar_url?: string;
+  type?: string;
 }
 
 export class UpdateUserService {
@@ -25,6 +26,12 @@ export class UpdateUserService {
       user.occupation_role =
         userUpdateRequest.occupation_role ?? user.occupation_role;
       user.avatar_url = userUpdateRequest.avatar_url ?? user.avatar_url;
+
+      if (userUpdateRequest.type === "manager") {
+        user.type = UserType.MANAGER;
+      } else if (userUpdateRequest.type === "auditor") {
+        user.type = UserType.AUDITOR;
+      }
 
       await repo.update(id, user);
 
