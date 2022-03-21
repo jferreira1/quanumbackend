@@ -20,8 +20,20 @@ export class GetAnswersService {
       let answersResponse = [];
 
       for (let answer of answers) {
-        if (questions.find((question) => answer.question.id === question.id))
-          answersResponse.push(answer);
+        if (questions.find((question) => answer.question.id === question.id)) {
+          let responseArrayEvidences = [];
+          for (let evidence of answer.evidences) {
+            responseArrayEvidences.push(evidence.link);
+          }
+          let answerResponse = {
+            id: answer.id,
+            question_id: answer.question.id,
+            conformance_lvl: answer.conformanceLevel,
+            comment: answer.comment,
+            evidences: responseArrayEvidences,
+          };
+          answersResponse.push(answerResponse);
+        }
       }
 
       return answersResponse;

@@ -35,6 +35,7 @@ export class CreateAnswersService {
 
       let responseAnswers: Answer[] = [];
       for (let answerRequest of answersRequest) {
+        let evidencesArray: Evidence[] = [];
         let answer = new Answer();
         answer.audit = auditFound[0];
         answer.comment = answerRequest.comment;
@@ -44,9 +45,10 @@ export class CreateAnswersService {
           evidenceObject.link = link;
           evidenceObject.answers = [answer];
           evidenceObject = await getRepository(Evidence).save(evidenceObject);
-          answer.evidences = [evidenceObject];
+          evidencesArray.push(evidenceObject);
         });
         await Promise.all(promises);
+        answer.evidences = evidencesArray;
         answer.question = await getRepository(Question).findOneOrFail(
           answerRequest.question_id
         );
@@ -57,7 +59,7 @@ export class CreateAnswersService {
 
       responseAnswers = await getRepository(Answer).find({
         where: { audit: audit },
-        relations: ["question"],
+        relations: ["question", "evidences"],
       });
 
       return responseAnswers;
