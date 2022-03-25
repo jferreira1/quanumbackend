@@ -853,6 +853,60 @@
             }
           }
         }
+      },
+      "patch": {
+        "summary": "Rota de atualização de prioridades de uma resposta Non-Conformance",
+        "tags": ["Audits"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "answer_id": {
+                          "type": "integer"
+                        },
+                        "ncPriority": {
+                          "type": "enum",
+                          "default": null,
+                          "enum": [0, 1, 2]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array"
+                }
+              }
+            }
+          }
+        }
       }
     }
   },
@@ -1030,6 +1084,11 @@
             "type": "string",
             "default": "0",
             "enum": ["0", "1", "2", "3", "4"]
+          },
+          "ncPriority": {
+            "type": "enum",
+            "default": null,
+            "enum": [0, 1, 2]
           },
           "comment": {
             "type": "string"

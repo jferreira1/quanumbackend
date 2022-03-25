@@ -29,6 +29,7 @@ export class GetAnswersService {
             id: answer.id,
             question_id: answer.question.id,
             conformance_lvl: answer.conformanceLevel,
+            ncPriority: answer.ncPriority,
             comment: answer.comment,
             evidences: responseArrayEvidences,
           };
@@ -49,8 +50,9 @@ export class GetAnswersService {
 
       const answers = await getRepository(Answer).find({
         where: [
-          { audit: auditId, conformanceLevel: "3" },
-          { audit: auditId, conformanceLevel: "4" },
+          { audit: auditId, conformanceLevel: "0" },
+          { audit: auditId, conformanceLevel: "1" },
+          { audit: auditId, conformanceLevel: "2" },
         ],
         relations: [
           "question",

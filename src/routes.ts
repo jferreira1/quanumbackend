@@ -104,6 +104,11 @@ router.get(
   new GetAnswersController().handleNonConformances
 );
 
+router.patch(
+  "/v1/audits/:auditId/nconformances",
+  new UpdateAnswersController().handleNCPriorities
+);
+
 router.get(
   "/v1/audits/:auditId/reports",
   authMiddleware,

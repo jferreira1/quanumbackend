@@ -46,4 +46,27 @@ export class UpdateAnswersService {
       throw err;
     }
   }
+  async updatePriorities(
+    auditId: string,
+    answersRequest: { answer_id: string; ncPriority: number }[]
+  ) {
+    try {
+      let answersUpdated = [];
+      for (let answerRequest of answersRequest) {
+        let answerToUpdate = await getRepository(Answer).findOneOrFail(
+          answerRequest.answer_id,
+          { relations: ["audit"] }
+        );
+        if (answerToUpdate.audit.id === Number(auditId)) {
+          answerToUpdate.ncPriority = answerRequest.ncPriority;
+          let answerUpdated = await getRepository(Answer).save(answerToUpdate);
+          const { audit, ...answerToSend } = answerUpdated;
+          answersUpdated.push(answerToSend);
+        }
+      }
+      return answersUpdated;
+    } catch (err) {
+      throw err;
+    }
+  }
 }
