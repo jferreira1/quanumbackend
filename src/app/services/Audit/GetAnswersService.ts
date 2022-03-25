@@ -1,5 +1,5 @@
 import { getRepository } from "typeorm";
-import { Answer, NonConformanceTypes } from "../../entities/Answer";
+import { Answer } from "../../entities/Answer";
 import Audit from "../../entities/Audit";
 import { Question } from "../../entities/Question";
 
@@ -60,45 +60,24 @@ export class GetAnswersService {
           "question.descriptions.language",
         ],
       });
-      let criticals: number = 0,
-        majors: number = 0,
-        minors: number = 0;
+
+      let answersResponse = [];
       for (let answer of answers) {
-        if (answer.ncPriority !== null) {
-          if (answer.ncPriority === NonConformanceTypes.CRITICAL) criticals++;
-          if (answer.ncPriority === NonConformanceTypes.MAJOR) majors++;
-          if (answer.ncPriority === NonConformanceTypes.MINOR) minors++;
-        }
+        const { question, comment, createdAt, ...auxA } = answer;
+        const { descriptions, ...auxB } = question;
+        let auxC = {
+          portuguese: descriptions.find(
+            (qDesc) => qDesc.language.shortname === "pt-BR"
+          )?.description,
+          english: descriptions.find(
+            (qDesc) => qDesc.language.shortname === "en-US"
+          )?.description,
+        };
+        let answerResponse = { ...auxA, ...auxB, ...auxC };
+        answersResponse.push(answerResponse);
       }
 
-      let teste = {
-        criticals: criticals,
-        majors: majors,
-        minors: minors,
-        ...answers,
-      };
-      console.log(teste);
-      //delete teste.comment;
-
-      // for (let answer of answers) {
-      //   console.log(answer);
-      //   const question = await getRepository(Question).findOneOrFail(
-      //     answer.question.id,
-      //     { relations: ["descriptions"] }
-      //   );
-
-      //   for (let description of question.descriptions) {
-      //     const descriptionObject = await getRepository(
-      //       QuestionDescription
-      //     ).findOneOrFail(description.id);
-      //     console.log(descriptionObject);
-      //   }
-
-      //   answer.question = { ...question };
-      //   console.log(answer);
-      // }
-
-      return teste;
+      return answersResponse;
     } catch (err) {
       throw err;
     }
