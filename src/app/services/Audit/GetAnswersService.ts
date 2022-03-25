@@ -64,7 +64,7 @@ export class GetAnswersService {
       let answersResponse = [];
       for (let answer of answers) {
         const { question, comment, createdAt, ...auxA } = answer;
-        const { descriptions, ...auxB } = question;
+        const { id, descriptions, ...auxB } = question;
         let auxC = {
           portuguese: descriptions.find(
             (qDesc) => qDesc.language.shortname === "pt-BR"
@@ -74,6 +74,7 @@ export class GetAnswersService {
           )?.description,
         };
         let answerResponse = { ...auxA, ...auxB, ...auxC };
+
         answersResponse.push(answerResponse);
       }
 
