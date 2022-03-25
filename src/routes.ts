@@ -100,6 +100,11 @@ router.get(
 );
 
 router.get(
+  "/v1/audits/:auditId/nconformances",
+  new GetAnswersController().handleNonConformances
+);
+
+router.get(
   "/v1/audits/:auditId/reports",
   authMiddleware,
   new GetReportController().handle

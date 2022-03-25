@@ -826,6 +826,34 @@
           }
         }
       }
+    },
+    "/audits/{audit-id}/nconformances": {
+      "get": {
+        "summary": "Retorna um array de Answers avaliadas como Non-Conformances",
+        "tags": ["Audits"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "audit-id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {

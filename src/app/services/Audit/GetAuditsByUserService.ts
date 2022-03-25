@@ -14,9 +14,13 @@ type AuditResponse = {
   type: AuditType;
   createdAt: Date;
   score: number;
-  score_max: number;
-  score_critical_limit: number;
-  non_conformancies: number;
+  scoreMax: number;
+  scoreCriticalLimit: number;
+  nonConformances: number;
+  nonConformancesUnclassified: number;
+  criticals: number;
+  majors: number;
+  minors: number;
 };
 
 export class GetAuditsByUserService {
@@ -33,12 +37,17 @@ export class GetAuditsByUserService {
       const promise = audits.map(async (audit: Audit) => {
         const report = new GetReportService();
         await report.getFormsReports(String(audit.id));
+
         let auditResponse: AuditResponse = {
           ...audit,
           score: report.score,
-          score_max: report.scoreMax,
-          score_critical_limit: report.scoreCriticalLimit,
-          non_conformancies: report.nonConformancies,
+          scoreMax: report.scoreMax,
+          scoreCriticalLimit: report.scoreCriticalLimit,
+          nonConformances: report.nonConformances,
+          nonConformancesUnclassified: report.nonConformancesUnclassified,
+          criticals: report.criticals,
+          majors: report.majors,
+          minors: report.minors,
         };
         auditsResponse.push(auditResponse);
       });

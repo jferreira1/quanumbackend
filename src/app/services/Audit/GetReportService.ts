@@ -1,14 +1,22 @@
 import { getRepository } from "typeorm";
-import { Answer, ConformanceLevels } from "../../entities/Answer";
+import {
+  Answer,
+  ConformanceLevels,
+  NonConformanceTypes,
+} from "../../entities/Answer";
 import Audit from "../../entities/Audit";
 import { Question } from "../../entities/Question";
 
 interface FormResponse {
   formId: string;
   applicables: number;
-  total_score: number;
-  percentage_score: string;
-  non_conformancies: number;
+  totalScore: number;
+  percentageScore: string;
+  nonConformances: number;
+  nonConformancesUnclassified: number;
+  criticals: number;
+  majors: number;
+  minors: number;
 }
 interface ReportResponse {
   forms: FormResponse[];
@@ -18,14 +26,18 @@ interface ReportResponse {
     applicables: number;
     scoreCriticalLimit: number;
     percentageScore: string;
-    nonConformancies: number;
+    nonConformances: number;
   };
 }
 export class GetReportService {
   score: number;
   scoreMax: number;
   scoreCriticalLimit: number;
-  nonConformancies: number;
+  nonConformances: number;
+  nonConformancesUnclassified: number;
+  criticals: number;
+  majors: number;
+  minors: number;
 
   async getFormsReports(auditId: string) {
     try {
@@ -37,7 +49,11 @@ export class GetReportService {
       let totalApplicables = 0;
       let totalTotalScore = 0;
       let totalPercentageScore = "";
-      let totalNonConformancies = 0;
+      let totalNonConformances = 0;
+      let totalNonConformancesUnclassified = 0;
+      let totalCriticals = 0;
+      let totalMajors = 0;
+      let totalMinors = 0;
 
       for (let form of auditFound.forms) {
         const questions = await getRepository(Question).find({
@@ -45,8 +61,12 @@ export class GetReportService {
           relations: ["form"],
         });
         let totalScore: number = 0;
-        let nonConformancies: number = 0;
+        let nonConformances: number = 0;
         let applicables: number = 0;
+        let nonConformancesUnclassified: number = 0;
+        let criticals: number = 0;
+        let majors: number = 0;
+        let minors: number = 0;
         for (let question of questions) {
           const answers = await getRepository(Answer).find({
             where: { question: question.id, audit: auditFound.id },
@@ -58,8 +78,19 @@ export class GetReportService {
               applicables += 1;
               totalScore += Number(answer.conformanceLevel);
               if (Number(answer.conformanceLevel) <= 2) {
-                nonConformancies += 1;
+                nonConformances += 1;
               }
+            }
+            if (
+              answer.conformanceLevel === "1" ||
+              answer.conformanceLevel === "2" ||
+              answer.conformanceLevel === "0"
+            ) {
+              if (answer.ncPriority === null) nonConformancesUnclassified += 1;
+              if (answer.ncPriority === NonConformanceTypes.CRITICAL)
+                criticals += 1;
+              if (answer.ncPriority === NonConformanceTypes.MAJOR) majors += 1;
+              if (answer.ncPriority === NonConformanceTypes.MINOR) minors += 1;
             }
           }
         }
@@ -74,14 +105,22 @@ export class GetReportService {
         let formResponse = {
           formId: String(form.id),
           applicables: applicables,
-          total_score: totalScore,
-          percentage_score: percentageScore,
-          non_conformancies: nonConformancies,
+          totalScore: totalScore,
+          percentageScore: percentageScore,
+          nonConformances: nonConformances,
+          nonConformancesUnclassified: nonConformancesUnclassified,
+          criticals: criticals,
+          majors: majors,
+          minors: minors,
         };
 
         totalApplicables += applicables;
         totalTotalScore += totalScore;
-        totalNonConformancies += nonConformancies;
+        totalNonConformances += nonConformances;
+        totalNonConformancesUnclassified += nonConformancesUnclassified;
+        totalCriticals += criticals;
+        totalMajors += majors;
+        totalMinors += minors;
 
         formsResponse.push(formResponse);
       }
@@ -100,13 +139,17 @@ export class GetReportService {
         applicables: totalApplicables,
         scoreCriticalLimit: totalApplicables * 2,
         percentageScore: totalPercentageScore,
-        nonConformancies: totalNonConformancies,
+        nonConformances: totalNonConformances,
       };
 
       this.score = totalTotalScore;
       this.scoreMax = totalApplicables * 4;
       this.scoreCriticalLimit = totalApplicables * 2;
-      this.nonConformancies = totalNonConformancies;
+      this.nonConformances = totalNonConformances;
+      this.nonConformancesUnclassified = totalNonConformancesUnclassified;
+      this.criticals = totalCriticals;
+      this.majors = totalMajors;
+      this.minors = totalMinors;
 
       let reportResponse: ReportResponse = {
         forms: formsResponse,

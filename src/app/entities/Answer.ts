@@ -23,6 +23,12 @@ export enum ConformanceLevels {
   FOUR = "4",
 }
 
+export enum NonConformanceTypes {
+  MINOR,
+  MAJOR,
+  CRITICAL,
+}
+
 @Entity("answers")
 @Unique(["user", "audit", "question"])
 export class Answer {
@@ -39,6 +45,14 @@ export class Answer {
     default: ConformanceLevels.NA,
   })
   conformanceLevel: ConformanceLevels;
+
+  @Column({
+    name: "nc_priority",
+    type: "enum",
+    enum: NonConformanceTypes,
+    nullable: true,
+  })
+  ncPriority: NonConformanceTypes;
 
   @Column("text")
   comment: string;

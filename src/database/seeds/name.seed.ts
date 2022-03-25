@@ -52,7 +52,7 @@ export const NameSeed = [
     name_en: "RADIOPHARMACY OPERATIONAL LEVEL 3",
   },
   {
-    name_pt: "HORMÔNIOS E MARCADORES TUMORAIS",
+    name_pt: "MARCADORES HORMONAIS E TUMORAIS",
     name_en: "HORMONES AND TUMOUR MARKERS",
   },
 ];
