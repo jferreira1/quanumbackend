@@ -47,6 +47,9 @@ export class User {
   @Column({ nullable: true })
   avatar_url: string;
 
+  @Column({ default: true })
+  isActive: boolean;
+
   //Relations
   @OneToMany(() => Answer, (answer) => answer.user)
   answers: Answer[];

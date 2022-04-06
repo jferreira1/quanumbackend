@@ -57,6 +57,9 @@ export class Answer {
   @Column("text")
   comment: string;
 
+  @Column({ default: true })
+  isActive: boolean;
+
   //Relations
 
   @ManyToOne(() => User)

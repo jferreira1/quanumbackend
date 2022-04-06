@@ -47,6 +47,9 @@ export class Audit {
   @CreateDateColumn({ name: "created_at" })
   createdAt: Date;
 
+  @Column({ default: true })
+  isActive: boolean;
+
   @ManyToMany(() => User, (user) => user.audits, { eager: true })
   users: User[];
 
