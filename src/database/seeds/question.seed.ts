@@ -4362,7 +4362,8 @@ export const QuestionSeed = [
       {
         question_number: "13.1",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "A unidade operacional de nível 3 da radiofarmácia é operada sob a direção de uma pessoa com treinamento e qualificação adequados, conforme definido pelos regulamentos locais ou nacionais?",
           description_en:
             "Is the radiopharmacy operational level 3 unit operated under the direction of a person with appropriate training and qualification as defined by local or national regulations?",
         },
@@ -4371,7 +4372,8 @@ export const QuestionSeed = [
           topic_en: "STAFFING AND TRAINING",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Farmacêutico, Cientista ou PQ registrado. Verifique o POP de treino / Verifique os cartões pessoais.",
           placeholder_en:
             "Registered Pharmacist, Scientist or QP. Check the training SOP / Check the personal cards.",
         },
@@ -4379,7 +4381,8 @@ export const QuestionSeed = [
       {
         question_number: "13.2",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe treinamento específico da equipe e avaliação de competência no nível operacional 3, incluindo todos os riscos, desvios e controle de mudanças, formulação farmacêutica, CQ, validação e prática asséptica?",
           description_en:
             "Is there specific staff training and assessment of competency at operational level 3, including all risks, deviations and change control, pharmaceutical formulation, QC, validation, and aseptic practice?",
         },
@@ -4388,14 +4391,16 @@ export const QuestionSeed = [
           topic_en: "STAFFING AND TRAINING",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Verifique o POP de treino / Verifique os cartões pessoais.",
           placeholder_en: "Check the training SOP / Check the personal cards.",
         },
       },
       {
         question_number: "13.3",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existem funcionários devidamente treinados, no mínimo 3 deles, para composição de diagnósticos ou terapias ou cold-kits, ou subdispensação de kits comerciais e validação/liberação do produto final?",
           description_en:
             "Are there appropriately trained staff members, minimum 3 of them, for compounding of diagnostics or therapies or cold-kits, or sub-dispensing of commercial kits and validation/release of the final product?",
         },
@@ -4404,14 +4409,16 @@ export const QuestionSeed = [
           topic_en: "STAFFING AND TRAINING",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Verifique o POP de treino / Verifique os cartões pessoais.",
           placeholder_en: "Check the training SOP / Check the personal cards.",
         },
       },
       {
         question_number: "13.4",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Há pessoal de CQ (independente dos envolvidos na produção específica) treinado para realizar verificações finais e liberação de lote em todos os produtos preparados para uso do paciente?",
           description_en:
             "Are there QC staff (independent from those involved on specific production)  trained to perform final checks and batch release on all products prepared for patient use?",
         },
@@ -4420,14 +4427,16 @@ export const QuestionSeed = [
           topic_en: "STAFFING AND TRAINING",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Verifique o POP de treino / Verifique os cartões pessoais.",
           placeholder_en: "Check the training SOP / Check the personal cards.",
         },
       },
       {
         question_number: "13.5",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existem salas limpas com instalações de ante-sala equipadas com filtros HEPA que atendem aos padrões USP/EU, Classe D para uso com isoladores e Classe C com gabinete LAF (fluxo de ar laminar)?",
           description_en:
             "Are there clean-rooms with anteroom facilities fitted with HEPA-filters meeting USP/EU standards, Class D for use with isolators and Class C with LAF (Laminar air flow) cabinet?",
         },
@@ -4436,14 +4445,15 @@ export const QuestionSeed = [
           topic_en: "FACILITIES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros/avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.6",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um sistema HVAC - (aquecimento, ventilação, ar condicionado) instalado, validado e mantido?",
           description_en:
             "Is there a HVAC - (heating, ventilation, air-conditioning) system installed, validated and maintained?",
         },
@@ -4452,14 +4462,15 @@ export const QuestionSeed = [
           topic_en: "FACILITIES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros/avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.7",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Essas instalações e todos os equipamentos críticos são monitorados e controlados regularmente (ou seja, pressão diferencial, taxas de fluxo de ar, contagens de partículas e contaminação microbiológica)?",
           description_en:
             "Are these facilities and all critical equipment regularly monitored and under control (i.e. differential pressure, airflow rates, particle counts and microbiological contamination)?",
         },
@@ -4468,30 +4479,32 @@ export const QuestionSeed = [
           topic_en: "FACILITIES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros/avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.8",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Todos os equipamentos analíticos (HPLC, GC, TLC, balanças, etc) são validados, mantidos? São mantidos registros de limpeza, calibração de rotina e manutenção?",
           description_en:
-            "Are all analytical equipment (HPLC, GC, TLC, weighing scales, etc) validated, maintained ? Are records kept of cleaning, routine calibration and maintenance?",
+            "Are all analytical equipment (HPLC, GC, TLC, weighing scales, etc) validated, maintained? Are records kept of cleaning, routine calibration and maintenance?",
         },
         topics: {
           topic_pt: "INSTALAÇÕES",
           topic_en: "FACILITIES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros/avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.9",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "A esterilização terminal e distribuição ocorrem sob condições ISO 5, classe 100 ou EU Grau A? Isso é apoiado por controles como placa microbiológica e caldo e testes de integridade do filtro?",
           description_en:
             "Does the terminal sterilization and dispensing take place under ISO 5, class 100 or EU Grade A conditions? Is this supported by controls such as microbiological plate and broth, and filter integrity tests?",
         },
@@ -4500,14 +4513,15 @@ export const QuestionSeed = [
           topic_en: "FACILITIES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros/avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.10",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Os módulos de síntese são testados quanto à rigidez e integridade/função antes de iniciar cada síntese?",
           description_en:
             "Are synthesis modules tested for tightness and integrity/function before starting each synthesis?",
         },
@@ -4516,14 +4530,15 @@ export const QuestionSeed = [
           topic_en: "OPERATIONAL PROTOCOLS",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique os registros.",
           placeholder_en: "Check the records.",
         },
       },
       {
         question_number: "13.11",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um POP para gerenciamento de materiais, incluindo controle e verificações de todas as matérias-primas (químicos ou gás)? Se aplicável, são usados ​​apenas ingredientes e reagentes de grau farmacêutico e todas as vidrarias ou todos os consumíveis possuem marcas de qualidade?",
           description_en:
             "Is there a SOP for material management, including control and checks on all raw materials (chemicals or gas)?  If applicable, are only ingredients and reagents of pharmaceutical grade used and do all glassware or all consumables have quality marks?",
         },
@@ -4532,14 +4547,15 @@ export const QuestionSeed = [
           topic_en: "OPERATIONAL PROTOCOLS",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros/avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.12",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um POP para controle das condições de armazenamento de materiais (por exemplo, armazenamento em geladeira/freezer/dessecador/à temperatura ambiente) e cada item possui uma etiqueta rastreável de CQ?",
           description_en:
             "Is there a SOP for control of material storage conditions (e.g. storage in fridge /freezer /desiccator/at room temperature) and does each item have a QC traceable tag?",
         },
@@ -4548,14 +4564,15 @@ export const QuestionSeed = [
           topic_en: "OPERATIONAL PROTOCOLS",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros/avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.13",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "As condições ambientais estão em conformidade durante a produção e a preparação de cada etapa da composição do radiofármaco é realizada em um gabinete de fluxo de ar laminar (LAF)?",
           description_en:
             "Are the environmental conditions compliant during production, and is the preparation of each stage of radiopharmaceutical compounding carried out in a laminar air flow (LAF) cabinet?",
         },
@@ -4564,14 +4581,15 @@ export const QuestionSeed = [
           topic_en: "OPERATIONAL PROTOCOLS",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros/avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.14",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Cada etapa é verificada e marcada no documento de trabalho no momento da conclusão da tarefa?",
           description_en:
             "Is each step checked and cross-checked on the working document at the time of completion of the task?",
         },
@@ -4580,14 +4598,15 @@ export const QuestionSeed = [
           topic_en: "OPERATIONAL PROTOCOLS",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros/avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.15",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Cada preparação individual de paciente e/ou número de lote pode ser rastreado por um sistema de documentação operacional até o material inicial, equipamento usado, operadores, ciclotrão, gerador e/ou kit específico, processos de CQ e liberação final?",
           description_en:
             "Can each individual patient preparation and/or batch number be traced back by an operational documentation system to the starting material, equipment used, operators, cyclotron run, specific generator and/or kit, QC processes and final release?",
         },
@@ -4596,14 +4615,15 @@ export const QuestionSeed = [
           topic_en: "OPERATIONAL PROTOCOLS",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros/avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.16",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existem POPs com instruções sobre segurança, limpeza, liberação de linha e descontaminação para prevenção de qualquer contaminação cruzada?",
           description_en:
             "Are there SOPs with instructions on safety, cleaning, line clearance and decontamination for prevention of any cross-contamination?",
         },
@@ -4612,7 +4632,8 @@ export const QuestionSeed = [
           topic_en: "OPERATIONAL PROTOCOLS",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Confira o procedimento, registros/avaliação em campo.",
           placeholder_en:
             "Check the procedure, records / Evaluation on the field.",
         },
@@ -4620,7 +4641,8 @@ export const QuestionSeed = [
       {
         question_number: "13.17",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Todas as verificações críticas (incluindo visuais), alterações e emendas durante o processo de preparação de radiofármacos individuais, kits, módulos PET, terapias são formalmente controladas, aprovadas, cronometradas e datadas?",
           description_en:
             "Are all critical checks (including visual), changes and amendments during the process of preparation of individual radiopharmaceuticals, kits, PET modules, therapies formally controlled, approved, timed and dated?",
         },
@@ -4629,7 +4651,8 @@ export const QuestionSeed = [
           topic_en: "OPERATIONAL PROTOCOLS",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Verifique os registros/ Documentação de controle de alterações / Avaliação em campo.",
           placeholder_en:
             "Check the records / Change control documentation / Evaluation on the field.",
         },
@@ -4637,7 +4660,8 @@ export const QuestionSeed = [
       {
         question_number: "13.18",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "O arquivo mestre do lote especifica um rótulo aprovado que inclui o nome da farmacopeia, atividade, referência e tempo de validade, instruções para armazenamento, número de licença e precauções? As cópias das etiquetas são retidas e o número total de etiquetas é reconciliado antes da liberação final do CQ do lote?",
           description_en:
             "Does the batch master-file specify an approved label that includes pharmacopeia name, activity, reference and expiry time, instructions for storage, license number and precautions? Are copies of labels retained and is the total number of labels reconciled before final QC release of batch?",
         },
@@ -4646,14 +4670,15 @@ export const QuestionSeed = [
           topic_en: "OPERATIONAL PROTOCOLS",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros / Avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.19",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "O gerente de produção verifica antes da entrega do lote ao Controle de Qualidade para liberação final ao paciente?",
           description_en:
             "Does the production manager check before batch handover to Quality Control for final release to the patient?",
         },
@@ -4662,14 +4687,15 @@ export const QuestionSeed = [
           topic_en: "OPERATIONAL PROTOCOLS",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os registros / Avaliação em campo.",
           placeholder_en: "Check the records / Evaluation on the field.",
         },
       },
       {
         question_number: "13.20",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existem POPs para Garantia e Controle de Qualidade, baseados em farmacopeia ou métodos validados equivalentes?",
           description_en:
             "Are there SOPs for QA/QC, based on pharmacopeia or equivalent validated methods?",
         },
@@ -4678,7 +4704,8 @@ export const QuestionSeed = [
           topic_en: "QA/QC",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Confira o procedimento, registros / Avaliação em campo.",
           placeholder_en:
             "Check the procedure, records / Evaluation on the field.",
         },
@@ -4686,7 +4713,8 @@ export const QuestionSeed = [
       {
         question_number: "13.21",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "O controlador de qualidade verifica independentemente a conformidade ambiental, material, documentação, equipamento, operador, limpeza, etc.?",
           description_en:
             "Does the quality controller independently check environmental compliance, material, documentation, equipment, operator, cleaning, etc.?",
         },
@@ -4695,7 +4723,8 @@ export const QuestionSeed = [
           topic_en: "QA/QC",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Confira o procedimento, registros / Avaliação em campo.",
           placeholder_en:
             "Check the procedure, records / Evaluation on the field.",
         },
@@ -4703,7 +4732,8 @@ export const QuestionSeed = [
       {
         question_number: "13.22",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "É feita uma validação antes de iniciar uma modificação nova ou significativa em um método de síntese existente?",
           description_en:
             "Is a validation done before starting a new or significant modification to an existing method of synthesis?",
         },
@@ -4712,7 +4742,8 @@ export const QuestionSeed = [
           topic_en: "QA/QC",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Confira o procedimento, registros / Avaliação em campo.",
           placeholder_en:
             "Check the procedure, records / Evaluation on the field.",
         },
@@ -4720,7 +4751,8 @@ export const QuestionSeed = [
       {
         question_number: "13.23",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe monitoramento microbiológico de rotina da área de preparo e da estação de dispensação asséptica na radiofarmácia? O controlador de qualidade realiza de forma independente todas as avaliações microbiológicas necessárias, testes de integridade do filtro, endotoxinas, controles de placas, final do caldo, placas de contato, testes de esterilidade, etc.?",
           description_en:
             "Is there routine microbiological monitoring of the preparation area and the aseptic dispensing station in the radiopharmacy? Does the quality controller independently perform all required microbiological assessments, filter integrity tests, endotoxins, plates controls, end of broth, contact plates, sterility testing, etc.?",
         },
@@ -4729,7 +4761,8 @@ export const QuestionSeed = [
           topic_en: "QA/QC",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Confira o procedimento, registros / Avaliação em campo.",
           placeholder_en:
             "Check the procedure, records / Evaluation on the field.",
         },
@@ -4737,7 +4770,8 @@ export const QuestionSeed = [
       {
         question_number: "13.24",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um procedimento de recall de produtos testado anualmente para garantir que os radiofármacos não sejam administrados aos pacientes antes do recebimento do documento de liberação do produto?",
           description_en:
             "Is there an annually tested product recall procedure to ensure radiopharmaceuticals are not administered to patients before receipt of the product release document?",
         },
@@ -4746,7 +4780,8 @@ export const QuestionSeed = [
           topic_en: "QA/QC",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Confira o procedimento, registros / Avaliação em campo.",
           placeholder_en:
             "Check the procedure, records / Evaluation on the field.",
         },
@@ -4754,7 +4789,8 @@ export const QuestionSeed = [
       {
         question_number: "13.25",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Todas as avaliações críticas foram realizadas e quaisquer alterações foram aprovadas por uma Pessoa Qualificada antes da liberação para administração ao paciente?",
           description_en:
             "Have all critical assessments been performed and any changes been approved by a Qualified Person before release for patient administration?",
         },
@@ -4763,7 +4799,8 @@ export const QuestionSeed = [
           topic_en: "QA/QC",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Confira o procedimento, registros / Avaliação em campo.",
           placeholder_en:
             "Check the procedure, records / Evaluation on the field.",
         },
@@ -4771,7 +4808,8 @@ export const QuestionSeed = [
       {
         question_number: "13.26",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um POP para requisitos de embalagem e transporte seguro de acordo com as diretrizes da AIEA?",
           description_en:
             "Is there a SOP for packing and safe transportation requirements in accordance with IAEA guidelines?",
         },
@@ -4780,7 +4818,8 @@ export const QuestionSeed = [
           topic_en: "QA/QC",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Confira o procedimento, registros / Avaliação em campo.",
           placeholder_en:
             "Check the procedure, records / Evaluation on the field.",
         },
@@ -4788,7 +4827,8 @@ export const QuestionSeed = [
       {
         question_number: "13.27",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Há transmissão oportuna de um documento de liberação de produto/certificado de análise aos usuários finais e acompanhamento de deficiências, reclamações e feedback?",
           description_en:
             "Is there timely transmission of a product release document / certificate of analysis to end-users and follow-up of deficiencies, complaints and feedback?",
         },
@@ -4797,7 +4837,8 @@ export const QuestionSeed = [
           topic_en: "QA/QC",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Confira o procedimento, registros / Avaliação em campo.",
           placeholder_en:
             "Check the procedure, records / Evaluation on the field.",
         },
@@ -4805,7 +4846,8 @@ export const QuestionSeed = [
       {
         question_number: "13.28",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um programa anual de autoavaliação e auditoria do SGQ no nível operacional 3 da radiofarmácia?",
           description_en:
             "Is there an annual programme of self-assessment and audit of QMS at radiopharmacy operational level 3?",
         },
@@ -4814,7 +4856,8 @@ export const QuestionSeed = [
           topic_en: "QA/QC",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Confira o procedimento, registros / Avaliação em campo.",
           placeholder_en:
             "Check the procedure, records / Evaluation on the field.",
         },
@@ -4822,7 +4865,8 @@ export const QuestionSeed = [
       {
         question_number: "13.29",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "As práticas adequadas de descarte de resíduos em conformidade com a ONU (incluindo blindagem de chumbo separada para resíduos radioativos, recipiente de resíduos para solventes e resíduos biológicos) estão em vigor?",
           description_en:
             "Are proper UN-compliant waste disposal practices (including separate lead shielding for radioactive waste, waste container for solvents, and biological waste) in place?",
         },
@@ -4831,7 +4875,8 @@ export const QuestionSeed = [
           topic_en: "QA/QC",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Confira o procedimento, registros / Avaliação em campo.",
           placeholder_en:
             "Check the procedure, records / Evaluation on the field.",
         },
@@ -4845,7 +4890,8 @@ export const QuestionSeed = [
       {
         question_number: "14.1",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "O serviço de radioimunoensaio possui autorização formal de uma autoridade nacional reconhecida?",
           description_en:
             "Does the radioimmunoassay service have formal authorization from a recognized national authority?",
         },
@@ -4854,7 +4900,8 @@ export const QuestionSeed = [
           topic_en: "GOOD LABORATORY PRACTICES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt:
+            "Verifique a autorização escrita da autoridade nacional.",
           placeholder_en:
             "Check the written authorization from the national authority.",
         },
@@ -4862,7 +4909,8 @@ export const QuestionSeed = [
       {
         question_number: "14.2",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um protocolo escrito claro para o uso de todos os analitos de radioimunoensaio, IRMA (ensaio imunoradiométrico), ELISA (ensaio imunossorvente ligado a enzima) usados ​​no laboratório?",
           description_en:
             "Is there a clear written protocol  for using all radioimmunoassay,  IRMA (immunoradiometric assay), ELISA (enzyme linked immunosorbent assay) analytes used in the laboratory?",
         },
@@ -4871,14 +4919,15 @@ export const QuestionSeed = [
           topic_en: "GOOD LABORATORY PRACTICES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique o protocolo escrito.",
           placeholder_en: "Check the written protocol.",
         },
       },
       {
         question_number: "14.3",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um protocolo claro informando a ação necessária no acompanhamento de suspeitas de erros de resultado no laboratório?",
           description_en:
             "Is there a clear protocol stating the action required in a follow-up of suspected result errors in the laboratory?",
         },
@@ -4887,14 +4936,15 @@ export const QuestionSeed = [
           topic_en: "GOOD LABORATORY PRACTICES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique o protocolo.",
           placeholder_en: "Check the protocol.",
         },
       },
       {
         question_number: "14.4",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe algum mecanismo para verificar por que seus resultados recentes são 20% inferiores, enquanto todos os resultados anteriores estão todos dentro de 10% da meta?",
           description_en:
             "Is there a mechanism to check why  its recent results are 20% lower,  while all previous results have all been  within 10% of the target?",
         },
@@ -4903,14 +4953,15 @@ export const QuestionSeed = [
           topic_en: "GOOD LABORATORY PRACTICES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique o mecanismo.",
           placeholder_en: "Check the mechanism.",
         },
       },
       {
         question_number: "14.5",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um mecanismo para acompanhar erros aleatórios, por exemplo, amostra errada no analisador, amostra errada testada, resultado errado relatado por acidente?",
           description_en:
             "Is there a mechanism to follow-up random errors, e.g. wrong sample  on analyser, wrong specimen assayed, wrong result reported by accident?",
         },
@@ -4919,14 +4970,15 @@ export const QuestionSeed = [
           topic_en: "GOOD LABORATORY PRACTICES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique o mecanismo.",
           placeholder_en: "Check the mechanism.",
         },
       },
       {
         question_number: "14.6",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um mecanismo para verificar novamente os registros de “indetectáveis” relatados quando o resultado esperado teria sido clinicamente significativo?",
           description_en:
             "Is there a mechanism to double check records of reported ‘undetectable’  when the expected result would have been clinically significant?",
         },
@@ -4935,14 +4987,15 @@ export const QuestionSeed = [
           topic_en: "GOOD LABORATORY PRACTICES",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique o mecanismo.",
           placeholder_en: "Check the mechanism.",
         },
       },
       {
         question_number: "14.7",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe algum procedimento a seguir quando o usuário clínico não fornece as informações necessárias ou a amostra correta?",
           description_en:
             "Is there a procedure to follow when the clinical user does not provide the necessary information or the correct specimen?",
         },
@@ -4951,14 +5004,15 @@ export const QuestionSeed = [
           topic_en: "PRE-ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique o procedimento escrito.",
           placeholder_en: "Check the written procedure.",
         },
       },
       {
         question_number: "14.8",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe uma revisão periódica para evitar erros pré-analíticos, por exemplo, uso de tubos de coleta de amostras inadequados, misturas de amostras, solicitações com rótulos incorretos ou misturados da unidade ou laboratório solicitante?",
           description_en:
             "Is there a periodic review to prevent pre-analytical errors, e.g. use of inappropriate specimen collection tubes, specimen mix-ups, incorrectly labelled or mixed up requests from the requesting unit or laboratory?",
         },
@@ -4967,14 +5021,15 @@ export const QuestionSeed = [
           topic_en: "PRE-ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique os registros.",
           placeholder_en: "Check the records.",
         },
       },
       {
         question_number: "14.9",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe uma revisão periódica da adequação e integridade do sistema de transporte de amostras?",
           description_en:
             "Is there a periodic review of the appropriateness and integrity of the sample transport system? ",
         },
@@ -4983,14 +5038,15 @@ export const QuestionSeed = [
           topic_en: "PRE-ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique os registros.",
           placeholder_en: "Check the records.",
         },
       },
       {
         question_number: "14.10",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe uma revisão periódica para garantir que a confidencialidade dos resultados dos pacientes seja garantida?",
           description_en:
             "Is there a periodic review to ensure that the confidentiality of patient results is guaranteed?",
         },
@@ -4999,14 +5055,15 @@ export const QuestionSeed = [
           topic_en: "PRE-ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique os registros.",
           placeholder_en: "Check the records.",
         },
       },
       {
         question_number: "14.11",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe uma revisão periódica para garantir a segurança biológica?",
           description_en:
             "Is there a periodic review to ensure biological safety?",
         },
@@ -5015,14 +5072,15 @@ export const QuestionSeed = [
           topic_en: "PRE-ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique os registros.",
           placeholder_en: "Check the records.",
         },
       },
       {
         question_number: "14.12",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existem registros de análises de linha de regressão com quantidade conhecida do padrão internacional em soro?",
           description_en:
             "Are there records of regression  line analyses with a known amount  of the international standard in serum?",
         },
@@ -5031,14 +5089,15 @@ export const QuestionSeed = [
           topic_en: "ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique os registros.",
           placeholder_en: "Check the records.",
         },
       },
       {
         question_number: "14.13",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existem registros de experimentos de recuperação para validar um novo método?",
           description_en:
             "Are there records of recovery experiments to validate a new method?",
         },
@@ -5047,14 +5106,15 @@ export const QuestionSeed = [
           topic_en: "ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique os registros.",
           placeholder_en: "Check the records.",
         },
       },
       {
         question_number: "14.14",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Para cada tipo de ensaio e/ou cada tipo de conjunto de dados, há registro de média calculada, desvio padrão e coeficiente de variação?",
           description_en:
             "For each type of assay and/or each type of data set, is there a record of calculated mean, standard deviations and coefficient of variation? ",
         },
@@ -5063,14 +5123,15 @@ export const QuestionSeed = [
           topic_en: "ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique os registros.",
           placeholder_en: "Check the records.",
         },
       },
       {
         question_number: "14.15",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um gráfico de Levey-Jennings, incluindo controles e padrões para cada ensaio?",
           description_en:
             "Is there a Levey-Jennings plot, including controls and standards for each assay? ",
         },
@@ -5079,14 +5140,15 @@ export const QuestionSeed = [
           topic_en: "ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique os registros.",
           placeholder_en: "Check the records.",
         },
       },
       {
         question_number: "14.16",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um protocolo escrito claro quando os pontos estão fora dos 2 limites de desvio padrão?",
           description_en:
             "Is there a clear written protocol when points are outside the 2 standard deviation limits? ",
         },
@@ -5095,14 +5157,15 @@ export const QuestionSeed = [
           topic_en: "ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique o protocolo escrito.",
           placeholder_en: "Check the written protocol.",
         },
       },
       {
         question_number: "14.17",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um sistema implementado para garantir o descarte seguro de amostras e as amostras são tratadas como resíduos infecciosos?",
           description_en:
             "Is there a system in place to guarantee safe disposal of samples and are samples treated as infectious waste?",
         },
@@ -5111,14 +5174,15 @@ export const QuestionSeed = [
           topic_en: "ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Observação no local.",
           placeholder_en: "Observation on site.",
         },
       },
       {
         question_number: "14.18",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe um formato padrão para relatar os resultados do laboratório que inclui o nome do laboratório, detalhes do paciente, pessoa solicitante, descrição do teste, tipo de amostra (soro, urina, etc.), resultados (mais valores de referência), comentários interpretativos (se houver) e assinatura de profissional autorizado?",
           description_en:
             "Is there a standard format for reporting laboratory results that includes the laboratory’s name, patient details, requesting person, test description, sample type (serum, urine, etc.), results (plus reference values), interpretative comments (if any) and signature of authorized professional?",
         },
@@ -5127,14 +5191,15 @@ export const QuestionSeed = [
           topic_en: "POST-ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os procedimentos / Confira os relatórios.",
           placeholder_en: "Check the procedures / Check the reports.",
         },
       },
       {
         question_number: "14.19",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Existe uma lista de funcionários autorizados que são designados para alterar as anotações ou relatórios dos pacientes e para comunicar os resultados?",
           description_en:
             "Is there a list of authorized staff members who are designated to amend patient notes or reports and for communicating results?",
         },
@@ -5143,14 +5208,15 @@ export const QuestionSeed = [
           topic_en: "POST-ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Confira os procedimentos / Confira os relatórios.",
           placeholder_en: "Check the procedures / Check the reports.",
         },
       },
       {
         question_number: "14.20",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "Os valores de referência baseados em achados nacionais ou regionais estão disponíveis para cada tipo de ensaio?",
           description_en:
             "Are reference values based on national or regional findings available for each assay type?",
         },
@@ -5159,14 +5225,15 @@ export const QuestionSeed = [
           topic_en: "POST-ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique os procedimentos escritos.",
           placeholder_en: "Check the written procedures.",
         },
       },
       {
         question_number: "14.21",
         descriptions: {
-          description_pt: "",
+          description_pt:
+            "O feedback dos serviços de interpretação clínica está documentado?",
           description_en:
             "Is feedback from clinical interpretative services documented?",
         },
@@ -5175,7 +5242,7 @@ export const QuestionSeed = [
           topic_en: "POST-ANALYTICAL PHASE",
         },
         evidencePlaceholders: {
-          placeholder_pt: "",
+          placeholder_pt: "Verifique os registros.",
           placeholder_en: "Check the records.",
         },
       },
