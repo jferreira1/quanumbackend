@@ -4,7 +4,7 @@ import { Language } from "../../app/entities/Language";
 import { Name } from "../../app/entities/Name";
 import { NameSeed } from "../seeds/name.seed";
 
-export class SeedForms1642366754919 implements MigrationInterface {
+export class SeedForms1662071835890 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     const repoForm = getRepository(Form);
     const repoName = getRepository(Name);
@@ -21,18 +21,17 @@ export class SeedForms1642366754919 implements MigrationInterface {
       name_pt.language = await repoLanguage.findOneOrFail({
         name: "portuguese",
       });
-      const responseNamePt = await repoName.save(name_pt);
+      //const responseNamePt = await repoName.save(name_pt);
+      await repoName.save(name_pt);
 
       const name_en = new Name();
       name_en.form = form;
       name_en.name = NameSeed[i].name_en;
       name_en.language = await repoLanguage.findOneOrFail({ name: "english" });
-      const responseNameEn = await repoName.save(name_en);
+      //const responseNameEn = await repoName.save(name_en);
+      await repoName.save(name_en);
     }
   }
 
-  public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.clearTable("names");
-    await queryRunner.clearTable("forms");
-  }
+  public async down(queryRunner: QueryRunner): Promise<void> {}
 }

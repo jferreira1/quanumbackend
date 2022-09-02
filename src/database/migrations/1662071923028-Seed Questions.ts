@@ -7,7 +7,7 @@ import { QuestionDescription } from "../../app/entities/QuestionDescription";
 import { Topic } from "../../app/entities/Topic";
 import { QuestionSeed } from "../seeds/question.seed";
 
-export class SeedQuestions1645132327940 implements MigrationInterface {
+export class SeedQuestions1662071923028 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     const repoForm = getRepository(Form);
     const repoLanguage = getRepository(Language);

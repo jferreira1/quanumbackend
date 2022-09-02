@@ -20,7 +20,7 @@ export class Question {
   questionNumber: string;
 
   //Relations
-  @ManyToOne(() => Form)
+  @ManyToOne(() => Form, { onDelete: "CASCADE" })
   @JoinColumn({ name: "form_id" })
   form: Form;
 
