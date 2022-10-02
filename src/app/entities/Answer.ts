@@ -74,7 +74,7 @@ export class Answer {
   @JoinColumn({ name: "question_id" })
   question: Question;
 
-  @ManyToMany(() => Evidence)
+  @ManyToMany(() => Evidence, (evidence) => evidence.answers)
   @JoinTable({
     name: "answers_evidences",
     joinColumn: {
