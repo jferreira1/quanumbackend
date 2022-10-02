@@ -34,6 +34,7 @@ export class CreateAnswersService {
       });
 
       let responseAnswers: Answer[] = [];
+
       for (let answerRequest of answersRequest) {
         let evidencesArray: Evidence[] = [];
         let answer = new Answer();
