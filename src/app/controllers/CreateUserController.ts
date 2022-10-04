@@ -17,7 +17,7 @@ export class CreateUserController {
         firstname,
         lastname,
         occupation_role,
-        user_type: type,
+        type,
         avatar_url,
       } = req.body;
 
