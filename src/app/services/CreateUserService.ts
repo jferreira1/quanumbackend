@@ -7,7 +7,7 @@ type UserRequest = {
   firstname: string;
   lastname: string;
   occupation_role: string;
-  user_type: string;
+  type: string;
   avatar_url?: string;
 };
 
@@ -17,7 +17,7 @@ type UserResponse = {
   firstname: string;
   lastname: string;
   occupation_role: string;
-  user_type: string;
+  type: string;
   avatar_url?: string;
 };
 
@@ -28,7 +28,7 @@ export class CreateUserService {
     firstname,
     lastname,
     occupation_role,
-    user_type,
+    type,
     avatar_url,
   }: UserRequest) {
     try {
@@ -43,8 +43,8 @@ export class CreateUserService {
       user.firstname = firstname;
       user.lastname = lastname;
       user.occupation_role = occupation_role;
-      if (user_type === UserType.AUDITOR) user.type = UserType.AUDITOR;
-      if (user_type === UserType.MANAGER) user.type = UserType.MANAGER;
+      user.type = UserType.AUDITOR;
+      if (type && type === UserType.MANAGER) user.type = UserType.MANAGER;
       if (avatar_url) user.avatar_url = avatar_url;
 
       user = await repo.save(user);
@@ -55,7 +55,7 @@ export class CreateUserService {
         lastname: user.lastname,
         avatar_url: user.avatar_url,
         occupation_role: user.occupation_role,
-        user_type: user.type,
+        type: user.type,
       };
       return userResponse;
     } catch (err) {
