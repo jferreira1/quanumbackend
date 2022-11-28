@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Quanum Audit API",
-    "description": "API de acesso ao backend da aplicação de auditoria Quanum.",
+    "title": "Audinum API",
+    "description": "API de acesso ao backend da aplicação de auditoria AUDINUM.",
     "contact": {
       "name": "Jean Ferreira",
       "email": "jeanferreira@id.uff.br"
