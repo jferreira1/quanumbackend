@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc; npx migration:run",
     "dev": "npx nodemon --exec ts-node -r dotenv/config --files ./src/index.ts",
     "typeorm": "npx ts-node ./node_modules/typeorm/cli.js",
     "start": "node dist/index.js"
