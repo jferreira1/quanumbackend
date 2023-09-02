@@ -14,7 +14,7 @@
       "url": "https://{domain}/v1",
       "variables": {
         "domain": {
-          "default": "audinum.onrender.com"
+          "default": "https://br-audinum-api.onrender.com"
         }
       }
     },
