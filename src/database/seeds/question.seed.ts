@@ -4436,7 +4436,7 @@ export const QuestionSeed = [
         question_number: "13.5",
         descriptions: {
           description_pt:
-            "Existem salas limpas com instalações de antessala equipadas com filtros HEPA que atendem aos padrões USP/EU, Classe D para uso com isoladores e Classe C com gabinete LAF (fluxo de ar laminar)?",
+            "Existem salas limpas com instalações de ante-sala equipadas com filtros HEPA que atendem aos padrões USP/EU, Classe D para uso com isoladores e Classe C com gabinete LAF (fluxo de ar laminar)?",
           description_en:
             "Are there clean-rooms with anteroom facilities fitted with HEPA-filters meeting USP/EU standards, Class D for use with isolators and Class C with LAF (Laminar air flow) cabinet?",
         },
