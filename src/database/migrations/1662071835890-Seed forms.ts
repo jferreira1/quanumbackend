@@ -7,6 +7,9 @@ import { NameSeed } from "../seeds/name.seed";
 
 export class SeedForms1662071835890 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
+    console.log(queryRunner.isTransactionActive);
+    if (!queryRunner.isTransactionActive) queryRunner.startTransaction;
+
     await getRepository("languages").save(LanguageSeed);
 
     const repoForm = getRepository(Form);
@@ -34,6 +37,7 @@ export class SeedForms1662071835890 implements MigrationInterface {
       //const responseNameEn = await repoName.save(name_en);
       await repoName.save(name_en);
     }
+    if (queryRunner.isTransactionActive) queryRunner.commitTransaction;
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {}

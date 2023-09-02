@@ -138,6 +138,18 @@
     "@types/express" "*"
     "@types/serve-static" "*"
 
+"@types/webidl-conversions@*":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@types/webidl-conversions/-/webidl-conversions-7.0.0.tgz#2b8e60e33906459219aa587e9d1a612ae994cfe7"
+  integrity sha512-xTE1E+YF4aWPJJeUzaZI5DRntlkY3+BCVJi0axFptnjGmAoWxkyREIh/XMrfxVLejwQxMCfDXdICo0VLxThrog==
+
+"@types/whatwg-url@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@types/whatwg-url/-/whatwg-url-11.0.0.tgz#5c42518a163a6867e14235223a1a558143bccbab"
+  integrity sha512-4F6szvZP3FM5HvJAmcInXBfrAhvM4tLIc8MO1nXwabG5TZVOLxVmAXRpICqXYd3lBlomSRGmLCopYV+yTocgpQ==
+  dependencies:
+    "@types/webidl-conversions" "*"
+
 "@types/zen-observable@0.8.3":
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/@types/zen-observable/-/zen-observable-0.8.3.tgz#781d360c282436494b32fe7d9f7f8e64b3118aa3"

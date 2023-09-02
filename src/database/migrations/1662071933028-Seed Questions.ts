@@ -9,6 +9,7 @@ import { QuestionSeed } from "../seeds/question.seed";
 
 export class SeedQuestions1662071923028 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
+    if (!queryRunner.isTransactionActive) queryRunner.startTransaction;
     const repoForm = getRepository(Form);
     const repoLanguage = getRepository(Language);
     const repoDescription = getRepository(QuestionDescription);
@@ -88,6 +89,7 @@ export class SeedQuestions1662071923028 implements MigrationInterface {
         }
       }
     }
+    if (queryRunner.isTransactionActive) queryRunner.commitTransaction;
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
